@@ -3,6 +3,7 @@ import discord
 from characters import display_character_stats, load_characters
 from umiejki import skills, abilities, ochlapus
 import wyzwiska
+import commands
 
 ochlapus_copy = set(ochlapus)
 
@@ -44,24 +45,8 @@ async def get_response(message: str, ctx):
     if not p_message.startswith(prefix):
         return None
 
-    if p_message.startswith(f'{prefix}dm'):  # DM
-        if not has_admin_permissions(ctx):
-            return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
-
-        parts = message.split(maxsplit=2)
-        if len(parts) < 3:
-            return "Użyj poprawnej składni: `>dm <nazwa kanału> <wiadomość>`"
-
-        channel_name = parts[1]
-        msg = parts[2]
-
-        target_channel = discord.utils.get(ctx.guild.text_channels, name=channel_name)
-
-        if target_channel:
-            await target_channel.send(msg)
-            return f"✅ Wiadomość wysłana na kanał **#{channel_name}**"
-        else:
-            return f"❌ Nie znaleziono kanału **#{channel_name}**"
+    if p_message.startswith(f'{prefix}dm'):
+        return await commands.dm_command(ctx, message)
 
     if p_message.startswith(f'{prefix}sesja'):  # SESJA
 
