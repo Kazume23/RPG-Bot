@@ -69,7 +69,7 @@ skills = {
 
     "ukrywanie się": "**Ukrywanie się**\nBohater potrafi skutecznie maskować swoją obecność, korzystając z otoczenia lub specjalnych technik, aby uniknąć wykrycia przez przeciwników.\nRzut na Zręczność",
 
-    "unikanie": "**Unikanie**\nUmiejętność pozwalająca bohaterowi na zgrabne omijanie ciosów przeciwników, co skutkuje minimalizacją obrażeń i zwiększeniem szans na przeżycie w walce.\nRzut na Zręczność",
+    "unik": "**Unikanie**\nUmiejętność pozwalająca bohaterowi na zgrabne omijanie ciosów przeciwników.\nRzut na Zręczność",
 
     "wycena": "**Wycena**\nBohater potrafi precyzyjnie ocenić wartość przedmiotów, skarbów i dóbr materialnych, co jest nieocenione przy handlu i negocjacjach.\nRzut na Inteligencję",
 
