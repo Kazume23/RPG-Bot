@@ -4,6 +4,8 @@ from characters import display_character_stats, load_characters
 from umiejki import skills, abilities, ochlapus
 import wyzwiska
 
+ochlapus_copy = set(ochlapus)
+
 
 def has_admin_permissions(ctx):
     return ctx.author.guild_permissions.administrator
@@ -104,8 +106,15 @@ async def get_response(message: str, ctx):
         user_value = int(parts[1])
         random_value = random.randint(1, 100)
 
+        global ochlapus_copy
+        if not ochlapus_copy:
+            ochlapus_copy = set(ochlapus)
+
+        effect = random.choice(list(ochlapus_copy))
+        ochlapus_copy.remove(effect)
+
         if user_value >= random_value:
-            return f"🎲 Wylosowana wartość: **{random_value}** (twoja: {user_value})\n{random.choice(list(ochlapus))}"
+            return f"🎲 Wylosowana wartość: **{random_value}** (twoja: {user_value}) (Efekty: {len(ochlapus_copy)}) \n{effect}"
         else:
             return f"🎲 Wylosowana wartość: **{random_value}** (twoja: {user_value})\nTym razem udało ci się nie najebać"
 
