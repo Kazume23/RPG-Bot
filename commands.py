@@ -4,6 +4,7 @@ from umiejki import skills, abilities, ochlapus
 import wyzwiska
 
 ochlapus_copy = set(ochlapus)
+klnij_copy = set(wyzwiska.przeklenstwa_ogolne)
 
 
 def has_admin_permissions(ctx):
@@ -175,7 +176,14 @@ async def roll_command(message):
 
 # Komenda >klnij
 async def klnij_command():
-    return wyzwiska.losuj_przeklenstwo()
+    global klnij_copy
+    if not klnij_copy:
+        klnij_copy = set(wyzwiska.przeklenstwa_ogolne)
+
+    effect = random.choice(list(klnij_copy))
+    klnij_copy.remove(effect)
+
+    return f"{wyzwiska.losuj_przeklenstwo()} \nPozostało: {len(klnij_copy)}"
 
 
 # Komenda >help
