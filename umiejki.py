@@ -156,7 +156,7 @@ abilities = {
     "zapiekła nienawiść": "**Zapiekła nienawiść**\nBohater pała nienawiścią do konkretnej grupy lub rasy.\n+5 do testów Walki Wręcz przeciwko wybranej grupie wrogów.",
 }
 
-chlanie = {
+ochlapus = {
     "**Pół kufla to nie picie**\n„Nawet się nie rozgrzałem!” – Twój organizm przyjął alkohol jak wodę. Nic się nie dzieje… jeszcze.",
     "**Bełkot pijaka**\n„No… i… tego… ja tylko chciałem powiedzieć, że… że… HIC!” – Twoja mowa staje się niezrozumiała. Wszyscy traktują cię jak debila (-10 do testów Ogłady).",
     "**Łapy jak wory z piwem**\n„Ej… czemu ja mam cztery ręce?” – Masz problem z utrzymaniem równowagi. Każda akcja wymagająca precyzji dostaje -20 do testu.",
