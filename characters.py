@@ -2,7 +2,7 @@ import json
 
 
 def load_characters():
-    with open('postacie.json', 'r', encoding='utf-8') as file:
+    with open('data/postacie.json', 'r', encoding='utf-8') as file:
         return json.load(file)
 
 
