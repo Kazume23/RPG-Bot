@@ -188,63 +188,6 @@ async def klnij_command():
     return f"{wyzwiska.losuj_przeklenstwo()} \nPozostało: {len(klnij_copy)}"
 
 
-async def wydarzenia_command_chuj(message, ctx):
-    parts = message.split(maxsplit=2)
-
-    if len(parts) < 2:
-        return "Użyj poprawnej składni: >wydarzenia {dodaj/usun/zmien/daj} [parametry]"
-
-    command = parts[1].lower()
-
-    wydarzenia_manager = FileManager('data/wydarzenia.json')
-
-    if command == 'dodaj':
-        if len(parts) < 3:
-            return "Użyj poprawnej składni: >wy dodaj {nazwa/opis}"
-
-        input_data = parts[2]
-        if '/' not in input_data:
-            return "Błąd: Użyj '/' do oddzielenia nazwy i opisu."
-
-        name, description = input_data.split('/', 1)
-        name = name.strip()
-        description = description.strip()
-
-        return wydarzenia_manager.add(f"{name} / {description}")
-
-    elif command == 'usun':
-        if len(parts) < 3:
-            return "Użyj poprawnej składni: >wydarzenia usun {nazwa}"
-
-        name = parts[2].strip()
-        return wydarzenia_manager.remove(name)
-
-    elif command == 'zmien':
-        if len(parts) < 3:
-            return "Użyj poprawnej składni: >wydarzenia zmien {nazwa} {nowy opis}"
-
-        input_data = parts[2]
-        if '/' not in input_data:
-            return "Błąd: Użyj '/' do oddzielenia nazwy i nowego opisu."
-
-        name, new_description = input_data.split('/', 1)
-        name = name.strip()
-        new_description = new_description.strip()
-
-        return wydarzenia_manager.change(f"{name} / {new_description}")
-
-    elif command == 'daj':
-        return wydarzenia_manager.display()
-
-    else:
-        return "Nieznana akcja. Użyj: dodaj, usun, zmien, daj."
-
-
-async def notatka_command_chuj(message, ctx):
-    parts = message.split(maxsplit=2)
-    return len(parts)
-
-
 async def wydarzenia_command(message, ctx):
     return await handle_command(message, ctx, "wydarzenia")
 
