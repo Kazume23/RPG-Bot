@@ -1,7 +1,7 @@
 import random
 import discord
 
-from filemanager import FileManager
+from filemanager import FileManager, handle_command
 from umiejki import skills, abilities, ochlapus
 import wyzwiska
 
@@ -188,11 +188,11 @@ async def klnij_command():
     return f"{wyzwiska.losuj_przeklenstwo()} \nPozostało: {len(klnij_copy)}"
 
 
-async def wydarzenia_command(message, ctx):
+async def wydarzenia_command_chuj(message, ctx):
     parts = message.split(maxsplit=2)
 
     if len(parts) < 2:
-        return "Użyj poprawnej składni: >wydarzenia {dodaj/usun/zmien/wyswietl} [parametry]"
+        return "Użyj poprawnej składni: >wydarzenia {dodaj/usun/zmien/daj} [parametry]"
 
     command = parts[1].lower()
 
@@ -200,7 +200,7 @@ async def wydarzenia_command(message, ctx):
 
     if command == 'dodaj':
         if len(parts) < 3:
-            return "Użyj poprawnej składni: >wydarzenia dodaj {nazwa/opis}"
+            return "Użyj poprawnej składni: >wy dodaj {nazwa/opis}"
 
         input_data = parts[2]
         if '/' not in input_data:
@@ -238,6 +238,23 @@ async def wydarzenia_command(message, ctx):
 
     else:
         return "Nieznana akcja. Użyj: dodaj, usun, zmien, daj."
+
+
+async def notatka_command_chuj(message, ctx):
+    parts = message.split(maxsplit=2)
+    return len(parts)
+
+
+async def wydarzenia_command(message, ctx):
+    return await handle_command(message, ctx, "wydarzenia")
+
+
+async def notatka_command(message, ctx):
+    return await handle_command(message, ctx, "notatki")
+
+
+async def npc_command(message, ctx):
+    return await handle_command(message, ctx, "npc")
 
 
 # Komenda >help

@@ -4,74 +4,106 @@ import os
 
 class FileManager:
     def __init__(self, filename):
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        self.filename = f"data/{filename}.json"
+        self._ensure_file_exists()
 
-        self.filename = filename
-        self.data = self.load_data()
+    def _ensure_file_exists(self):
+        if not os.path.exists(self.filename):
+            with open(self.filename, "w", encoding="utf-8") as file:
+                json.dump([], file, ensure_ascii=False, indent=4)
 
-    def load_data(self):
-        if os.path.exists(self.filename):
-            with open(self.filename, 'r') as file:
-                content = file.read().strip()
-                if content:
-                    return json.loads(content)
+    def _load_data(self):
+        try:
+            with open(self.filename, "r", encoding="utf-8") as file:
+                data = json.load(file)
+                if isinstance(data, list):
+                    return data
+                elif isinstance(data, dict):
+                    return [data]
                 else:
-                    return {}
-        else:
-            return {}
+                    return []
+        except (json.JSONDecodeError, FileNotFoundError):
+            return []
 
-    def save_data(self):
-        with open(self.filename, 'w') as file:
-            json.dump(self.data, file, indent=4)
+    def _save_data(self, data):
+        with open(self.filename, "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
 
-    def add(self, input_data):
-        # Rozdzielanie nazwy i opisu na podstawie "/"
-        if '/' not in input_data:
-            return "Błąd: Użyj '/' do oddzielenia nazwy i opisu."
+    def add(self, name, description):
+        data = self._load_data()
+        data.append({"name": name, "description": description})
+        self._save_data(data)
+        return f"Dodano: {name}"
 
-        name, description = input_data.split('/', 1)  # Rozdziel na dwie części
-        name = name.strip()
-        description = description.strip()
+    def remove(self, name):
+        data = self._load_data()
+        new_data = [item for item in data if item["name"] != name]
 
-        if name in self.data:
-            return f"Element {name} już istnieje!"
+        if len(new_data) == len(data):
+            return f"Błąd: {name} nie znaleziono."
 
-        self.data[name] = description
-        self.save_data()
-        return f"Element {name} został dodany z opisem: {description}"
+        self._save_data(new_data)
+        return f"Usunięto: {name}"
 
-    def remove(self, input_data):
-        # Rozdzielanie na podstawie "/"
-        if '/' not in input_data:
-            return "Błąd: Użyj '/' do podania nazwy."
+    def change(self, name, new_description):
+        data = self._load_data()
+        for item in data:
+            if item["name"] == name:
+                item["description"] = new_description
+                self._save_data(data)
+                return f"Zmieniono: {name}"
 
-        name = input_data.split('/', 1)[0].strip()
-
-        if name not in self.data:
-            return f"Nie znaleziono elementu {name}."
-
-        del self.data[name]
-        self.save_data()
-        return f"Element {name} został usunięty."
-
-    def change(self, input_data):
-        # Rozdzielanie na podstawie "/"
-        if '/' not in input_data:
-            return "Błąd: Użyj '/' do podania nazwy i nowego opisu."
-
-        name, new_description = input_data.split('/', 1)
-        name = name.strip()
-        new_description = new_description.strip()
-
-        if name not in self.data:
-            return f"Nie znaleziono elementu {name}."
-
-        self.data[name] = new_description
-        self.save_data()
-        return f"Opis elementu {name} został zmieniony na: {new_description}"
+        return f"Błąd: {name} nie znaleziono."
 
     def display(self):
-        if not self.data:
-            return "Brak danych."
-        return "\n".join([f"{name}: {desc}" for name, desc in self.data.items()])
+        data = self._load_data()
+        filtered_data = [item for item in data if "name" in item and "description" in item]
+
+        if not filtered_data:
+            return "Brak zapisanych danych."
+
+        return "\n".join([f"{i + 1}. {item['name']} - {item['description']}" for i, item in enumerate(filtered_data)])
+
+
+async def handle_command(message, ctx, category):
+    parts = message.split(maxsplit=2)
+
+    if len(parts) < 2:
+        return f"Użyj poprawnej składni: >{category} {{dodaj/usun/zmien/daj}} [parametry]"
+
+    command = parts[1].lower()
+    manager = FileManager(category)
+
+    if command == "dodaj":
+        if len(parts) < 3:
+            return f"Użyj poprawnej składni: >{category} dodaj {{nazwa}} / {{opis}}"
+
+        input_data = parts[2]
+        if "/" not in input_data:
+            return "Błąd: Użyj '/' do oddzielenia nazwy i opisu."
+
+        name, description = input_data.split("/", 1)
+        return manager.add(name.strip(), description.strip())
+
+    elif command == "usun":
+        if len(parts) < 3:
+            return f"Użyj poprawnej składni: >{category} usun {{nazwa}}"
+
+        return manager.remove(parts[2].strip())
+
+    elif command == "zmien":
+        if len(parts) < 3:
+            return f"Użyj poprawnej składni: >{category} zmien {{nazwa}} / {{nowy opis}}"
+
+        input_data = parts[2]
+        if "/" not in input_data:
+            return "Błąd: Użyj '/' do oddzielenia nazwy i nowego opisu."
+
+        name, new_description = input_data.split("/", 1)
+        return manager.change(name.strip(), new_description.strip())
+
+    elif command == "daj":
+        return manager.display()
+
+    else:
+        return "Nieznana akcja. Użyj: dodaj, usun, zmien, daj."
