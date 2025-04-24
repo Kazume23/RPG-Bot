@@ -1,6 +1,5 @@
 import random
 import discord
-
 from filemanager import FileManager, handle_command
 from umiejki import skills, abilities, ochlapus
 import wyzwiska
@@ -220,3 +219,11 @@ async def help_command():
     \n5. **`>klnij`**     
     Popularne krasnoludzkie wyzwiska które pomogą wam zdobyć XP na sesji.
     """
+
+async def ask_bot():
+    response = openai.Completion.create(
+        engine="text-davinci-003",  # Możesz użyć innego modelu
+        prompt=prompt,
+        max_tokens=100  # Maksymalna długość odpowiedzi
+    )
+    return response.choices[0].text.strip()

@@ -16,6 +16,9 @@ async def get_response(message: str, ctx):
     if p_message.startswith(f'{prefix}dm'):
         return await commands.dm_command(ctx, message)
 
+    if p_message.startswith(f'{prefix}sesja'):
+        return await commands.sesja_command(ctx, message)
+
     if p_message.startswith(f'{prefix}purge'):
         return await commands.purge_command(ctx, message)
 
