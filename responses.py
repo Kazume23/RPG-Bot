@@ -1,7 +1,7 @@
 import openai
 import os
 from openai import OpenAI
-
+from core import shadow
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -24,32 +24,25 @@ def toggle_session(state: str):
 
 
 async def get_response(message: str, ctx):
-    global total_tokens_used
     p_message = message.strip()
 
-    if p_message == "ARISE":
-        return toggle_session("ARISE")
-    if p_message == "CEASE":
-        return toggle_session("CEASE")
+    if p_message.upper().startswith("ARISE"):
+        parts = p_message.split()
+        if len(parts) == 1:
+            return shadow.toggle_session("ARISE", "none")
+        elif len(parts) == 2:
+            return shadow.toggle_session("ARISE", parts[1])
+        else:
+            return "Użycie: ARISE <osobowość>. Dostępne: " + ", ".join(shadow.PERSONALITIES.keys())
+
+    if p_message.upper() == "CEASE":
+        return shadow.toggle_session("CEASE")
 
     if p_message.startswith('>'):
         return await process_commands(p_message, ctx)
 
-    if session_active:
-        if total_tokens_used >= TOKEN_LIMIT:
-            return "Limit tokenów sesji został osiągnięty. CEASE, by zresetować."
-
-        try:
-            response = client.chat.completions.create(
-                model="gpt-4o-2024-05-13",
-                messages=[{"role": "user", "content": message}],
-                max_tokens=500,
-            )
-            output = response.choices[0].message.content
-            total_tokens_used += response.usage.total_tokens
-            return output
-        except Exception as e:
-            return f"Błąd podczas kontaktu z cieniem: {str(e)}"
+    if shadow.session_active:
+        return await shadow.get_shadow_response(message, ctx)
 
     return None
 
@@ -73,7 +66,7 @@ async def process_commands(p_message, ctx):
         return await commands.ochlapus_command(p_message)
 
     if p_message.startswith(f'>u'):
-        return await commands.umieki_command(p_message)
+        return await commands.umiejki_command(p_message)
 
     if p_message.startswith(f'>z'):
         return await commands.zdolnosci_command(p_message)
