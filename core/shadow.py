@@ -26,7 +26,7 @@ def toggle_session(state: str, personality: str = "none"):
             active_personality = "none"
             session_active = True
             total_tokens_used = 0
-            return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy. 12"
+            return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
         active_personality = personality
         session_active = True
@@ -34,7 +34,7 @@ def toggle_session(state: str, personality: str = "none"):
 
         print(f"[ARISE] Aktywna osobowość: {active_personality}")
 
-        return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy. 21"
+        return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
     elif state == "CEASE":
         session_active = False
@@ -58,6 +58,10 @@ async def get_shadow_response(message: str, ctx):
                 "role": "system",
                 "content": PERSONALITIES[active_personality]["system"]
             })
+
+        print("Historia przed zapytaniem:")
+        for message in history:
+            print(f"Rola: {message['role']}, Treść: {message['content']}")
 
         response = client.chat.completions.create(
             model="gpt-4o-2024-05-13",

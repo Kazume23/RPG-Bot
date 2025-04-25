@@ -2,6 +2,7 @@ from core.token_counter import count_tokens
 
 MAX_CONTEXT_TOKENS = 3500
 
+
 async def build_context_from_history(channel, bot_user, max_tokens=MAX_CONTEXT_TOKENS):
     messages = []
     total_tokens = 0
