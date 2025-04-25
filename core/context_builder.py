@@ -3,21 +3,23 @@ from core.token_counter import count_tokens
 MAX_CONTEXT_TOKENS = 3500
 
 
-async def build_context_from_history(channel, bot_user, max_tokens=MAX_CONTEXT_TOKENS):
-    messages = []
-    total_tokens = 0
+async def build_context_from_history(channel, bot_user, limit=15):
+    messages = [message async for message in channel.history(limit=limit)]
+    context = []
 
-    async for msg in channel.history(limit=10):  # token limit
-        if msg.author.bot:
-            continue
+    for msg in reversed(messages):
+        if msg.author.bot or msg.author == bot_user:
+            if any(msg.content.upper().startswith(cmd) for cmd in ["ARISE", "CEASE", ">HELP"]):
+                continue
+            context.append({
+                "role": "assistant",
+                "content": msg.content
+            })
+        elif msg.author != bot_user:
+            context.append({
+                "role": "user",
+                "content": msg.content
+            })
 
-        role = "assistant" if msg.author == bot_user else "user"
-        token_count = count_tokens(msg.content)
+    return context
 
-        if total_tokens + token_count > max_tokens:
-            break
-
-        messages.insert(0, {"role": role, "content": msg.content})
-        total_tokens += token_count
-
-    return messages
