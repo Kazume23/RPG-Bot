@@ -8,19 +8,8 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-session_active = False
 total_tokens_used = 0
 TOKEN_LIMIT = 3000
-
-
-def toggle_session(state: str):
-    global session_active
-    if state == "ARISE":
-        session_active = True
-        return "I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
-    elif state == "CEASE":
-        session_active = False
-        return "Even in silence, my shadow remains. When you call again, I will rise, and your enemies will feel my wrath once more."
 
 
 async def get_response(message: str, ctx):
