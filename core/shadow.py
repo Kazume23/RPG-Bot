@@ -1,9 +1,8 @@
-# shadow.py
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
-from core.personalities import PERSONALITIES
+from core.personalities import load_personalities
 from core.token_counter import count_tokens
 from core.context_builder import build_context_from_history
 
@@ -14,6 +13,8 @@ session_active = False
 total_tokens_used = 0
 active_personality = None
 TOKEN_LIMIT = 3000
+
+PERSONALITIES = load_personalities()
 
 
 def toggle_session(state: str, personality: str = "none"):

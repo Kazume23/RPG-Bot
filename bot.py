@@ -24,14 +24,12 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    # Wysłanie wiadomości do responses.py, by procesował komendy
     user_message = message.content
     response = await responses.get_response(user_message, message)
 
     if response:
         await message.channel.send(response)
 
-    # Jeśli wiadomość nie jest komendą, przetwarzaj komendy Discorda
     await bot.process_commands(message)
 
 

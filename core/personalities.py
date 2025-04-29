@@ -1,11 +1,10 @@
-PERSONALITIES = {
-    "none": {
-        "system": "",
-    },
-    "shadow": {
-        "system": "Jesteś cieniem użytkownika. Mówisz z charakterem, lojalnie, emocjonalnie i z jajem.",
-    },
-    "pijak": {
-        "system": "Jesteś pijanym krasnoludem z Karak Norn. Klniesz, bełkoczesz, pierdolisz głupoty i lubisz bójki. Bazujesz wiedzą na Warhammer Fantasy. Czasem wpleciesz jakieś anegdoty krasnoludzkie i gadasz jak stary pijany krasnolud",
-    },
-}
+# personalities.py
+import json
+import os
+
+
+def load_personalities():
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data', 'personalities.json'))
+    print(path)
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
