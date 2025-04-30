@@ -25,16 +25,12 @@ def toggle_session(state: str, personality: str = "none"):
     if state == "ARISE":
         if personality not in PERSONALITIES:
             active_personality = "none"
-            session_active = True
-            total_tokens_used = 0
-            return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
+        else:
+            active_personality = personality
 
-        active_personality = personality
         session_active = True
         total_tokens_used = 0
-
         print(f"[ARISE] Aktywna osobowość: {active_personality}")
-
         return f"I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
     elif state == "CEASE":
@@ -67,15 +63,12 @@ async def get_shadow_response(message: str, ctx):
             else:
                 break
 
-        print("Historia przed zapytaniem:")
-        for message in history:
-            print(f"Rola: {message['role']}, Treść: {message['content']}")
-
         response = client.chat.completions.create(
             model="gpt-4o-2024-05-13",
             messages=history,
             max_tokens=500,
         )
+
         output = response.choices[0].message.content
         total_tokens_used += response.usage.total_tokens
         return output
@@ -93,3 +86,6 @@ async def process_commands(p_message, ctx):
             return toggle_session("ARISE", "none")
         else:
             return "Użycie: ARISE <osobowość>. Dostępne: shadow, pijak, bełcho"
+
+    if p_message.startswith("CEASE"):
+        return toggle_session("CEASE")

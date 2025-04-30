@@ -16,18 +16,14 @@ async def build_context_from_history(channel, bot_user, limit=15):
     context = []
 
     for msg in reversed(messages):
+        if msg.content.upper().startswith(("ARISE", "CEASE")) or msg.content.startswith(">"):
+            continue
+
         if msg.author.bot or msg.author == bot_user:
-            if msg.content.upper().startswith(("ARISE", "CEASE")) or msg.content.startswith(">"):
-                continue
-            context.append({
-                "role": "assistant",
-                "content": msg.content
-            })
-        elif msg.author != bot_user:
-            context.append({
-                "role": "user",
-                "content": msg.content
-            })
+            context.append({"role": "assistant", "content": msg.content})
+        else:
+            context.append({"role": "user", "content": msg.content})
+
     context = await trim_or_summarize_context(context)
     return context
 
