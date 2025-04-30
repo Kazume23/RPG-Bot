@@ -60,6 +60,13 @@ async def get_shadow_response(message: str, ctx):
                 "content": PERSONALITIES[active_personality]["system"]
             })
 
+        max_context_tokens = TOKEN_LIMIT - 500
+        while count_tokens(history) > max_context_tokens:
+            if len(history) > 1:
+                history.pop(1)
+            else:
+                break
+
         print("Historia przed zapytaniem:")
         for message in history:
             print(f"Rola: {message['role']}, Treść: {message['content']}")
