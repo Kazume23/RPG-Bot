@@ -25,7 +25,9 @@ async def on_message(message):
         return
 
     user_message = message.content
-    response = await responses.get_response(user_message, message)
+
+    async with message.channel.typing():
+        response = await responses.get_response(user_message, message)
 
     if response:
         await message.channel.send(response)
