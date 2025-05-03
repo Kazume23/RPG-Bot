@@ -1,14 +1,16 @@
-from core.token_counter import count_tokens
 import os
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
+from core.token_counter import count_tokens
+from core.importance_rules import assign_importance_score
 
 load_dotenv()
 openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-MAX_CONTEXT_TOKENS = 200
-SUMMARIZE_AT = 500
-MAX_MESSAGE_TOKENS = 100  # Limit długości pojedynczej wiadomości do streszczenia
+MAX_CONTEXT_TOKENS = 1500
+MAX_MESSAGE_TOKENS = 250
+MAX_SUMMARY_TOKENS = 750
+MODEL_FOR_SUMMARY = "gpt-3.5-turbo"
 
 IGNORED_PHRASES = [
     "I rise, bound to no one.",
@@ -22,7 +24,7 @@ def is_ignored_message(content: str):
     return any(phrase in content for phrase in IGNORED_PHRASES)
 
 
-async def build_context_from_history(channel, bot_user, limit=15):
+async def build_context_from_history(channel, bot_user, limit=8):
     messages = [message async for message in channel.history(limit=limit)]
     context = []
 
@@ -33,33 +35,35 @@ async def build_context_from_history(channel, bot_user, limit=15):
             continue
 
         role = "assistant" if msg.author.bot or msg.author == bot_user else "user"
-        context.append({"role": role, "content": msg.content})
+        context.append({
+            "role": role,
+            "content": msg.content.strip()
+        })
 
     context = await trim_or_summarize_context(context)
+
     print("\n========== KONTEKST UŻYTY W ZAPYTANIU ==========")
     for i, m in enumerate(context):
-        print(f"[{i}] ({m['role']}): {m['content'][:200]}")
+        print(f"[{i}] ({m['role']}): {m['content']}... (tokens: {count_tokens(m['content'])})")
     print("===============================================\n")
+
     return context
 
 
-async def summarize_messages(messages, max_tokens=300):
+async def summarize_messages(messages_to_summarize, max_tokens=MAX_SUMMARY_TOKENS):
     summary_prompt = (
         "Streszczaj poprzednie wiadomości zachowując ich sens, ton i emocje. "
         "Nie dodawaj nowych wątków. Nie wymyślaj niczego. Nie zmieniaj stylu. "
-        "Jeśli rozmowa była intensywna, poważna lub wulgarna – streszczaj to w tym samym stylu. "
         "Zachowuj sens odpowiedzi i psychologiczny klimat. Unikaj literackich opisów jak z powieści."
+        "Skróć wiadomości do minimum tak aby zachować jak najmniejsze zużycie tokenów modelu"
     )
 
-    raw_text = "\n".join([f"{msg['role']}: {msg['content']}" for msg in messages])
-    print("\n🧠 SUROWY TEKST DO STRESZCZENIA:\n" + raw_text[:1000] + "\n")
+    messages = [{"role": "system", "content": summary_prompt}]
+    messages += [{"role": m["role"], "content": m["content"]} for m in reversed(messages_to_summarize)]
 
     response = await openai_client.chat.completions.create(
-        model="gpt-4o-2024-05-13",
-        messages=[
-            {"role": "system", "content": summary_prompt},
-            {"role": "user", "content": raw_text}
-        ],
+        model=MODEL_FOR_SUMMARY,
+        messages=messages,
         temperature=0.3,
         max_tokens=max_tokens
     )
@@ -75,27 +79,40 @@ async def trim_or_summarize_context(messages):
         print("✅ No trimming required, total tokens within limit.")
         return messages
 
+    print("\n🔍 Obliczanie ważności wiadomości...")
+    for m in messages:
+        m["importance_score"] = assign_importance_score(m)
+        print(f"📌 '{m['content'][:50]}' → score: {m['importance_score']}")
+
+    messages_sorted = sorted(messages, key=lambda x: x["importance_score"], reverse=True)
+
     preserved_messages = []
     summarize_buffer = []
     running_tokens = 0
 
-    for msg in reversed(messages):
+    for msg in messages_sorted:
         msg_tokens = count_tokens(msg["content"])
 
         if msg_tokens > MAX_MESSAGE_TOKENS:
+            print(f"🪓 DUŻA wiadomość (>{MAX_MESSAGE_TOKENS} tok), dodana do streszczenia: {msg['content'][:60]}")
             summarize_buffer.append(msg)
             continue
 
         if running_tokens + msg_tokens <= MAX_CONTEXT_TOKENS:
-            preserved_messages.insert(0, msg)
+            preserved_messages.append(msg)
             running_tokens += msg_tokens
+            print(f"✅ Zachowano: {msg['content'][:60]}")
         else:
             summarize_buffer.append(msg)
+            print(f"🪓 Dodano do streszczenia (brak miejsca): {msg['content'][:60]}")
 
     summary = None
     if summarize_buffer:
-        summary = await summarize_messages(list(reversed(summarize_buffer)))
-        summary_msg = {"role": "system", "content": f"STRESZCZENIE WCZEŚNIEJSZEJ ROZMOWY:\n{summary}"}
+        summary = await summarize_messages(summarize_buffer)
+        summary_msg = {
+            "role": "system",
+            "content": f"STRESZCZENIE WCZEŚNIEJSZEJ ROZMOWY:\n{summary}"
+        }
         print("📝 Summary created for trimmed content.")
         return [summary_msg] + preserved_messages
 

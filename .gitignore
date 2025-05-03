@@ -382,4 +382,5 @@ docs/crowdin.py
 *.mo
 /.coverage
 build/*
+importance_rules.py
 >>>>>>> 34f5b36b640f263de765775c1e6ec23e45a2bea7
