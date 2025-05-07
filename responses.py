@@ -1,3 +1,4 @@
+import discord
 import openai
 import os
 from openai import OpenAI
@@ -12,8 +13,11 @@ total_tokens_used = 0
 TOKEN_LIMIT = 3000
 
 
-async def get_response(message: str, ctx):
-    p_message = message.strip()
+async def get_response(message: discord.Message):
+    print(message)
+
+    p_message = message.content.strip()
+    print(p_message)
 
     if p_message.upper().startswith("ARISE"):
         parts = p_message.split()
@@ -28,10 +32,10 @@ async def get_response(message: str, ctx):
         return shadow.toggle_session("CEASE")
 
     if p_message.startswith('>'):
-        return await process_commands(p_message, ctx)
+        return await process_commands(p_message, message)
 
     if shadow.session_active:
-        return await shadow.get_shadow_response(message, ctx)
+        return await shadow.get_shadow_response(message)
 
     return None
 

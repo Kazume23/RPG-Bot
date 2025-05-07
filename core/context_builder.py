@@ -24,21 +24,30 @@ def is_ignored_message(content: str):
     return any(phrase in content for phrase in IGNORED_PHRASES)
 
 
-async def build_context_from_history(channel, bot_user, limit=8):
-    messages = [message async for message in channel.history(limit=limit)]
+async def build_context_from_history(ctx, limit_valid=7, limit_raw=40):
+    channel = ctx.channel
+    bot_user = ctx.guild.me
+
+    messages = [message async for message in channel.history(limit=limit_raw)]
     context = []
 
-    for msg in reversed(messages):
+    valid_messages = []
+    for msg in messages:
         if msg.content.upper().startswith(("ARISE", "CEASE")) or msg.content.startswith(">"):
             continue
         if is_ignored_message(msg.content):
             continue
 
         role = "assistant" if msg.author.bot or msg.author == bot_user else "user"
-        context.append({
+        valid_messages.append({
             "role": role,
             "content": msg.content.strip()
         })
+
+        if len(valid_messages) >= limit_valid:
+            break
+
+    context = list(reversed(valid_messages))
 
     context = await trim_or_summarize_context(context)
 

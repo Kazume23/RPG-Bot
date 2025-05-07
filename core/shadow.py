@@ -55,7 +55,7 @@ def toggle_session(state: str, personality: str = "none"):
         return "Even in silence, my shadow remains. When you call again, I will rise..."
 
 
-async def get_shadow_response(message: str, ctx):
+async def get_shadow_response(ctx):
     global total_tokens_used
 
     if not session_active:
@@ -67,7 +67,7 @@ async def get_shadow_response(message: str, ctx):
         return "Limit tokenów sesji został osiągnięty. CEASE, by zresetować."
 
     try:
-        history = await build_context_from_history(ctx.channel, ctx.guild.me)
+        history = await build_context_from_history(ctx)
         logger.info("Zbudowano historię konwersacji (%d wpisów, %d tokenów)", len(history), count_tokens(history))
         # print("Historia przed zapytaniem:")
         # for message in history:
