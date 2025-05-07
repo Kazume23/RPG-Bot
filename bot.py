@@ -24,10 +24,8 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    user_message = message.content
-
     async with message.channel.typing():
-        response = await responses.get_response(user_message, message)
+        response = await responses.get_response(message)
 
     if response:
         await message.channel.send(response)
