@@ -55,6 +55,22 @@ def toggle_session(state: str, personality: str = "none"):
         return "Even in silence, my shadow remains. When you call again, I will rise..."
 
 
+def build_personality_prompts(personality_data):
+    prompts = []
+
+    if "system" in personality_data:
+        prompts.append({"role": "system", "content": personality_data["system"]})
+
+    if "memory" in personality_data and personality_data["memory"]:
+        memory_text = "\n".join(personality_data["memory"])
+        prompts.append({"role": "system", "content": f"Wspomnienia i zasady:\n{memory_text}"})
+
+    if "style" in personality_data:
+        prompts.append({"role": "system", "content": f"Pisz stylem {personality_data['style']}"})
+
+    return prompts
+
+
 async def get_shadow_response(ctx):
     global total_tokens_used
 
@@ -74,8 +90,9 @@ async def get_shadow_response(ctx):
         #     print(f"Rola: {message['role']}, Treść: {message['content']}")
 
         if active_personality != "none":
-            system_prompt = PERSONALITIES[active_personality]["system"]
-            history.insert(0, {"role": "system", "content": system_prompt})
+            personality_data = PERSONALITIES.get(active_personality, {})
+            personality_prompts = build_personality_prompts(personality_data)
+            history = personality_prompts + history
             logger.info("Dodano systemową osobowość: %s", active_personality)
 
         # Trim historii, jeśli za długa

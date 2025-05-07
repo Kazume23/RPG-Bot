@@ -10,4 +10,4 @@ def count_tokens(text):
 
 
 def flatten_history_to_text(history):
-    return "\n".join([f"{m['role']}: {m['content']}" for m in history])
+    return "\n".join([f"{m['role']}: {m.get('content', '[BRAK CONTENTU]')}" for m in history])
