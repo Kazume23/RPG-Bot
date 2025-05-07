@@ -68,6 +68,8 @@ def build_personality_prompts(personality_data):
     if "style" in personality_data:
         prompts.append({"role": "system", "content": f"Pisz stylem {personality_data['style']}"})
 
+    prompts.append({"role": "system", "content": "Odpowiadaj zwięźle na wiadomości i nie przedłużaj ich niepotrzebnie. Historię mają być rozbudowane ale odpowiedzi zwięzłe na temat które go wyczerpią. Możesz przeklinać"})
+
     return prompts
 
 
