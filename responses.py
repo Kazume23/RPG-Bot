@@ -34,7 +34,7 @@ async def get_response(message: discord.Message):
     if p_message.startswith('>'):
         return await process_commands(p_message, message)
 
-    if shadow.session_active:
+    if shadow.is_session_active(message.channel.id):
         return await shadow.get_shadow_response(message)
 
     return None

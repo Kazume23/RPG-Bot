@@ -38,9 +38,12 @@ async def on_message(message):
 
     if is_session_active(message.channel.id):
         async with message.channel.typing():
-            response = await responses.get_response(message)
-        if response:
-            await message.channel.send(response)
+            try:
+                response = await responses.get_response(message)
+                if response:
+                    await message.channel.send(response)
+            except Exception as e:
+                print(f"Błąd przy generowaniu odpowiedzi: {e}")
 
 
 bot.run(TOKEN)

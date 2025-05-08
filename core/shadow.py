@@ -21,7 +21,6 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-session_active = False
 total_tokens_used = 0
 active_personality = None
 TOKEN_LIMIT = 3000
@@ -32,7 +31,7 @@ active_sessions = {}
 
 
 def toggle_session(state: str, personality: str = "none", channel_id=None):
-    global session_active, total_tokens_used, active_personality
+    global total_tokens_used, active_personality
 
     personality = personality.lower()
 
@@ -44,16 +43,20 @@ def toggle_session(state: str, personality: str = "none", channel_id=None):
             active_personality = personality
             logger.info("Aktywowano osobowość: %s", active_personality)
 
-        active_sessions[channel_id] = personality
-        session_active = True
+        active_sessions[channel_id] = {
+            "personality": personality,
+            "active": True}
+
+        print(f"KURWAAAAAA \n {active_sessions}")
         total_tokens_used = 0
         logger.info("[ARISE] Sesja rozpoczęta.")
         return "I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
     elif state == "CEASE":
-        if channel_id in active_sessions:
-            del active_sessions[channel_id]
-        session_active = False
+        session = active_sessions.get(channel_id)
+        if session:
+            session["active"] = False
+            print(f"[DEBUG] CEASE → active_sessions: {active_sessions}")
         total_tokens_used = 0
         active_personality = None
         logger.info("[CEASE] Sesja zakończona.")
@@ -61,7 +64,9 @@ def toggle_session(state: str, personality: str = "none", channel_id=None):
 
 
 def is_session_active(channel_id):
-    return channel_id in active_sessions
+    session = active_sessions.get(channel_id)
+    print(f"[DEBUG] Sprawdzam sesję dla kanału {channel_id}, session: {session}")
+    return session is not None and session.get("active", False)
 
 
 def build_personality_prompts(personality_data):
@@ -86,7 +91,7 @@ def build_personality_prompts(personality_data):
 async def get_shadow_response(ctx):
     global total_tokens_used
 
-    if not session_active:
+    if not is_session_active(ctx.channel.id):
         logger.info("Wiadomość zignorowana – sesja nieaktywna.")
         return None
 
