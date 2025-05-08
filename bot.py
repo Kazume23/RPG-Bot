@@ -3,6 +3,7 @@ import discord
 import responses
 from discord.ext import commands
 from dotenv import load_dotenv
+from core.shadow import process_commands, is_session_active
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
@@ -24,13 +25,22 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    async with message.channel.typing():
-        response = await responses.get_response(message)
+    p_message = message.content
 
-    if response:
-        await message.channel.send(response)
+    if p_message.startswith(">"):
+        await bot.process_commands(message)
+        return
 
-    await bot.process_commands(message)
+    result = await process_commands(p_message, message)
+    if result:
+        await message.channel.send(result)
+        return
+
+    if is_session_active(message.channel.id):
+        async with message.channel.typing():
+            response = await responses.get_response(message)
+        if response:
+            await message.channel.send(response)
 
 
 bot.run(TOKEN)

@@ -28,8 +28,10 @@ TOKEN_LIMIT = 3000
 
 PERSONALITIES = load_personalities()
 
+active_sessions = {}
 
-def toggle_session(state: str, personality: str = "none"):
+
+def toggle_session(state: str, personality: str = "none", channel_id=None):
     global session_active, total_tokens_used, active_personality
 
     personality = personality.lower()
@@ -42,17 +44,24 @@ def toggle_session(state: str, personality: str = "none"):
             active_personality = personality
             logger.info("Aktywowano osobowość: %s", active_personality)
 
+        active_sessions[channel_id] = personality
         session_active = True
         total_tokens_used = 0
         logger.info("[ARISE] Sesja rozpoczęta.")
         return "I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
     elif state == "CEASE":
+        if channel_id in active_sessions:
+            del active_sessions[channel_id]
         session_active = False
         total_tokens_used = 0
         active_personality = None
         logger.info("[CEASE] Sesja zakończona.")
         return "Even in silence, my shadow remains. When you call again, I will rise..."
+
+
+def is_session_active(channel_id):
+    return channel_id in active_sessions
 
 
 def build_personality_prompts(personality_data):
@@ -68,7 +77,8 @@ def build_personality_prompts(personality_data):
     if "style" in personality_data:
         prompts.append({"role": "system", "content": f"Pisz stylem {personality_data['style']}"})
 
-    prompts.append({"role": "system", "content": "Odpowiadaj zwięźle na wiadomości i nie przedłużaj ich niepotrzebnie. Historię mają być rozbudowane ale odpowiedzi zwięzłe na temat które go wyczerpią. Możesz przeklinać"})
+    prompts.append({"role": "system",
+                    "content": "Odpowiadaj zwięźle na wiadomości i nie przedłużaj ich niepotrzebnie. Historię mają być rozbudowane ale odpowiedzi zwięzłe na temat które go wyczerpią. Możesz przeklinać"})
 
     return prompts
 
@@ -130,11 +140,13 @@ async def process_commands(p_message, ctx):
     if p_message.startswith("ARISE"):
         parts = p_message.split()
         if len(parts) == 2:
-            return toggle_session("ARISE", parts[1])
+            return toggle_session("ARISE", parts[1], ctx.channel.id)
         elif len(parts) == 1:
-            return toggle_session("ARISE", "none")
+            return toggle_session("ARISE", "none", ctx.channel.id)
         else:
             return "Użycie: ARISE <osobowość>. Dostępne: shadow, pijak, bełcho"
 
     if p_message.startswith("CEASE"):
-        return toggle_session("CEASE")
+        return toggle_session("CEASE", channel_id=ctx.channel.id)
+
+    return None
