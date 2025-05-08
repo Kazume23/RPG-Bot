@@ -22,7 +22,6 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 total_tokens_used = 0
-active_personality = None
 TOKEN_LIMIT = 3000
 
 PERSONALITIES = load_personalities()
@@ -31,23 +30,23 @@ active_sessions = {}
 
 
 def toggle_session(state: str, personality: str = "none", channel_id=None):
-    global total_tokens_used, active_personality
+    global total_tokens_used
 
     personality = personality.lower()
 
     if state == "ARISE":
         if personality not in PERSONALITIES:
-            active_personality = "none"
+            personality = "none"
             logger.warning("Nieznana osobowość '%s'. Ustawiono 'none'", personality)
         else:
-            active_personality = personality
-            logger.info("Aktywowano osobowość: %s", active_personality)
+            logger.info("Aktywowano osobowość: %s", personality)
 
         active_sessions[channel_id] = {
             "personality": personality,
-            "active": True}
+            "active": True
+        }
 
-        print(f"KURWAAAAAA \n {active_sessions}")
+        print(f"[DEBUG] ARISE → active_sessions: {active_sessions}")
         total_tokens_used = 0
         logger.info("[ARISE] Sesja rozpoczęta.")
         return "I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
@@ -58,7 +57,6 @@ def toggle_session(state: str, personality: str = "none", channel_id=None):
             session["active"] = False
             print(f"[DEBUG] CEASE → active_sessions: {active_sessions}")
         total_tokens_used = 0
-        active_personality = None
         logger.info("[CEASE] Sesja zakończona.")
         return "Even in silence, my shadow remains. When you call again, I will rise..."
 
@@ -91,9 +89,14 @@ def build_personality_prompts(personality_data):
 async def get_shadow_response(ctx):
     global total_tokens_used
 
-    if not is_session_active(ctx.channel.id):
+    channel_id = ctx.channel.id
+    session = active_sessions.get(channel_id)
+
+    if not session or not session.get("active"):
         logger.info("Wiadomość zignorowana – sesja nieaktywna.")
         return None
+
+    personality = session.get("personality", "none")
 
     if total_tokens_used >= TOKEN_LIMIT:
         logger.warning("Przekroczono limit tokenów (%d)", TOKEN_LIMIT)
@@ -102,17 +105,14 @@ async def get_shadow_response(ctx):
     try:
         history = await build_context_from_history(ctx)
         logger.info("Zbudowano historię konwersacji (%d wpisów, %d tokenów)", len(history), count_tokens(history))
-        # print("Historia przed zapytaniem:")
-        # for message in history:
-        #     print(f"Rola: {message['role']}, Treść: {message['content']}")
 
-        if active_personality != "none":
-            personality_data = PERSONALITIES.get(active_personality, {})
+        if personality != "none":
+            personality_data = PERSONALITIES.get(personality, {})
             personality_prompts = build_personality_prompts(personality_data)
             history = personality_prompts + history
-            logger.info("Dodano systemową osobowość: %s", active_personality)
+            logger.info("Dodano systemową osobowość: %s", personality)
 
-        # Trim historii, jeśli za długa
+        # Przycięcie historii
         max_context_tokens = TOKEN_LIMIT - 500
         while count_tokens(history) > max_context_tokens:
             if len(history) > 1:
@@ -121,7 +121,6 @@ async def get_shadow_response(ctx):
                 break
         logger.debug("Historia przycięta do limitu tokenów (%d)", count_tokens(history))
 
-        # Zapytanie do OpenAI
         response = client.chat.completions.create(
             model="gpt-4o-2024-05-13",
             messages=history,
@@ -137,8 +136,8 @@ async def get_shadow_response(ctx):
         return output
 
     except Exception as e:
-        logger.exception("Błąd podczas kontaktu z OpenAI: %s", str(e))
-        return f"Błąd podczas kontaktu z cieniem: {str(e)}"
+        logger.exception("Błąd przy generowaniu odpowiedzi: %s", str(e))
+        return "Coś poszło nie tak w mroku... spróbuj ponownie."
 
 
 async def process_commands(p_message, ctx):
