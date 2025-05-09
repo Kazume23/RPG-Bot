@@ -26,9 +26,10 @@ async def on_message(message):
         return
 
     p_message = message.content
+    response = await responses.get_response(message)
 
     if p_message.startswith(">"):
-        await bot.process_commands(message)
+        await message.channel.send(response)
         return
 
     result = await process_commands(p_message, message)
