@@ -14,17 +14,14 @@ TOKEN_LIMIT = 3000
 
 
 async def get_response(message: discord.Message):
-    print(message)
-
     p_message = message.content.strip()
-    print(p_message)
-
     if p_message.upper().startswith("ARISE"):
         parts = p_message.split()
+
         if len(parts) == 1:
-            return shadow.toggle_session("ARISE", "none")
+            return shadow.toggle_session("ARISE", "none", message)
         elif len(parts) == 2:
-            return shadow.toggle_session("ARISE", parts[1])
+            return shadow.toggle_session("ARISE", parts[1], message)
         else:
             return "Użycie: ARISE <osobowość>. Dostępne: " + ", ".join(shadow.PERSONALITIES.keys())
 

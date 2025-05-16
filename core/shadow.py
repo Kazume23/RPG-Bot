@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+admin = int(os.getenv("ADMIN_ID"))
 
 total_tokens_used = 0
 TOKEN_LIMIT = 3000
@@ -29,8 +30,13 @@ PERSONALITIES = load_personalities()
 active_sessions = {}
 
 
-def toggle_session(state: str, personality: str = "none", channel_id=None):
+def toggle_session(state: str, personality: str = "none", message=None):
     global total_tokens_used
+
+    channel_id = message.channel.id if message else None
+
+    if message and message.author.id != admin:
+        return "Spierdalaj, nie jesteś moim panem"
 
     personality = personality.lower()
 
@@ -144,13 +150,13 @@ async def process_commands(p_message, ctx):
     if p_message.startswith("ARISE"):
         parts = p_message.split()
         if len(parts) == 2:
-            return toggle_session("ARISE", parts[1], ctx.channel.id)
+            return toggle_session("ARISE", parts[1], ctx)
         elif len(parts) == 1:
-            return toggle_session("ARISE", "none", ctx.channel.id)
+            return toggle_session("ARISE", "none", ctx)
         else:
             return "Użycie: ARISE <osobowość>. Dostępne: shadow, pijak, bełcho"
 
     if p_message.startswith("CEASE"):
-        return toggle_session("CEASE", channel_id=ctx.channel.id)
+        return toggle_session("CEASE", message=ctx)
 
     return None
