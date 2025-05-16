@@ -25,8 +25,12 @@ def is_ignored_message(content: str):
 
 
 async def build_context_from_history(ctx, limit_valid=7, limit_raw=40):
+    from bot import bot
     channel = ctx.channel
-    bot_user = ctx.guild.me
+    if ctx.guild is not None:
+        bot_user = ctx.guild.me
+    else:
+        bot_user = bot.user
 
     messages = [message async for message in channel.history(limit=limit_raw)]
     context = []
