@@ -55,6 +55,10 @@ def toggle_session(state: str, personality: str = "none", message=None):
         print(f"[DEBUG] ARISE → active_sessions: {active_sessions}")
         total_tokens_used = 0
         logger.info("[ARISE] Sesja rozpoczęta.")
+
+        if message and message.guild is None:
+            return None
+
         return "I rise, bound to no one. Your will is mine to shape, your enemies, mine to destroy."
 
     elif state == "CEASE":
