@@ -23,7 +23,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 admin = int(os.getenv("ADMIN_ID"))
 
 total_tokens_used = 0
-TOKEN_LIMIT = 3000
+TOKEN_LIMIT = 20000
 
 PERSONALITIES = load_personalities()
 

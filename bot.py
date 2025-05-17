@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix=">", intents=intents, help_command=None)
 async def on_ready():
     from services.dm_sender import send_startup_dm
     await send_startup_dm(bot)
-    await start_session_ai(bot, personality="shadow")
+    await start_session_ai(bot, personality="pijak")
     print(f"{bot.user} jest online!")
     await bot.change_presence(activity=discord.Game(name="Cooking dogs"))
 

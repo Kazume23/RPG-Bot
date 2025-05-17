@@ -13,3 +13,5 @@ class MockMessage:
     def __init__(self, user_id, channel_id):
         self.author = type("obj", (object,), {"id": user_id})
         self.channel = type("obj", (object,), {"id": channel_id})
+        self.guild = None
+        self.content = ""
