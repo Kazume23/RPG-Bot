@@ -6,7 +6,11 @@ async def start_session_ai(bot, personality: str = "none"):
     dm_channel = await user.create_dm()
 
     response = toggle_session("ARISE", personality=personality, message=MockMessage(admin, dm_channel.id))
-    await dm_channel.send(response)
+
+    if response and response.strip():
+        await dm_channel.send(response)
+    else:
+        print("[WARN] Nie wysłano wiadomości – response był pusty lub None.")
 
 
 class MockMessage:
