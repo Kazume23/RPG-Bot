@@ -16,7 +16,8 @@ IGNORED_PHRASES = [
     "I rise, bound to no one.",
     "Your will is mine to shape",
     "Even in silence, my shadow remains.",
-    "When you call again, I will rise..."
+    "When you call again, I will rise...",
+    "Shadow: uruchomiony i gotowy do akcji..."
 ]
 
 
