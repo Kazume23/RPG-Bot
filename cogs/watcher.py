@@ -2,7 +2,7 @@
 
 import os
 from dotenv import load_dotenv
-import psutil
+import psutil, asyncio
 from discord.ext import commands, tasks
 from services.dm_sender import manual_send
 import time
@@ -27,26 +27,37 @@ class WatcherCog(commands.Cog):
     @tasks.loop(seconds=10)
     async def monitor_loop(self):
         now = time.time()
-        for p in psutil.process_iter(['name', 'cmdline']):
+        proc_list = await asyncio.to_thread(
+            lambda: list(psutil.process_iter(['name', 'cmdline', 'pid']))
+        )
+
+        for p in proc_list:
             try:
                 name = p.info.get('name') or ""
                 cmd = p.info.get('cmdline') or []
-            except (psutil.NoSuchProcess, psutil.AccessDenied):
+                path = ""
+                try:
+                    path = p.exe() or ""
+                except (psutil.AccessDenied, psutil.NoSuchProcess):
+                    pass
+            except (psutil.AccessDenied, psutil.NoSuchProcess):
                 continue
-            for p in psutil.process_iter(['name', 'cmdline']):
-                name = p.info.get('name', '').lower()
-                if name in ('java.exe', 'javaw.exe'):
-                    print("[DEBUG] java pid", p.pid, "cmdline:", p.info.get('cmdline'))
-                if 'slaythespire' in name:
-                    print("[DEBUG] wrapper pid", p.pid, "name:", name)
+
             for game in GAME_WHITELIST:
-                detected = (
-                        name.lower() == game.lower()
-                        or (
-                                name.lower() in ('java.exe', 'javaw.exe')
-                                and any(game.lower() in arg.lower() for arg in cmd)
-                        )
-                )
+                gl = game.lower()
+                nl = name.lower()
+                nl = name.lower()
+                detected = False
+
+                if nl == gl:
+                    detected = True
+
+                elif nl in ('java.exe', 'jawav.exe') and any(gl in arg.lower() for arg in cmd):
+                    detected = True
+
+                elif gl in path.lower():
+                    detected = True
+
                 if not detected:
                     continue
 
@@ -59,20 +70,28 @@ class WatcherCog(commands.Cog):
                         await manual_send(
                             self.bot,
                             ADMIN_ID,
-                            f"Shadow: Wyłączyłem '{game} po {TEST_THRESHOLD}sec."
+                            f"Shadow: wyłączyłem '{game}' po {TEST_THRESHOLD} sek stary chuju."
                         )
                     except Exception as e:
-                        print(f"[Watcher][ERROR] kill DM: {e}")
-                    del self.start_times[game]
+                        print(f"[Watcher][ERROR] kill dm: {e}")
+                    finally:
+                        del self.start_times[game]
 
-            active_games = {
-                game for game, start in self.start_times.items()
-                if any(
-                    (p.info.get('name') or "").lower() == game.lower()
-                    for p in psutil.process_iter(['name'])
-                )
-            }
-            self.start_times = {g: t for g, t in self.start_times.items() if g in active_games}
+            running_names = {p.info.get('name', '').lower() for p in proc_list}
+            exe_paths = []
+            for p in proc_list:
+                try:
+                    path = p.exe() or ""
+                except (psutil.AccessDenied, psutil.NoSuchProcess):
+                    path = ""
+                exe_paths.append(path.lower())
+
+            new_start_times = {}
+            for game, ts in self.start_times.items():
+                gl = game.lower()
+                if gl in running_names or any(gl in ep for ep in exe_paths):
+                    new_start_times[game] = ts
+            self.start_times = new_start_times
 
     @monitor_loop.before_loop
     async def before_monitor(self):
