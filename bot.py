@@ -59,7 +59,7 @@ async def on_message(message):
 async def main():
     COGS_PATH = Path(__file__).parent / "cogs"
     for file in COGS_PATH.iterdir():
-        if file.suffix == ".py" and file.stem != "__init__":
+        if file.suffix == ".py" and file.stem not in ["__init__", "voice_cog"]:
             ext = f"cogs.{file.stem}"
             print(f"[bot] ładuję extension {ext}")
             await bot.load_extension(ext)

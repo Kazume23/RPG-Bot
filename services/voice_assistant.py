@@ -1,37 +1,41 @@
 import os
 import re
 import time
+import wave
 import sounddevice as sd
 import soundfile as sf
+import webrtcvad
+from rapidfuzz import fuzz
 import subprocess
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Konfiguracja
+# --- Konfiguracja ---
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SAMPLE_RATE = 16000
 CHANNELS = 1
-WAKE_DURATION = 3  # sekundy nagrywania frazy wake-word
-CMD_DURATION = 3  # sekundy nagrywania komendy
-WHISPER_MODEL = "whisper-1"
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+FRAME_MS = 30
+VAD_AGGRESSIVENESS = 1
+VAD_SPEECH_THRESHOLD = 0.1
+WAKE_PHRASE = ""
+FUZZY_THRESHOLD = 60
 
-# Inicjalizacja klienta OpenAI
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-# Mapa fraza → program do uruchomienia
+# mapa fraza → program
 ACTIONS = {
     "cock": {
         "windows": ["calc.exe"],
         "darwin": ["open", "-a", "Calculator"]
     },
-    # dodaj swoje kolejne komendy tutaj
+    # dodaj kolejne tutaj
 }
 
 
 def record_chunk(duration, filename):
-    print(f"[voice_assistant] Nagrywam {duration}s audio do {filename}…")
+    print(f"[voice_assistant] Nagrywam {duration}s audio do {filename} …")
     data = sd.rec(int(duration * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=CHANNELS)
     sd.wait()
     sf.write(filename, data, SAMPLE_RATE)
@@ -39,29 +43,50 @@ def record_chunk(duration, filename):
 
 
 def transcribe(audio_file):
-    print(f"[voice_assistant] Transkrypcja {audio_file} (tylko angielski)…")
+    print(f"[voice_assistant] Transkrypcja {audio_file} (tylko EN)…")
     with open(audio_file, "rb") as f:
         resp = client.audio.transcriptions.create(
             model=WHISPER_MODEL,
             file=f,
-            language="en"  # wymuszamy tylko angielski
+            language="en",
+            response_format="verbose_json"
         )
-    text = resp.text.strip()
+    # zbierz tekst i confidence
+    data = resp.model_dump()
+    segments = data.get("segments", [])
+    text = " ".join(seg["text"].strip() for seg in segments)
     print(f"[voice_assistant] Rozpoznano: {text}")
     return text
 
 
 def normalize(text):
-    # usuń znaki przestankowe i zostaw tylko ASCII
-    cleaned = re.sub(r'[^\x00-\x7F]', '', text)
-    cleaned = re.sub(r'[^\w\s]', '', cleaned)
-    return cleaned.strip().lower()
+    # usuwa znaki spoza ASCII i przestankowe
+    t = re.sub(r'[^\x00-\x7F]', '', text)
+    return re.sub(r'[^\w\s]', '', t).strip().lower()
+
+
+def is_speech(audio_file):
+    # sprawdza czy to w ogóle mowa czy szum
+    with wave.open(audio_file, "rb") as wf:
+        assert wf.getnchannels() == 1 and wf.getframerate() == SAMPLE_RATE
+        pcm = wf.readframes(wf.getnframes())
+    vad = webrtcvad.Vad(VAD_AGGRESSIVENESS)
+    frame_len = int(SAMPLE_RATE * 30 / 1000) * 2  # 30ms frame, 2 bytes/sample
+    frames = [pcm[i:i + frame_len] for i in range(0, len(pcm), frame_len)]
+    if not frames:
+        return False
+    speech = sum(1 for f in frames if vad.is_speech(f, SAMPLE_RATE))
+    ratio = speech / len(frames)
+    print(f"[voice_assistant] VAD speech ratio: {ratio:.2f}")
+    return ratio >= VAD_SPEECH_THRESHOLD
 
 
 def is_wake(text):
     norm = normalize(text)
-    print(f"[voice_assistant] Normalized wake-word: '{norm}'")
-    return norm.startswith("hey shadow")
+    print(f"[voice_assistant] Normalized text: '{norm}'")
+    score = fuzz.partial_ratio(norm, WAKE_PHRASE)
+    print(f"[voice_assistant] Fuzzy score for wake-phrase: {score}")
+    return score >= FUZZY_THRESHOLD
 
 
 def handle_command(cmd_text):
@@ -74,19 +99,3 @@ def handle_command(cmd_text):
             return True
     print("[voice_assistant] Nie rozpoznano komendy.")
     return False
-
-
-def listen_once():
-    wake_file = record_chunk(WAKE_DURATION, "wake.wav")
-    wake_text = transcribe(wake_file)
-    if is_wake(wake_text):
-        print("[voice_assistant] Wake-word wykryty!")
-        cmd_file = record_chunk(CMD_DURATION, "cmd.wav")
-        cmd_text = transcribe(cmd_file)
-        handle_command(cmd_text)
-    else:
-        print("[voice_assistant] Wake-word nie wykryto.")
-
-
-if __name__ == "__main__":
-    listen_once()
