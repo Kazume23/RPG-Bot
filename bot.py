@@ -38,6 +38,8 @@ async def on_message(message):
         print(f"[DM] {message.author}: {message.content}")
 
     if p_message.startswith(">"):
+        if not response:
+            return
         await message.channel.send(response)
         return
 
