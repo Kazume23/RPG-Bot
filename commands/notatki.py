@@ -1,5 +1,5 @@
 from services.filemanager import handle_command
 
 
-async def wydarzenia_command(message, ctx):
+async def notatka_command(message, ctx):
     return await handle_command(message, ctx, "notatki")

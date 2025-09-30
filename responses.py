@@ -55,7 +55,7 @@ async def process_commands(p_message, ctx):
     if p_message.startswith(f'>ochlapus'):
         return await commands.ochlapus_command(p_message)
 
-    if p_message.startswith(f'>u'):
+    if p_message.startswith(f'>u') and len(p_message) <= 2:
         return await commands.umiejki_command(p_message)
 
     if p_message.startswith(f'>z'):
@@ -63,6 +63,9 @@ async def process_commands(p_message, ctx):
 
     if p_message.startswith(f'>roll'):
         return await commands.roll_command(p_message)
+
+    if p_message.startswith(f'>ukryty'):
+        return await commands.ukryty_command(p_message, ctx)
 
     if p_message.startswith(f'>klnij'):
         return await commands.klnij_command()

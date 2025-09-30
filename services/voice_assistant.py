@@ -51,7 +51,6 @@ def transcribe(audio_file):
             language="en",
             response_format="verbose_json"
         )
-    # zbierz tekst i confidence
     data = resp.model_dump()
     segments = data.get("segments", [])
     text = " ".join(seg["text"].strip() for seg in segments)

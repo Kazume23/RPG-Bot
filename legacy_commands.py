@@ -7,6 +7,8 @@ from static import wyzwiska
 ochlapus_copy = set(ochlapus)
 klnij_copy = set(wyzwiska.przeklenstwa_ogolne)
 
+print("[commands] START", __file__)
+
 
 def has_admin_permissions(ctx):
     return ctx.author.guild_permissions.administrator
@@ -92,6 +94,10 @@ async def purge_command(ctx, message):
             return f"Coś poszło nie tak: {e}"
     else:
         return "Pisz jak człowiek, np: >purge 20"
+
+
+async def ukryty_command(message, ctx):
+    print("[commands] ukryty_command defined")
 
 
 # Komenda >hello
@@ -214,10 +220,8 @@ async def help_command():
        Dowiedz się więcej o zdolnościach swojej postaci. Podaj nazwę zdolności, by poznać szczegóły na temat jej działania w grze.
     
     4. **`>roll {ilość}d{strona}`**  
-       Hazard! Wpisz np. `>roll 2d6`.
+       Hazard!!! Wpisz np. `>roll 2d6`.
     
     \n5. **`>klnij`**     
     Popularne krasnoludzkie wyzwiska które pomogą wam zdobyć XP na sesji.
     """
-
-
