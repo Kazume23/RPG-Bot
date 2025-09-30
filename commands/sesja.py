@@ -27,11 +27,11 @@ async def send_sesja_message(ctx, channel):
             print(f"Error adding emoji {emoji}: {e}")
 
 
-async def sesja_command(ctx, message):
+async def sesja_command(ctx):
     if not has_admin_permissions(ctx):
         return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
 
-    channel_name = message[len(">sesja"):].strip()
+    channel_name = ctx.content[len(">sesja"):].strip()
 
     channel = discord.utils.get(ctx.guild.text_channels, name=channel_name)
 

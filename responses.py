@@ -4,6 +4,7 @@ import os
 from openai import OpenAI
 from core import shadow
 from dotenv import load_dotenv
+from core.shadow_context import ShadowContext
 
 load_dotenv()
 
@@ -15,9 +16,9 @@ TOKEN_LIMIT = 3000
 
 async def get_response(message: discord.Message):
     p_message = message.content.strip()
+
     if p_message.upper().startswith("ARISE"):
         parts = p_message.split()
-
         if len(parts) == 1:
             return shadow.toggle_session("ARISE", "none", message)
         elif len(parts) == 2:
@@ -28,8 +29,9 @@ async def get_response(message: discord.Message):
     if p_message.upper() == "CEASE":
         return shadow.toggle_session("CEASE")
 
-    if p_message.startswith('>'):
-        return await process_commands(p_message, message)
+    if p_message.startswith(">"):
+        ctx = ShadowContext(message._state._get_client(), message)
+        return await process_commands(ctx)
 
     if shadow.is_session_active(message.channel.id):
         return await shadow.get_shadow_response(message)
@@ -37,49 +39,50 @@ async def get_response(message: discord.Message):
     return None
 
 
-async def process_commands(p_message, ctx):
+async def process_commands(ctx: ShadowContext):
     import commands
+    content = ctx.content
 
-    if p_message.startswith(f'>dm'):
-        return await commands.dm_command(ctx, p_message)
+    if content.startswith(">dm"):
+        return await commands.dm_command(ctx)
 
-    if p_message.startswith(f'>sesja'):
-        return await commands.sesja_command(ctx, p_message)
+    if content.startswith(">sesja"):
+        return await commands.sesja_command(ctx)
 
-    if p_message.startswith(f'>purge'):
-        return await commands.purge_command(ctx, p_message)
+    if content.startswith(">purge"):
+        return await commands.purge_command(ctx)
 
-    if p_message == f'>hello':
+    if content == ">hello":
         return await commands.hello_command()
 
-    if p_message.startswith(f'>ochlapus'):
-        return await commands.ochlapus_command(p_message)
+    if content.startswith(">ochlapus"):
+        return await commands.ochlapus_command(content)
 
-    if p_message.startswith(f'>u') and len(p_message) <= 2:
-        return await commands.umiejki_command(p_message)
+    if content.startswith(">u") and len(content) <= 2:
+        return await commands.umiejki_command(content)
 
-    if p_message.startswith(f'>z'):
-        return await commands.zdolnosci_command(p_message)
+    if content.startswith(">z"):
+        return await commands.zdolnosci_command(content)
 
-    if p_message.startswith(f'>roll'):
-        return await commands.roll_command(p_message)
+    if content.startswith(">roll"):
+        return await commands.roll_command(content)
 
-    if p_message.startswith(f'>ukryty'):
-        return await commands.ukryty_command(p_message, ctx)
+    if content.startswith(">ukryty"):
+        return await commands.ukryty_command(ctx)
 
-    if p_message.startswith(f'>klnij'):
+    if content.startswith(">klnij"):
         return await commands.klnij_command()
 
-    if p_message.startswith(f'>help'):
+    if content.startswith(">help"):
         return await commands.help_command()
 
-    if p_message.startswith(f'>wy') or p_message.startswith(f'>wydarzenia'):
-        return await commands.wydarzenia_command(p_message, ctx)
+    if content.startswith(">wy") or content.startswith(">wydarzenia"):
+        return await commands.wydarzenia_command(ctx)
 
-    if p_message.startswith(f'>not') or p_message.startswith(f'>notatki'):
-        return await commands.notatka_command(p_message, ctx)
+    if content.startswith(">not") or content.startswith(">notatki"):
+        return await commands.notatka_command(ctx)
 
-    if p_message.startswith(f'>npc'):
-        return await commands.npc_command(p_message, ctx)
+    if content.startswith(">npc"):
+        return await commands.npc_command(ctx)
 
     return "Naucz się w końcu tych komend KURWAAA"

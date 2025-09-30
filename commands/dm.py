@@ -2,11 +2,11 @@ import discord
 from commands.utility import has_admin_permissions
 
 
-async def dm_command(ctx, message):
+async def dm_command(ctx):
     if not has_admin_permissions(ctx):
         return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
 
-    parts = message.split(maxsplit=2)
+    parts = ctx.content.split(maxsplit=2)
     if len(parts) < 3:
         return "Użyj poprawnej składni: `>dm <nazwa kanału> <wiadomość>`"
 

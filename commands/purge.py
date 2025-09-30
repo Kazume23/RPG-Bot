@@ -1,10 +1,10 @@
 from commands.utility import has_admin_permissions
 
-async def purge_command(ctx, message):
+async def purge_command(ctx):
     if not has_admin_permissions(ctx):
         return "Spierdalaj. Nie masz uprawnień administratora do tej komendy."
 
-    parts = message.split()
+    parts = ctx.content.split()
     if len(parts) == 2 and parts[1].isdigit():
         try:
             amount = int(parts[1])
