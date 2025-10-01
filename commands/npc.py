@@ -1,5 +1,6 @@
-from services.filemanager import handle_command
+from services.character_aliver import *
 
 
-async def npc_command(message, ctx):
-    return await handle_command(message, ctx, "npc")
+async def npc_command(ctx):
+    parts = ctx.content.split(maxsplit=1)
+    return await character_randomizer(parts[1].lower())

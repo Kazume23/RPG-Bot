@@ -1,5 +1,6 @@
 from commands.utility import has_admin_permissions
 
+
 async def purge_command(ctx):
     if not has_admin_permissions(ctx):
         return "Spierdalaj. Nie masz uprawnień administratora do tej komendy."
