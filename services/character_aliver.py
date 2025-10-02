@@ -24,7 +24,7 @@ def format_appearance(appearance: dict) -> list[str]:
     result.append(f"Kolor włosów: {appearance['hair']}")
     result.append(f"Wzrost: {appearance['height']} cm")
     result.append(f"Waga: {appearance['weight']} kg")
-    result.append(f"Znaki szczególne: {appearance['marks']}")
+    result.append(f"Znaki szczególne: {', '.join(appearance['marks'])}")
     return result
 
 
@@ -63,16 +63,19 @@ def format_substats(substats: dict, rolled_stats: dict) -> list[str]:
 async def character_randomizer(race: str, gender: str):
     race_data = data_manager.get_race_data(race)
     name_data = data_manager.get_names(race, gender)
+
     stats_lines, rolled_stats = format_stats(race_data["stats"])
     substats_lines = format_substats(race_data["substats"], rolled_stats)
 
+    looks = race_data["looks"]
+
     appearance = {
-        "age": random.choice(data_manager.get_looks(race, "age")),
-        "eyes": random.choice(data_manager.get_looks(race, "eyes")),
-        "hair": random.choice(data_manager.get_looks(race, "hair")),
-        "marks": random.sample(data_manager.get_looks(race, "marks"), 3),
-        "weight": random.choice(data_manager.get_looks(race, "weight")),
-        "height": random.choice(data_manager.get_looks(race, "height", gender))
+        "age": random.choice(looks["age"]),
+        "eyes": random.choice(looks["eyes"]),
+        "hair": random.choice(looks["hair"]),
+        "marks": random.sample(looks["marks"], 3),
+        "weight": random.choice(looks["weight"]),
+        "height": random.choice(looks["height"][gender.lower()])
     }
 
     result = []
