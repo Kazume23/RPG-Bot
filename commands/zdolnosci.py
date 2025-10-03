@@ -1,17 +1,21 @@
-from static.umiejki import abilities
+from services import data_manager
 
 
-async def zdolnosci_command(message):
-    parts = message.split(maxsplit=1)
+async def zdolnosci_command(args: str):
+    abilities = data_manager.get_abilities()
 
-    if len(parts) == 1:
-        return "Dostępne zdolności: " + ", ".join(abilities.keys())
+    if not args:
+        return "Dostępne zdolności:\n " + "\n".join(abilities.keys())
 
-    if len(parts) < 2:
-        return "Użyj poprawnej składni: >z {nazwa_zdolności}"
+    ability_name = args.lower()
+    normalized = {k.lower(): v for k, v in abilities.items()}
 
-    ability_name = parts[1].lower()
-    if ability_name in abilities:
-        return abilities[ability_name]
+    if ability_name in normalized:
+        ability = normalized[ability_name]
+        return (
+            f"**{ability['name']}**\n"
+            f"Opis: {ability['desc']}\n"
+            f"Efekt: {ability['effect']}"
+        )
     else:
         return "Weź ty kurwa się naucz wpisywać dobrze te gówna."
