@@ -41,48 +41,50 @@ async def get_response(message: discord.Message):
 
 async def process_commands(ctx: ShadowContext):
     import commands
-    content = ctx.content
+    parts = ctx.content.split(maxsplit=1)
+    cmd = parts[0]
+    args = parts[1] if len(parts) > 1 else None
 
-    if content.startswith(">dm"):
-        return await commands.dm_command(ctx)
+    if cmd == ">dm":
+        return await commands.dm_command(ctx, args)
 
-    if content.startswith(">sesja"):
-        return await commands.sesja_command(ctx)
+    if cmd == ">sesja":
+        return await commands.sesja_command(ctx, args)
 
-    if content.startswith(">purge"):
-        return await commands.purge_command(ctx)
+    if cmd == ">purge":
+        return await commands.purge_command(ctx, args)
 
-    if content == ">hello":
+    if cmd == ">hello":
         return await commands.hello_command()
 
-    if content.startswith(">ochlapus"):
-        return await commands.ochlapus_command(content)
+    if cmd == ">ochlapus":
+        return await commands.ochlapus_command(args)
 
-    if content.startswith(">u") and len(content) <= 2:
-        return await commands.umiejki_command(content)
+    if cmd == ">u":
+        return await commands.umiejki_command(args)
 
-    if content.startswith(">z"):
-        return await commands.zdolnosci_command(content)
+    if cmd == ">z":
+        return await commands.zdolnosci_command(args)
 
-    if content.startswith(">roll"):
-        return await commands.roll_command(content)
+    if cmd == ">roll":
+        return await commands.roll_command(args)
 
-    if content.startswith(">ukryty"):
+    if cmd == ">ukryty":
         return await commands.ukryty_command(ctx)
 
-    if content.startswith(">klnij"):
+    if cmd == ">klnij":
         return await commands.klnij_command()
 
-    if content.startswith(">help"):
+    if cmd == ">help":
         return await commands.help_command()
 
-    if content.startswith(">wy") or content.startswith(">wydarzenia"):
+    if cmd in (">wy", ">wydarzenia"):
         return await commands.wydarzenia_command(ctx)
 
-    if content.startswith(">not") or content.startswith(">notatki"):
+    if cmd in (">not", ">notatki"):
         return await commands.notatka_command(ctx)
 
-    if content.startswith(">npc"):
+    if cmd == ">npc":
         return await commands.npc_command(ctx)
 
     return "Naucz się w końcu tych komend KURWAAA"
