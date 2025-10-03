@@ -1,6 +1,7 @@
 import discord
 from commands.utility import has_admin_permissions
 
+
 async def send_sesja_message(ctx, channel):
     text = """
     @everyone
@@ -27,16 +28,16 @@ async def send_sesja_message(ctx, channel):
             print(f"Error adding emoji {emoji}: {e}")
 
 
-async def sesja_command(ctx):
+async def sesja_command(ctx, args: str):
     if not has_admin_permissions(ctx):
         return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
 
-    channel_name = ctx.content[len(">sesja"):].strip()
+    if not args:
+        return "Użyj poprawnej składni: `>sesja <nazwa_kanału>`"
 
-    channel = discord.utils.get(ctx.guild.text_channels, name=channel_name)
-
+    channel = discord.utils.get(ctx.guild.text_channels, name=args.strip())
     if channel:
         await send_sesja_message(ctx, channel)
-        return f"Sesja została zaplanowana na kanale #{channel_name}!"
+        return f"Sesja została zaplanowana na kanale #{args.strip()}!"
     else:
         return "Nie udało się znaleźć kanału o podanej nazwie."

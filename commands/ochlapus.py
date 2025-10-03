@@ -4,14 +4,13 @@ from static.umiejki import ochlapus
 ochlapus_copy = set(ochlapus)
 
 
-async def ochlapus_command(message):
+async def ochlapus_command(args: str):
     global ochlapus_copy
 
-    parts = message.split()
-    if len(parts) != 2 or not parts[1].isdigit():
+    if not args or not args.isdigit():
         return "Użyj poprawnej składni: `>ochlapus X`, gdzie X to liczba Odp"
 
-    user_value = int(parts[1])
+    user_value = int(args)
     random_value = random.randint(1, 100)
 
     if not ochlapus_copy:
