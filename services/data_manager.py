@@ -50,6 +50,15 @@ def get_names(race: str, gender: str) -> List[str]:
     return normalized_gender[gender_lower]
 
 
+def get_class_data(class_name: str) -> Dict[str, Any]:
+    data = load_json("class.json", subdir="characters")
+    class_lower = class_name.lower()
+    normalized = {key.lower(): value for key, value in data.items()}
+    if class_lower not in normalized:
+        raise KeyError(f"Nie znaleziono klasy: {class_name}")
+    return normalized[class_lower]
+
+
 def get_skills() -> Dict[str, Any]:
     return load_json("skills.json", subdir="content")
 

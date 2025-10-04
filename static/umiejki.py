@@ -75,6 +75,47 @@ skills = {
 
     "wiedza": "**Wiedza (różne)**\nUmiejętność reprezentująca głęboką wiedzę bohatera w określonych dziedzinach, takich jak historia, geografia, magia czy polityka. Pozwala na analizę sytuacji i rozwiązywanie problemów wymagających specjalistycznej wiedzy.\nRzut na Inteligencję",
 
+    "żeglarstwo": "**Żeglarstwo**\nBohater potrafi sprawnie obsługiwać statki i łodzie, utrzymując kontrolę w trudnych warunkach morskich. Umiejętność ta jest kluczowa przy długodystansowych podróżach oraz w sytuacjach kryzysowych na wodzie.\nRzut na Zręczność",
+    "plotkowanie": "**Plotkowanie**\nUmiejętność pozwalająca bohaterowi zdobywać informacje poprzez rozmowy i plotki. Dzięki niej może szybko dowiedzieć się o bieżących wydarzeniach, tajemnicach czy lokalnych sekretach, co często daje przewagę strategiczną.\nRzut na Ogłada",
+
+    "pływanie": "**Pływanie**\nBohater potrafi swobodnie poruszać się w wodzie, utrzymując się na powierzchni i przemieszczając z dobrą techniką. Umiejętność ta jest kluczowa w sytuacjach kryzysowych, takich jak ucieczka przed zagrożeniem lub ratowanie życia.\nRzut na Krzepę",
+
+    "powożenie": "**Powożenie**\nDzięki tej umiejętności bohater sprawnie prowadzi wozy lub powozy, nawet w trudnym terenie. Jest niezbędna podczas długich podróży, transportu towarów lub w sytuacjach wymagających szybkiego przemieszczania się większych grup.\nRzut na Zręczność",
+
+    "przekonywanie": "**Przekonywanie**\nBohater potrafi efektywnie wpływać na decyzje innych, używając argumentacji, emocjonalnej manipulacji lub perswazji. Umiejętność ta jest wykorzystywana w negocjacjach, dyplomacji oraz w sytuacjach kryzysowych, gdzie liczy się przekonanie przeciwnika do zmiany zdania.\nRzut na Ogłada",
+
+    "przeszukiwanie": "**Przeszukiwanie**\nUmiejętność umożliwiająca dokładne przeszukiwanie pomieszczeń, ruin i terenów w poszukiwaniu ukrytych przedmiotów, pułapek lub śladów, które mogą prowadzić do odkrycia cennych informacji.\nRzut na Inteligencję",
+
+    "rzemiosło": "**Rzemiosło (różne)**\nBohater potrafi tworzyć i naprawiać przedmioty, korzystając z wiedzy technicznej i artystycznej. W zależności od dziedziny (aptekarstwo (Int), bednarstwo (S), gotowanie (Int), górnictwo (S), handel (Ogd), jubilerstwo (Int), kaligrafia (Zr), kamieniarstwo (Zr), kartografia (Zr), kowalstwo (S), krawiectwo (Zr), młynarstwo (S), piwowarstwo (Int), płatnerstwo (S), rusznikarstwo (Zr), rymarstwo (Zr), stolarstwo (Zr), szkutnictwo (Int), szewstwo (Zr), sztuka (Int), świecarstwo (Zr), uprawa ziemi (S), wyrób łuków (Zr), zielarstwo (Int), złotnictwo (Zr)) wymaga precyzyjnych umiejętności manualnych oraz głębokiej wiedzy o materiałach.\nRzut na Różnie",
+
+    "sekretne znaki": "**Sekretne znaki (różne)**\nBohater zna tajemne systemy symboli wykorzystywanych przez wybrane frakcje lub stowarzyszenia, co pozwala mu na komunikację z wtajemniczonymi lub identyfikację członków danej grupy.\nRzut na Inteligencję",
+
+    "sekretny język": "**Sekretny język (różne)**\nUmiejętność umożliwiająca komunikację w języku znanym tylko wybranym osobom, takim jak język złodziei czy tajemnych kultów. Pozwala na przekazywanie informacji bez zrozumienia przez osoby nie wtajemniczone.\nRzut na Inteligencję",
+
+    "skradanie się": "**Skradanie się**\nBohater potrafi poruszać się cicho i niezauważenie, co umożliwia mu infiltrację, kradzież lub unikanie wykrycia przez wrogów. Kluczowa umiejętność w sytuacjach wymagających dyskrecji.\nRzut na Zręczność",
+
+    "splatanie magii": "**Splatanie magii**\nUmiejętność pozwalająca bohaterowi na manipulowanie surową energią magiczną, umożliwiając tworzenie prostych zaklęć lub rytuałów. Wymaga silnej kontroli nad energią i skupienia.\nRzut na Siłę Woli",
+
+    "spostrzegawczość": "**Spostrzegawczość**\nBohater charakteryzuje się wyjątkową czujnością, dostrzegając nawet najmniejsze szczegóły otoczenia, co pozwala mu na szybkie wykrycie zagrożeń, pułapek lub ukrytych obiektów.\nRzut na Inteligencję",
+
+    "sztuka przetrwania": "**Sztuka przetrwania**\nUmiejętność umożliwiająca bohaterowi radzenie sobie w ekstremalnych warunkach przyrody. Pozwala na znalezienie pożywienia, wody i schronienia, a także na adaptację do trudnych warunków środowiskowych.\nRzut na Inteligencję",
+
+    "śledzenie": "**Śledzenie**\nBohater potrafi odczytywać ślady pozostawione przez istoty, co umożliwia mu określenie kierunku, z jakiego pochodzi cel, lub odnalezienie zagubionych osób.\nRzut na Inteligencję",
+
+    "torturowanie": "**Torturowanie**\nUmiejętność pozwalająca na zadawanie przeciwnikowi intensywnego bólu w celu zdobycia informacji lub osłabienia go w walce. Jest to brutalna metoda wykorzystywana zwykle jako ostateczność.\nRzut na Krzepę",
+
+    "targowanie": "**Targowanie**\nBohater wykazuje się zdolnością do negocjowania korzystnych warunków transakcji, potrafiąc obniżyć cenę lub uzyskać dodatkowe korzyści. Umiejętność ta wymaga finezji i wyczucia sytuacji.\nRzut na Ogłada",
+
+    "tresura": "**Tresura**\nUmiejętność umożliwiająca bohaterowi szkolenie zwierząt do wykonywania określonych zadań – od transportu, przez pomoc w walce, po wykorzystywanie w rozpoznaniu terenu.\nRzut na Siłę Woli",
+
+    "ukrywanie się": "**Ukrywanie się**\nBohater potrafi skutecznie maskować swoją obecność, korzystając z otoczenia lub specjalnych technik, aby uniknąć wykrycia przez przeciwników.\nRzut na Zręczność",
+
+    "unik": "**Unikanie**\nUmiejętność pozwalająca bohaterowi na zgrabne omijanie ciosów przeciwników.\nRzut na Zręczność",
+
+    "wycena": "**Wycena**\nBohater potrafi precyzyjnie ocenić wartość przedmiotów, skarbów i dóbr materialnych, co jest nieocenione przy handlu i negocjacjach.\nRzut na Inteligencję",
+
+    "wiedza": "**Wiedza (różne)**\nUmiejętność reprezentująca głęboką wiedzę bohatera w określonych dziedzinach, takich jak historia, geografia, magia czy polityka. Pozwala na analizę sytuacji i rozwiązywanie problemów wymagających specjalistycznej wiedzy.\nRzut na Inteligencję",
+
     "żeglarstwo": "**Żeglarstwo**\nBohater potrafi sprawnie obsługiwać statki i łodzie, utrzymując kontrolę w trudnych warunkach morskich. Umiejętność ta jest kluczowa przy długodystansowych podróżach oraz w sytuacjach kryzysowych na wodzie.\nRzut na Zręczność"
 }
 
