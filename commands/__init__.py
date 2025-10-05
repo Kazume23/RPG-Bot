@@ -12,3 +12,4 @@ from .wydarzenia import wydarzenia_command
 from .notatki import notatka_command
 from .npc import npc_command
 from .ukryty import ukryty_command
+from .classes import classes_command

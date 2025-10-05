@@ -87,4 +87,7 @@ async def process_commands(ctx: ShadowContext):
     if cmd == ">npc":
         return await commands.npc_command(ctx)
 
+    if cmd == ">class":
+        return await commands.classes_command(ctx)
+
     return "Naucz się w końcu tych komend KURWAAA"
