@@ -95,12 +95,17 @@ def apply_class(race_data: dict, class_data: dict) -> dict:
         race_val = race_data["substats"][sub]
         class_val = class_data["substats"].get(sub, [0])
 
-        if isinstance(class_val, list):
-            chosen = random.choice(class_val)
-        else:
-            chosen = class_val
+        if isinstance(race_val, list) and isinstance(class_val, list):
+            race_roll = random.choice(race_val)
+            class_roll = random.choice(class_val)
+            merged_substats[sub] = race_roll + class_roll
 
-        if isinstance(race_val, int):
+        elif isinstance(race_val, list):
+            race_roll = random.choice(race_val)
+            merged_substats[sub] = race_roll + (class_val if isinstance(class_val, int) else random.choice(class_val))
+
+        elif isinstance(race_val, int):
+            chosen = random.choice(class_val) if isinstance(class_val, list) else class_val
             merged_substats[sub] = race_val + chosen
         else:
             merged_substats[sub] = race_val
