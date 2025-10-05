@@ -1,0 +1,795 @@
+{
+    "akolita": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","leczenie",["nauka (astronomia)","nauka (historia)"],"nauka (teologia)","przekonywanie","spostrzegawczość","znajomość języka (klasyczny)","znajomość języka (staroświatowy)"],
+  "abilities": [["bardzo silny","szybki refleks"],["charyzmatyczny","urodzony wojownik"],"przemawianie"],
+  "equipment": ["szaty kapłańskie","symbol boga"]
+  },
+    "banita": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["opieka nad zwierzętami","wiedza (Imperium)"],["plotkowanie","sekretne znaki (złodziei)"],["powożenie","jeździectwo"],"skradanie się","spostrzegawczość","ukrywanie się","unik","wspinaczka",["zastawianie pułapek","pływanie"]],
+  "abilities": [["strzał mierzony","ogłuszanie"],["wędrowiec","łotrzyk"]],
+  "equipment": ["łuk","10 strzał","lekki pancerz (skórzany kaftan)","tarcza"]
+  },
+    "berserker z norski": {
+  "stats": { "WW": [0,5,10,15], "US": [0], "K": [0,5,10], "ODP": [0,5,10], "Zr": [0], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["kuglarstwo (gawędziarstwo)","mocna głowa","pływanie","wiedza (Norska)","zastraszanie","znajomość języka (norski)"],
+  "abilities": ["broń specjalna (dwuręczna)","groźny","szał bojowy","szybkie wyciągnięcie"],
+  "equipment": [["broń dwuręczna","tarcza"],"lekki pancerz (skórzany kaftan)","butelka gorzałki"]
+  },
+    "chłop": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0,5], "ODP": [0,5,10], "Zr": [0], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["hazard","kuglarstwo (taniec)","kuglarstwo (śpiew)"],["opieka nad zwierzętami","przekonywanie"],["oswajanie","rzemiosło (gotowanie)"],["powożenie","rzemiosło (wyrób łuków)"],["sztuka przetrwania","rzemiosło (uprawa ziemi)"],["tresura","pływanie"],"ukrywanie się",["wioślarstwo","zastawianie pułapek"],["wspinaczka","skradanie się"]],
+  "abilities": [["chodu!","broń specjalna (proca)"],["twardziel","wędrowiec"]],
+  "equipment": [["Proca","Kij"],"Skórzany bukłak"]
+  },
+    "ciura obozowa": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["opieka nad zwierzętami","powożenie"],"plotkowanie",["przekonywanie","wycena"],"przeszukiwanie",["rzemiosło (gotowanie)","rzemiosło (handel)","rzemiosło (kartografia)","rzemiosło (kowalstwo)","rzemiosło (krawiectwo)","rzemiosło (płatnerstwo)","rzemiosło (rusznikarstwo)","rzemiosło (wyrób łuków)","rzemiosło (zielarstwo)"],"spostrzegawczość","targowanie",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (tileański)"],"zwinne palce"],
+  "abilities": ["chodu!",["odporność na choroby","obycie w obyczajach"],["twardziel","charyzmatyczny"],["żyłka handlowa","bijatyka"]],
+  "equipment": [["talizman szczęścia","narzędzia (rzemieślnika)"],"sakiewka","namiot"]
+  },
+    "cyrkowiec": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["kuglarstwo (dowolne dwa)",["opieka nad zwierzętami","pływanie"],"przekonywanie","spostrzegawczość","wiedza (Imperium)",["wycena","plotkowanie"],"znajomość języka (staroświatowy)",["brzuchomówstwo","gadanie","hipnoza","jeździectwo","oswajanie","tresura","wspinaczka","zwinne palce"]],
+  "abilities": [["bardzo silny","broń specjalna (rzucana)","naśladowca","przemawianie","strzał mierzony","szybki refleks","szybkie wyciągnięcie","woltyżerka"]],
+  "equipment": ["lekki pancerz (skórzany kaftan)",["2 noże do rzucania","2 topory do rzucania","instrument muzyczny (dowolny)","narzędzia (kuglarza)"],["kostium cyrkowy (dowolny)","ubranie dobrej jakości"]]
+  },
+    "cyrulik": {
+  "stats": { "WW": [0,5], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","leczenie",["powożenie","pływanie"],"przekonywanie","rzemiosło (aptekarstwo)","spostrzegawczość","targowanie",["znajomość języka (bretoński)","znajomość języka (staroświatowy)","znajomość języka (tileański)"]],
+  "abilities": [["charyzmatyczny","niezwykle odporny"],"chirurgia",["odporność na choroby","błyskotliwość"]],
+  "equipment": ["narzędzia (cyrulika)"]
+  },
+    "fanatyk": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5,10], "Zr": [0], "Int": [0], "SW": [0,5,10], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","nauka (teologia)","przekonywanie","wiedza (Imperium)","zastraszanie"],
+  "abilities": ["broń specjalna (korbacze)",["opanowanie","bardzo silny"],"przemawianie",["twardziel","charyzmatyczny"]],
+  "equipment": [["korbacz","morgenstern"],"lekki pancerz (skórzana kurta)",["butelka spirytusu","gorzałka dobrej jakości"]]
+  },
+    "flisak": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["mocna głowa","plotkowanie"],"nawigacja","pływanie",["sekretny język (łowców)","znajomość języka (kislevski)"],"spostrzegawczość","sztuka przetrwania",["wiedza (Imperium)","wiedza (Kislev)"],"wioślarstwo","żeglarstwo"],
+  "abilities": ["obieżyświat","wyczucie kierunku"],
+  "equipment": ["lekki pancerz (skórzana kurta)","łódź wiosłowa"]
+  },
+    "giermek": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0,5], "Zr": [0], "Int": [0], "SW": [0], "Ogd": [0,5] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["jeździectwo",["nauka (genealogia/heraldyka)","wiedza (Bretonia)"],"opieka nad zwierzętami",["przekonywanie","plotkowanie"],"tresura","unik",["znajomość języka (bretoński)","znajomość języka (staroświatowy)"]],
+  "abilities": ["broń specjalna (kawaleryjska)","etykieta","silny cios"],
+  "equipment": ["lanca","średni pancerz (kaftan kolczy, czepek kolczy i skórzana kurta)","tarcza","koń z siodłem i uprzężą"]
+  },
+    "gladiator": {
+  "stats": { "WW": [0,5,10,15], "US": [0], "K": [0], "ODP": [0,5,10], "Zr": [0,5,10], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["unik","zastraszanie"],
+  "abilities": [["bardzo silny","odporność psychiczna"],"broń specjalna (dwuręczna)","broń specjalna (korbacze)","broń specjalna (parująca)",["rozbrajanie","zapasy"],"silny cios",["szybkie wyciągnięcie","morderczy atak"]],
+  "equipment": [["korbacz","broń dwuręczna"],"kastet","średni pancerz (kaftan kolczy i skórzana kurta)",["tarcza","puklerz"]]
+  },
+    "goniec": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 1, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["nawigacja","pływanie","sekretne znaki (zwiadowców)","spostrzegawczość","sztuka przetrwania","unik"],
+  "abilities": [["bardzo szybki","szósty zmysł"],["bardzo wytrzymały","bardzo silny"],"błyskawiczne przeładowanie","chodu!","wyczucie kierunku"],
+  "equipment": ["kusza","10 bełtów","lekki pancerz (skórzana kurta)","mikstura lecznicza","talizman szczęścia"]
+  },
+    "górnik": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0,5,10], "ODP": [0,5], "Zr": [0], "Int": [0,5], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["nawigacja","opieka nad zwierzętami",["rzemiosło (górnictwo)","rzemiosło (górnictwo odkrywkowe)"],"spostrzegawczość",["ukrywanie się","powożenie"],"wspinaczka",["wycena","sztuka przetrwania"]],
+  "abilities": [["bardzo wytrzymały","urodzony wojownik"],"broń specjalna (dwuręczna)","wyczucie kierunku"],
+  "equipment": ["broń dwuręczna (dwuręczny kilof)","lekki pancerz (skórzana kurta)","kilof","łopata","latarnia sztormowa","olej do latarni"]
+  },
+    "guślarz": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0,5], "Zr": [0,5], "Int": [0,5], "SW": [0,5,10], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 1, "PO": 0, "PP": 0 },
+  "skills": [["leczenie","hipnoza"],["opieka nad zwierzętami","targowanie"],["oswajanie","rzemiosło (aptekarstwo)"],["przekonywanie","zastraszanie"],"przeszukiwanie","splatanie magii","spostrzegawczość","wykrywanie magii"],
+  "abilities": ["gusła","magia prosta (gusła)"],
+  "equipment": ["mikstura lecznicza","płaszcz z kapturem"]
+  },
+    "hiena cmentarna": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["otwieranie zamków","skradanie się"],"przeszukiwanie","spostrzegawczość",["ukrywanie się","sztuka przetrwania"],["wiedza (Imperium)","sekretne znaki (złodziei)"],"wspinaczka","wycena",["znajomość języka (eltharin)","znajomość języka (khazalid)","znajomość języka (klasyczny)"]],
+  "abilities": [["szczęście","szósty zmysł"],["wykrywanie pułapek","grotołaz"]],
+  "equipment": ["lekki pancerz (skórzana kurta)","łom","latarnia","olej do latarni","10 metrów liny","2 worki"]
+  },
+    "kanciarz": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["gadanie",["hazard","sekretne znaki (złodziei)"],["kuglarstwo (aktorstwo)","kuglarstwo (gawędziarstwo)"],["plotkowanie","targowanie"],"przekonywanie",["przeszukiwanie","sekretny język (złodziejski)"],"spostrzegawczość","wycena","znajomość języka (staroświatowy)"],
+  "abilities": [["chodu!","łotrzyk"],"przemawianie",["szczęście","szósty zmysł"]],
+  "equipment": [["ubranie najlepszej jakości","zestaw kości do gry","talia kart"],"1k10 zk"]
+  },
+    "kozak kislewski": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0,5,10], "Zr": [0], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["hazard","targowanie"],"mocna głowa","przeszukiwanie","spostrzegawczość","sztuka przetrwania","unik","wiedza (Kislev)","znajomość języka (kislevski)"],
+  "abilities": ["broń specjalna (dwuręczna)","morderczy atak"],
+  "equipment": ["łuk","10 strzał","broń dwuręczna (dwuręczny topór)","średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)"]
+  },
+    "leśnik": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5,10], "ODP": [0], "Zr": [0,5], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["sekretne znaki (łowców)","sekretny język (łowców)","skradanie się","spostrzegawczość",["tropienie","zastawianie pułapek"],"ukrywanie się","wspinaczka"],
+  "abilities": [["bardzo szybki","niezwykle odporny"],"broń specjalna (dwuręczna)","wędrowiec"],
+  "equipment": ["broń dwuręczna (dwuręczny topór)","lekki pancerz (skórzana kurta)","odtrutki"]
+  },
+    "łowca": {
+  "stats": { "WW": [0], "US": [0,5,10,15], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["przeszukiwanie","pływanie"],"sekretne znaki (łowców)",["skradanie się","zastawianie pułapek"],"spostrzegawczość","sztuka przetrwania","tropienie","ukrywanie się"],
+  "abilities": ["błyskawiczne przeładowanie",["strzelec wyborowy","wędrowiec"],["szybki refleks","niezwykle odporny"],["twardziel","broń specjalna (długi łuk)"]],
+  "equipment": ["długi łuk","10 strzał",["2 potraszki","wnyki na zwierzęta"],"odtrutki"]
+  },
+    "łowca nagród": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0,5], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["przeszukiwanie","skradanie się","spostrzegawczość","sztuka przetrwania","śledzenie","tropienie","zastraszanie"],
+  "abilities": ["broń specjalna (unieruchamiająca)",["strzał mierzony","silny cios"],["strzelec wyborowy","ogłuszanie"],"wędrowiec"],
+  "equipment": ["kusza","10 bełtów","sieć","lekki pancerz (skórzany kaftan i skórzany hełm)","kajdany","10 metrów liny"]
+  },
+    "mieszczanin": {
+  "stats": { "WW": [0,5], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["plotkowanie","czytanie i pisanie"],"powożenie","przeszukiwanie","spostrzegawczość","targowanie",["wiedza (Imperium)","mocna głowa"],"wycena",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (tileański)"],"znajomość języka (staroświatowy)"],
+  "abilities": [["błyskotliwość","charyzmatyczny"],"żyłka handlowa"],
+  "equipment": ["ubranie dobrej jakości","liczydło","latarnia"]
+  },
+    "mytnik": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0,5,10], "Zr": [0,5], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["plotkowanie","targowanie"],"przeszukiwanie","spostrzegawczość","unik","wycena",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (tileański)"]],
+  "abilities": [["szybki refleks","strzelec wyborowy"]],
+  "equipment": ["kusza","10 bełtów","średni pancerz (kaftan kolczy i skórzany kaftan)","tarcza","zamykana na kłódkę skrzynia","1k10 zk"]
+  },
+    "najemnik": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5], "Zr": [0,5], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["opieka nad zwierzętami","hazard"],["plotkowanie","targowanie"],["powożenie","jeździectwo"],"sekretny język (bitewny)",["spostrzegawczość","przeszukiwanie"],"unik",["wiedza (Bretonia, Kislev albo Tilea)"],["znajomość języka (tileański)","pływanie"]],
+  "abilities": [["błyskawiczne przeładowanie","silny cios"],["rozbrajanie","szybkie wyciągnięcie"],["strzał mierzony","ogłuszanie"]],
+  "equipment": ["kusza","10 bełtów","średni pancerz (kaftan kolczy i skórzana kurta)","tarcza","mikstura lecznicza"]
+  },
+    "ochotnik": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["hazard","plotkowanie"],"opieka nad zwierzętami",["powożenie","pływanie"],"przeszukiwanie","rzemiosło (dowolne)","spostrzegawczość","sztuka przetrwania","unik"],
+  "abilities": [["broń specjalna (dwuręczna)","błyskawiczne przeładowanie"],"silny cios"],
+  "equipment": [["halabarda","łuk i 10 strzał"],"lekki pancerz (skórzana kurta i skórzany hełm)","mundur"]
+  },
+    "ochroniarz": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5], "Int": [0], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["leczenie","spostrzegawczość","unik","zastraszanie"],
+  "abilities": [["bardzo silny","niezwykle odporny"],"bijatyka","broń specjalna (parująca)","broń specjalna (rzucana)","ogłuszanie",["rozbrajanie","szybkie wyciągnięcie"]],
+  "equipment": [["dwa topory","noże do rzucania"],"kastety","lekki pancerz (skórzana kurta)","puklerz"]
+  },
+    "oprych": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0], "Int": [0], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["hazard","mocna głowa","sekretny język (złodziejski)","unik","zastraszanie"],
+  "abilities": [["morderczy atak","zapasy"],["odporność na trucizny","szybkie wyciągnięcie"],"ogłuszanie",["opanowanie","szybki refleks"],"rozbrajanie"],
+  "equipment": ["kastety","średni pancerz (kaftan kolczy i skórzany kaftan)"]
+  },
+    "paź": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","gadanina","nauka (genealogia/heraldyka)",["plotkowanie","znajomość języka (bretoński)","znajomość języka (staroświatowy)"],"przeszukiwanie","spostrzegawczość","targowanie","wycena"],
+  "abilities": ["etykieta",["opanowanie","charyzmatyczny"],["żyłka handlowa","obieżyświat"]],
+  "equipment": ["2 komplety ubrań najlepszej jakości","liberia","perfumy","mieszek"]
+  },
+    "podżegacz": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["nauka (historia)","plotkowanie"],["nauka (prawo)","wiedza (Imperium)"],"przekonywanie","spostrzegawczość","ukrywanie się",["znajomość języka (bretoński)","znajomość języka (tileański)"],"znajomość języka (staroświatowy)"],
+  "abilities": ["chodu!",["opanowanie","bijatyka"],"przemawianie"],
+  "equipment": ["lekki pancerz (skórzana kurta)","ubranie dobrej jakości","2k10 ulotek różnej treści"]
+  },
+    "porywacz zwłok": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0,5], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["plotkowanie","targowanie"],"powożenie","przeszukiwanie","sekretne znaki (złodziei)","skradanie się","spostrzegawczość","wspinaczka"],
+  "abilities": ["chodu!",["łotrzyk","odporność psychiczna"],"odporność na choroby"],
+  "equipment": ["latarnia","olej do latarni","kilof","łopata","worek"]
+  },
+    "posłaniec": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["jeździectwo","nawigacja","opieka nad zwierzętami","pływanie","sekretne znaki (zwiadowców)","spostrzegawczość","sztuka przetrwania",["wiedza (Imperium)","wiedza (Jałowa Kraina)","plotkowanie"],"znajomość języka (staroświatowy)"],
+  "abilities": ["obieżyświat","wyczucie kierunku"],
+  "equipment": ["lekki pancerz (skórzana kurta)","tarcza",["koń z siodłem i uprzężą","kuc dla niziołków z siodłem i uprzężą"],"tuba na mapy"]
+  },
+    "przemytnik": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["plotkowanie","sekretny język (złodziejski)"],"pływanie","powożenie","przeszukiwanie","skradanie się","spostrzegawczość","targowanie","wioślarstwo","wycena",["znajomość języka (bretoński)","znajomość języka (kislevski)","sekretne znaki (złodziei)"]],
+  "abilities": [["żyłka handlowa","łotrzyk"]],
+  "equipment": ["lekki pancerz (skórzana kurta)",["koń pociągowy i wóz","łódź wiosłowa"],"2 pochodnie"]
+  },
+    "przepatrywacz": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["jeździectwo","nawigacja","opieka nad zwierzętami","przeszukiwanie","skradanie się","spostrzegawczość","sztuka przetrwania","tropienie"],
+  "abilities": ["broń specjalna (unieruchamiająca)",["opanowanie","bardzo silny"],"wyczucie kierunku"],
+  "equipment": [["łuk i 10 strzał","kusza i 10 bełtów"],["bicz","arkan"],"sieć","lekki pancerz (skórzana kurta)","tarcza","koń z siodłem i uprzężą","10 metrów liny"]
+  },
+    "przewoźnik": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0,5,10], "ODP": [0,5], "Zr": [0,5], "Int": [0], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["plotkowanie","zastraszanie"],"pływanie","przekonywanie","spostrzegawczość","targowanie","wiedza (Imperium)","wioślarstwo",["wycena","sekretny język (łowców)"]],
+  "abilities": [["broń specjalna (palna)","bijatyka"],["strzelec wyborowy","charyzmatyczny"]],
+  "equipment": [["kusza i 10 bełtów","garłacz z zapasem amunicji na 10 strzałów"],"lekki pancerz (skórzana kurta)"]
+  },
+    "rybak": {
+  "stats": { "WW": [0], "US": [0,5], "K": [0,5,10], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["mocna głowa","targowanie"],["nawigacja","rzemiosło (handel)"],"pływanie","spostrzegawczość","sztuka przetrwania",["wiedza (Imperium)","wiedza (Jałowa Kraina)"],"wioślarstwo",["znajomość języka (staroświatowy)","znajomość języka (norski)"],"żeglarstwo"],
+  "abilities": [["twardziel","błyskotliwość"],["wyczucie kierunku","bijatyka"]],
+  "equipment": ["włócznia","sieć","lina z kotwiczką"]
+  },
+    "rzecznik rodu": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","plotkowanie","pływanie","przekonywanie","rzemiosło (handel)","sekretny język (gildii)","spostrzegawczość","targowanie",["wiedza (Imperium)","wiedza (Jałowa Kraina)"],"wycena"],
+  "abilities": [["obieżyświat","żyłka handlowa"]],
+  "equipment": ["lekki pancerz (skórzana kurta)","2 komplety ubrań dobrej jakości","przybory do pisania"]
+  },
+    "rzemieślnik": {
+  "stats": { "WW": [0], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["opieka nad zwierzętami","plotkowanie"],"powożenie","rzemiosło (dowolne dwa)","sekretny język (gildii)","spostrzegawczość","targowanie","wycena"],
+  "abilities": [["żyłka handlowa","błyskotliwość"]],
+  "equipment": ["lekki pancerz (skórzany kaftan)","1k10 zk"]
+  },
+    "rzezimieszek": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5,10], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["jeździectwo",["plotkowanie","targowanie"],"unik","zastraszanie"],
+  "abilities": ["bijatyka",["groźny","charyzmatyczny"],"morderczy atak","ogłuszanie",["rozbrajanie","szybkie wyciągnięcie"],"silny cios"],
+  "equipment": ["średni pancerz (kaftan kolczy i skórzana kurta)","tarcza","koń z siodłem i uprzężą"]
+  },
+    "skryba": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","nauka (dowolna)","rzemiosło (kaligrafia)","sekretny język (gildii)","spostrzegawczość",["wiedza (Imperium)","plotkowanie"],"znajomość języka (bretoński)","znajomość języka (klasyczny)",["znajomość języka (staroświatowy)","znajomość języka (tileański)"]],
+  "abilities": ["poliglota"],
+  "equipment": ["nóż","dwie świece woskowe","5 zapałek","ilustrowana księga","przybory do pisania","wosk do pieczęci"]
+  },
+    "sługa": {
+  "stats": { "WW": [0,5], "US": [0], "K": [0,5], "ODP": [0], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5,10], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["czytanie i pisanie","zwinne palce"],"gadanina",["opieka nad zwierzętami","rzemiosło (gotowanie)"],"plotkowanie",["powożenie","przeszukiwanie"],"spostrzegawczość",["targowanie","wycena"],"unik"],
+  "abilities": [["bardzo wytrzymały","szybki refleks"],["czuły słuch","chodu!"],["etykieta","twardziel"]],
+  "equipment": ["ubranie dobrej jakości","manierka","krzesiwo i hubka","latarnia sztormowa","olej do latarni"]
+  },
+    "strażnik": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["nauka (prawo)","plotkowanie","przeszukiwanie","spostrzegawczość","tropienie","unik","zastraszanie"],
+  "abilities": ["ogłuszanie",["opanowanie","błyskotliwość"],["rozbrajanie","bijatyka"],"silny cios"],
+  "equipment": ["lekki pancerz (skórzana kurta)","mundur","latarnia na drągu","olej do latarni"]
+  },
+    "strażnik dróg": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0], "Zr": [0,5,10], "Int": [0,5], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["jeździectwo","nawigacja","opieka nad zwierzętami","powożenie","przeszukiwanie","spostrzegawczość","sztuka przetrwania","tropienie","sekretny język (zwiadowców)",["wiedza (Imperium)","plotkowanie"]],
+  "abilities": ["broń specjalna (palna)",["szybkie wyciągnięcie","błyskawiczne przeładowanie"]],
+  "equipment": ["pistolet z 10 kulami i zapasem prochu","średni pancerz (kaftan kolczy i skórzana kurta)","tarcza",["lekki koń bojowy z siodłem i uprzężą","kuc dla niziołków z siodłem i uprzężą"],"10 metrów liny"]
+  },
+    "strażnik pól": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["nauka (nekromancja)","wiedza (Imperium)"],"przeszukiwanie","skradanie się","spostrzegawczość","sztuka przetrwania","tropienie","ukrywanie się"],
+  "abilities": [["bardzo szybki","błyskotliwość"],["strzał precyzyjny","błyskawiczne przeładowanie"],["wędrowiec","szybkie wyciągnięcie"]],
+  "equipment": ["proca z amunicją","kuc z siodłem i uprzężą","latarnia","olej do latarni","łopata"]
+  },
+    "strażnik więzienny": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5,10], "ODP": [0,5,10], "Zr": [0], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["dowodzenie",["leczenie","zwinne palce"],"mocna głowa","przeszukiwanie","spostrzegawczość","unik","zastraszanie"],
+  "abilities": ["broń specjalna (unieruchamiająca)","odporność na choroby","odporność na trucizny","zapasy"],
+  "equipment": [["bolas","sieć","arkan"],"butelka podłego wina","manierka"]
+  },
+    "szczurołap": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["opieka nad zwierzętami","przeszukiwanie","skradanie się","spostrzegawczość","tresura","ukrywanie się","zastawianie pułapek"],
+  "abilities": ["broń specjalna (proca)","grotołaz","odporność na choroby","odporność na trucizny"],
+  "equipment": ["proca z amunicją","4 pułapki na szczury","drąg z martwymi szczurami (1k10)","mały ale zajadły pies"]
+  },
+    "szermierz estalijski": {
+  "stats": { "WW": [0,5,10,15], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","nauka (anatomia)","unik","wiedza (Estalia)","znajomość języka (estalijski)"],
+  "abilities": [["brawura","szybki refleks"],"broń specjalna (szermiercza)","silny cios",["szybkie wyciągnięcie","morderczy atak"]],
+  "equipment": [["szpada","rapier"],"ubranie najlepszej jakości","perfumy","mikstura lecznicza"]
+  },
+    "szlachcic": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["gadanina","dowodzenie"],["hazard","plotkowanie"],"jeździectwo",["mocna głowa","kuglarstwo (muzykalność)"],"przekonywanie","wiedza (Imperium)","znajomość języka (staroświatowy)"],
+  "abilities": [["błyskotliwość","broń specjalna (szermiercza)"],["broń specjalna (parująca)","intrygant"],"etykieta",["szczęście","przemawianie"]],
+  "equipment": ["szpada","lewak","strój szlachecki z herbem rodu","koń z siodłem i uprzężą","1k10 zk","biżuteria o wartości 6k10 zk"]
+  },
+    "śmieciarz": {
+  "stats": { "WW": [0,5], "US": [0], "K": [0,5], "ODP": [0,5,10], "Zr": [0,5], "Int": [0], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["opieka nad zwierzętami","powożenie",["przekonywanie","plotkowanie"],"przeszukiwanie","spostrzegawczość","targowanie","wiedza (Imperium)","wycena"],
+  "abilities": [["opanowanie","łotrzyk"],["twardziel","odporność na choroby"]],
+  "equipment": ["wózek","3 worki"]
+  },
+    "tarczownik": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["nawigacja","spostrzegawczość","śledzenie","unik","wspinaczka"],
+  "abilities": [["czuły słuch","opanowanie"],"morderczy atak","ogłuszanie","silny cios","wyczucie kierunku"],
+  "equipment": ["kusza i 10 bełtów","średni pancerz (kolczuga, skórzana kurta i skórzane nogawice)","tarcza","10 metrów liny z kotwiczką","bukłak z wodą"]
+  },
+    "uczeń czarodzieja": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5], "Int": [0,5,10], "SW": [0,5,10,15], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 1, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie","język tajemny (magiczny)","nauka (magia)","przeszukiwanie","splatanie magii","spostrzegawczość","wykrywanie magii","znajomość języka (klasyczny)"],
+  "abilities": [["błyskotliwość","niezwykle odporny"],"magia prosta (tajemna)",["zmysł magii","dotyk mocy"]],
+  "equipment": ["kij","plecak","księga wiedzy tajemnej"]
+  },
+    "węglarz": {
+  "stats": { "WW": [0,5], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5], "Int": [0,5], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["powożenie","plotkowanie"],"przeszukiwanie","sekretne znaki (łowców)","spostrzegawczość","sztuka przetrwania","targowanie",["wiedza (Imperium)","ukrywanie się"],"wspinaczka"],
+  "abilities": [["błyskotliwość","bardzo silny"],"chodu!"],
+  "equipment": [["broń jednoręczna (topór)","broń jednoręczna (pałka)"],"3 pochodnie","krzesiwo i hubka"]
+  },
+    "włóczykij": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5], "SW": [0], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["kuglarstwo (gawędziarstwo)","kuglarstwo (śpiew)","kuglarstwo (taniec)","sekretne znaki (łowców)","sekretne znaki (złodziei)"],["leczenie","spostrzegawczość"],"nawigacja",["plotkowanie","sekretny język (łowców)","sekretny język (złodziejski)"],"skradanie się","sztuka przetrwania",["targowanie","pływanie"],["wiedza (Bretonia)","wiedza (Estalia)","wiedza (Kislev)","wiedza (Tilea)"]],
+  "abilities": [["bardzo szybki","wędrowiec"],"obieżyświat",["strzelec wyborowy","wyczucie kierunku"]],
+  "equipment": ["plecak","prowiant (1 tydzień)","namiot","bukłak z wodą"]
+  },
+    "wojownik klanowy": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["leczenie","przeszukiwanie"],"skradanie się","spostrzegawczość","sztuka przetrwania","tropienie","ukrywanie się","unik","wspinaczka"],
+  "abilities": [["błyskawiczne przeładowanie","urodzony wojownik"],["strzelec wyborowy","wędrowiec"]],
+  "equipment": ["elfi łuk","10 strzał","lekki pancerz (skórzana kurta)"]
+  },
+    "woźnica": {
+  "stats": { "WW": [0,5], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5], "Ogd": [0,5] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["leczenie","jeździectwo"],"nawigacja","opieka nad zwierzętami",["plotkowanie","targowanie"],"powożenie","sekretne znaki (łowców)","spostrzegawczość",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (tileański)"]],
+  "abilities": ["broń specjalna (palna)",["szybkie wyciągnięcie","obieżyświat"]],
+  "equipment": ["garłacz z zapasem amunicji na 10 strzałów","średni pancerz (kaftan kolczy i skórzana kurta)","instrument muzyczny (róg woźnicy)"]
+  },
+    "zabójca trolli": {
+  "stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5], "Zr": [0,5], "Int": [0], "SW": [0,5,10], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["mocna głowa","unik","zastraszanie"],
+  "abilities": ["bijatyka","broń specjalna (dwuręczna)",["rozbrajanie","szybkie wyciągnięcie"],"silny cios",["szybki refleks","niezwykle odporny"],"twardziel"],
+  "equipment": ["broń dwuręczna","lekki pancerz (skórzany kaftan)",["butelka spirytusu","gorzałka kiepskiej jakości"]]
+  },
+    "zarządca": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0,5], "ODP": [0], "Zr": [0], "Int": [0,5,10], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["dowodzenie","nawigacja"],"jeździectwo","nauka (prawo)",["opieka nad zwierzętami","plotkowanie"],"przekonywanie","spostrzegawczość",["zastraszanie","wiedza (Imperium)"]],
+  "abilities": [["etykieta","geniusz arytmetyczny"],"przemawianie"],
+  "equipment": ["lekki pancerz (skórzana kurta i skórzany hełm)","ubranie dobrej jakości","koń z siodłem i uprzężą"]
+  },
+    "złodziej": {
+  "stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5,10,15], "Int": [0,5], "SW": [0], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["czytanie i pisanie","zwinne palce"],["hazard","otwieranie zamków"],["przekonywanie","wspinaczka"],"przeszukiwanie",["sekretny język (złodziejski)","sekretne znaki (złodziei)"],"skradanie się","spostrzegawczość","ukrywanie się",["wycena","charakteryzacja"]],
+  "abilities": [["geniusz arytmetyczny","wykrywanie pułapek"],["ulicznik","łotrzyk"]],
+  "equipment": ["lekki pancerz (skórzany kaftan)","worek","wytrychy","10 metrów liny"]
+  },
+    "żak": {
+  "stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5], "Ogd": [0,5,10] },
+  "substats": { "A": [0], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["czytanie i pisanie",["leczenie","przeszukiwanie"],"nauka (dowolna)",["nauka (dowolna)","plotkowanie"],["przekonywanie","mocna głowa"],"spostrzegawczość","znajomość języka (klasyczny)","znajomość języka (staroświatowy)"],
+  "abilities": [["błyskotliwość","charyzmatyczny"],["etykieta","poliglota"],["obieżyświat","geniusz arytmetyczny"]],
+  "equipment": ["dwie księgi związane z wybraną dziedziną nauki","przybory do pisania"]
+  },
+    "żeglarz": {
+  "stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5,10], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["mocna głowa","spostrzegawczość"],"pływanie","unik",["wiedza (Bretonia)","wiedza (Norska)","wiedza (Tilea)","wiedza (Jałowa Kraina)"],"wioślarstwo","wspinaczka",["znajomość języka (bretoński)","znajomość języka (norski)","znajomość języka (tileański)"],"żeglarstwo"],
+  "abilities": ["obieżyświat",["silny cios","brawura"],["twardziel","bijatyka"]],
+  "equipment": ["lekki pancerz (skórzany kaftan)","butelka gorzałki kiepskiej jakości"]
+  },
+    "żołnierz": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": [["hazard","plotkowanie"],["opieka nad zwierzętami","leczenie"],["powożenie","jeździectwo"],"unik",["wiedza (Imperium)","spostrzegawczość"],"zastraszanie"],
+  "abilities": [["broń specjalna (palna)","broń specjalna (dwuręczna)"],["morderczy atak","błyskawiczne przeładowanie"],["ogłuszanie","strzał precyzyjny"],["rozbrajanie","szybkie wyciągnięcie"],["strzał mierzony","silny cios"]],
+  "equipment": [["broń dwuręczna (halabarda)","rusznica z amunicją na 10 strzałów"],"lekki pancerz (skórznia)","mundur","tarcza"]
+  },
+    "żołnierz okrętowy": {
+  "stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5,10], "ODP": [0], "Zr": [0,5], "Int": [0], "SW": [0,5], "Ogd": [0] },
+  "substats": { "A": [0,1], "Żyw": [0,1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+  "skills": ["mocna głowa",["plotkowanie","sekretny język (bitewny)"],"pływanie","unik",["wiedza (Jałowa Kraina)","hazard"] ,"wioślarstwo","zastraszanie"],
+  "abilities": ["ogłuszanie",["rozbrajanie","szybkie wyciągnięcie"],"silny cios"],
+  "equipment": [["łuk i 10 strzał","kusza i 10 bełtów"],"lekki pancerz (skórzana kurta)","tarcza","10 metrów liny z kotwiczką"]
+  },
+
+"arcykapłan": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [5,10,15], "ODP": [5,10,15], "Zr": [5,10,15], "Int": [10,15,20], "SW": [20,25,30], "Ogd": [15,20,25] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 3, "PO": 0, "PP": 0 },
+"skills": [["jeździectwo","pływanie"],"język tajemny (magiczny)","leczenie","nauka (dowolne trzy)","nauka (teologia)","plotkowanie","przekonywanie","splatanie magii","wiedza (dowolne dwie)","wykrywanie magii","zastraszanie","znajomość języka (dowolne trzy)"],
+"abilities": [["dotyk mocy","odporność"],"etykieta","magia powszechna (dowolne dwie)",["pancerz wiary","morderczy pocisk"],["zmysł magii","medytacja"]],
+"equipment": ["relikwia"]
+},
+"arcymag": {
+"stats": { "WW": [5,10,15], "US": [5,10,15], "K": [0], "ODP": [5,10,15], "Zr": [10,15,20], "Int": [20,25,30], "SW": [30,35,40], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [3,4,5], "S": [0], "Wt": [0], "Sz": 0, "Mag": 4, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie",["język tajemny (demoniczny)","język tajemny (tajemny elf)"],"język tajemny (magiczny)","nauka (dowolne trzy)","nauka (magia)",["przekonywanie","zastraszanie"],"splatanie magii","wiedza (dowolne trzy)","wykrywanie magii","znajomość języka (dowolne cztery)"],
+"abilities": [["czarnoksięstwo","medytacja"],["dotyk mocy","twardziel"],"magia powszechna (dowolne dwie)",["zmysł magii","morderczy pocisk"]],
+"equipment": ["3 magiczne przedmioty","12 ksiąg magii tajemnej"]
+},
+"arystokrata": {
+"stats": { "WW": [15,20,25], "US": [5,10,15], "K": [0,5,10], "ODP": [0], "Zr": [0,5,10], "Int": [10,15,20], "SW": [10,15,20], "Ogd": [20,25,30] },
+"substats": { "A": [0,1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","jeździectwo","nauka (genealogia/heraldyka)","nauka (historia albo strategia/taktyka)","plotkowanie","przekonywanie","spostrzegawczość","wiedza (Imperium)","wycena","znajomość języka (klasyczny)","znajomość języka (staroświatowy)"],
+"abilities": ["broń specjalna (szermiercza)","krasomówstwo","przemawianie"],
+"equipment": [["rapier najlepszej jakości","szpada najlepszej jakości"],"strój arystokraty najlepszej jakości","rumak z siodłem i uprzężą","500 zk","biżuteria o wartości 500 zk"]
+},
+"bard": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0], "Zr": [5,10,15], "Int": [0,5,10], "SW": [0,5], "Ogd": [15,20,25] },
+"substats": { "A": [0], "Żyw": [0,1,2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","kuglarstwo (muzykalność)","kuglarstwo (śpiew)","plotkowanie","przekonywanie","spostrzegawczość","wiedza (dowolne dwie)",["znajomość języka (bretoński)","znajomość języka (eltharin)","znajomość języka (tileański)"]],
+"abilities": ["etykieta","przemawianie"],
+"equipment": ["kostium",["instrument muzyczny (lutnia)","instrument muzyczny (mandolina)"]]
+},
+"biczownik": {
+"stats": { "WW": [5,10,15], "US": [0], "K": [5,10], "ODP": [5,10,15], "Zr": [0,5], "Int": [0], "SW": [10,15,20], "Ogd": [0,5,10] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["leczenie","nauka (teologia)","przekonywanie","zastraszanie","znajomość języka (klasyczny)"],
+"abilities": [["broń specjalna (korbacz)","broń specjalna (dwuręczna)"],"nieustraszony","silny cios"],
+"equipment": [["korbacz","broń dwuręczna"],["butelka spirytusu","gorzałka dobrej jakości"],"symbol religijny","relikwia"]
+},
+"bosman": {
+"stats": { "WW": [5,10,15], "US": [5,10,15], "K": [0,5,10], "ODP": [5,10,15], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5,10] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","hazard","mocna głowa","plotkowanie","pływanie","rzemiosło (szkutnictwo)","unik","wiedza (dowolne dwie)","wioślarstwo","zastraszanie",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (norski)"],"żeglarstwo"],
+"abilities": ["bijatyka","obieżyświat","odporność na choroby"],
+"equipment": ["lekki pancerz (skórzana kurta)"]
+},
+"demagog": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [10,15,20], "SW": [5,10,15], "Ogd": [20,25,30] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["charakteryzacja","dowodzenie","gadanina","nauka (historia)","nauka (prawo)","plotkowanie","przekonywanie","spostrzegawczość","ukrywanie się","unik","wiedza (Imperium)","zastraszanie","znajomość języka (staroświatowy)"],
+"abilities": ["bijatyka",["etykieta","łotrzyk"],"krasomówstwo","przemawianie"],
+"equipment": ["lekki pancerz (skórzana kurta i skórzany hełm)"]
+},
+"dworzanin": {
+"stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0], "Zr": [0,5,10], "Int": [10,15,20], "SW": [10,15,20], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie",["dowodzenie","kuglarstwo (dowolne)"],"gadanina","jeździectwo",["nauka (sztuka)","nauka (historia)","hazard"],"plotkowanie","przekonywanie","spostrzegawczość",["wiedza (Bretonia)","wiedza (Tilea)"],"wycena",["znajomość języka (bretoński)","znajomość języka (tileański)"],"znajomość języka (staroświatowy)"],
+"abilities": [["błyskotliwość","charyzmatyczny"],["intrygant","broń specjalna (szermiercza)"],"przemawianie",["żyłka handlowa","etykieta"]],
+"equipment": ["4 stroje szlacheckie","100 zk","paź"]
+},
+"fechtmistrz": {
+"stats": { "WW": [35,40], "US": [35,40], "K": [20,25], "ODP": [20,25], "Zr": [25,30], "Int": [0], "SW": [15,20], "Ogd": [0] },
+"substats": { "A": [2], "Żyw": [7,8], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["spostrzegawczość","unik","wycena","zastraszanie"],
+"abilities": ["artylerzysta",["bardzo szybki","szybki refleks"],"błyskawiczne przeładowanie","błyskawiczny blok","broń specjalna (dowolne trzy)","strzał precyzyjny","szybkie wyciągnięcie","zapasy"],
+"equipment": ["dowolne sześć sztuk broni najlepszej jakości","średni pancerz (kaftan kolczy i skórzana kurta)"]
+},
+"herold": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5], "Zr": [5,10,15], "Int": [5,10,15], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","gadanina","jeździectwo","nauka (genealogia/heraldyka)","nauka (historia)","plotkowanie","przekonywanie","spostrzegawczość","targowanie",["wiedza (Bretonia)","wiedza (Kislev)","wiedza (Tilea)"],"wiedza (Imperium)","wycena",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (tileański)"],"znajomość języka (staroświatowy)"],
+"abilities": ["etykieta","krasomówstwo","przemawianie"],
+"equipment": ["perfumy","mieszek","2 komplety ubrań najlepszej jakości","liberia"]
+},
+"herszt banitów": {
+"stats": { "WW": [10,15,20], "US": [20,25,30], "K": [0,5,10], "ODP": [10,15,20], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [2], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","jeździectwo","nauka (strategia/taktyka)",["sekretne znaki (zwiadowców)","sekretne znaki (złodziei)"],"sekretny język (bitewny)","sekretny język (złodziejski)","skradanie się","spostrzegawczość","tropienie","ukrywanie się","wiedza (Imperium)","wspinaczka"],
+"abilities": ["błyskawiczne przeładowanie","błyskawiczny blok","strzał precyzyjny","strzał przebijający","szybkie wyciągnięcie"],
+"equipment": [["łuk i 10 strzał","kusza i 10 bełtów"],"średni pancerz (koszulka kolcza i skórzana kurta)","koń z siodłem i uprzężą","grupa banitów"]
+},
+"inżynier": {
+"stats": { "WW": [0,5,10], "US": [5,10,15], "K": [5], "ODP": [5], "Zr": [0,5,10], "Int": [10,15,20], "SW": [0,5,10], "Ogd": [0] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","nauka (inżynieria)","nauka (mechanika)",["powożenie","jeździectwo"],"rzemiosło (rusznikarstwo)","spostrzegawczość",["wiedza (krasnoludy)","wiedza (Tilea)"],["znajomość języka (khazalid)","znajomość języka (tileański)"]],
+"abilities": ["artylerzysta",["broń specjalna (mechaniczna)","broń specjalna (palna)"]],
+"equipment": ["lekki pancerz (skórzana kurta)","narzędzia (inżyniera)","6 długich gwoździ"]
+},
+  "kapitan": {
+"stats": { "WW": [15,20,25], "US": [10,15,20], "K": [5,10,15], "ODP": [10,15,20], "Zr": [10,15,20], "Int": [10,15,20], "SW": [15,20,25], "Ogd": [20,25,30] },
+"substats": { "A": [1,2], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","nauka (strategia/taktyka)","pływanie",["rzemiosło (kartografia)","rzemiosło (szkutnictwo)"],"spostrzegawczość","tresura","unik","wiedza (dowolne trzy)","znajomość języka (dowolne trzy)","żeglarstwo"],
+"abilities": [["błyskawiczny blok","brawura"],"broń specjalna (szermiercza)","obieżyświat","rozbrajanie","silny cios"],
+"equipment": ["rapier","średni pancerz (skórzana kurta)","luneta","żaglowiec"]
+},
+"kapłan": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5,10], "Zr": [0,5], "Int": [0,5,10], "SW": [10,15,20], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie",["jeździectwo","pływanie"],"język tajemny (magiczny)","leczenie","nauka (dowolna)","nauka (teologia)","plotkowanie","przekonywanie","splatanie magii","spostrzegawczość","wiedza (dowolne dwie)","wykrywanie magii","znajomość języka (dowolne dwa)"],
+"abilities": ["magia prosta (kapłańska)",["morderczy atak","ogłuszanie"],["pancerz wiary","krasomówstwo"]],
+"equipment": ["modlitewnik","przybory do pisania"]
+},
+"karczmarz": {
+"stats": { "WW": [0,5,10], "US": [0,5], "K": [0,5], "ODP": [0,5,10], "Zr": [10,15,20], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": [["czytanie i pisanie","zwinne palce"],["gadanina","czytanie z warg"],"mocna głowa","plotkowanie","przekonywanie","rzemiosło (gotowanie)","spostrzegawczość","targowanie","wiedza (Imperium)","wycena",["znajomość języka (bretoński)","znajomość języka (kislevski)","znajomość języka (staroświatowy)","znajomość języka (tileański)"]],
+"abilities": [["etykieta","łotrzyk"],"ogłuszanie",["żyłka handlowa","bijatyka"]],
+"equipment": ["karczma",["jeden służący","więcej służących"]]
+},
+"książę złodziei": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [5,10,15], "ODP": [5,10,15], "Zr": [10,15,20], "Int": [15,20,25], "SW": [10,15,20], "Ogd": [20,25,30] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","plotkowanie","przekonywanie","sekretne znaki (złodziei)","sekretny język (złodziejski)","spostrzegawczość","targowanie","torturowanie","unik","wiedza (Imperium)","wycena","zastraszanie"],
+"abilities": [["broń specjalna (kusze)","broń specjalna (parująca)"],"groźny","twardziel","odporność na trucizny","przemawianie","szósty zmysł",["żyłka handlowa","intrygant"]],
+"equipment": [["kusza pistoletowa i 10 bełtów","łamacz mieczy"],"ubranie najlepszej jakości","odtrutki","100 zk","organizacja przestępcza"]
+},
+  "kupiec": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [15,20,25], "SW": [10,15,20], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","jeździectwo","plotkowanie","powożenie","przekonywanie","rzemiosło (handel)","sekretny język (gildii)","targowanie","wiedza (dowolne dwie)","wycena",["znajomość języka (bretoński)","znajomość języka (estalijski)","znajomość języka (kislevski)","znajomość języka (norski)"],"znajomość języka (staroświatowy)"],
+"abilities": ["geniusz arytmetyczny",["żyłka handlowa","łotrzyk"]],
+"equipment": ["dom w mieście","magazyn",["1000 zk (w monecie)","1000 zk (w towarach)"]]
+},
+"leśny duch": {
+"stats": { "WW": [10,15,20], "US": [20,25,30], "K": [5,10,15], "ODP": [5,10,15], "Zr": [15,20,25], "Int": [10,15,20], "SW": [10,15,20], "Ogd": [0] },
+"substats": { "A": [0], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie z warg","nawigacja","sekretne znaki (łowców)","sekretny język (łowców)","skradanie się","spostrzegawczość","sztuka przetrwania","śledzenie","tropienie","ukrywanie się","unik","zastawianie pułapek","zastraszanie"],
+"abilities": ["błyskawiczne przeładowanie","błyskawiczny blok","strzał precyzyjny","strzał przebijający","szybkie wyciągnięcie",["twardziel","bardzo szybki"]],
+"equipment": ["elfi łuk i 10 strzał","lekki pancerz (skórznia najlepszej jakości)"]
+},
+"łowca czarownic": {
+"stats": { "WW": [20,25,30], "US": [20,25,30], "K": [5,10,15], "ODP": [5,10,15], "Zr": [5,10,15], "Int": [5,10,15], "SW": [25,30,35], "Ogd": [10,15,20] },
+"substats": { "A": [1,2], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","jeździectwo","nauka (magia)","nauka (nekromancja)","nauka (teologia)","plotkowanie","przekonywanie","przeszukiwanie","skradanie się","spostrzegawczość","wiedza (Imperium)","zastraszanie","znajomość języka (dowolny)"],
+"abilities": ["błyskawiczny blok","broń specjalna (kusze)","broń specjalna (rzucana)","broń specjalna (unieruchamiająca)","groźny","odwaga","przemawianie","silny cios","szósty zmysł",["szybki refleks","strzelec wyborowy"]],
+"equipment": ["kusza pistoletowa i 10 bełtów","broń jednoręczna najlepszej jakości",["4 noże","gwiazdki do rzucania"],"ciężki pancerz (zbroja płytowa)","10 metrów liny"]
+},
+"łowca wampirów": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [10,15,20], "Zr": [5,10,15], "Int": [5,10,15], "SW": [10,15,20], "Ogd": [0] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": [["nauka (historia)","nauka (nekromancja)"],"przeszukiwanie","skradanie się","spostrzegawczość","śledzenie","tropienie","ukrywanie się","unik","wiedza (Imperium)","wspinaczka","znajomość języka (klasyczny)"],
+"abilities": ["broń specjalna (kusze)","grotołaz","morderczy atak","odwaga","silny cios",["strzał precyzyjny","błyskawiczne przeładowanie"]],
+"equipment": ["kusza samopowtarzalna i 10 bełtów","średni pancerz (kolcza zbroja)","woda święcona","4 kołki"]
+},
+  "majordomus": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5,10], "ODP": [0,5,10], "Zr": [0], "Int": [20,25,30], "SW": [10,15,20], "Ogd": [15,20,25] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","jeździectwo","nauka (prawo)","plotkowanie","przekonywanie","przeszukiwanie","rzemiosło (handel)","spostrzegawczość","targowanie","wiedza (Imperium)","wycena","zastraszanie","znajomość języka (staroświatowy)"],
+"abilities": ["geniusz arytmetyczny","przemawianie"],
+"equipment": ["2 stroje szlacheckie najlepszej jakości","przybory do pisania"]
+},
+"medyk": {
+"stats": { "WW": [0], "US": [0], "K": [0,5,10], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [20,25,30], "SW": [10,15,20], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","leczenie","nauka (anatomia)","plotkowanie","rzemiosło (aptekarstwo)","spostrzegawczość","warzenie trucizn","znajomość języka (klasyczny)"],
+"abilities": ["chirurgia","odporność na choroby","ogłuszanie"],
+"equipment": ["4 mikstury leczenia","narzędzia (instrumenty medyczne)"]
+},
+"mistrz cieni": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [0,5,10], "Zr": [30,35,40], "Int": [15,20,25], "SW": [10,15,20], "Ogd": [15,20,25] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["charakteryzacja","czytanie i pisanie",["hazard","czytanie z warg"],"otwieranie zamków","plotkowanie","pływanie","przekonywanie","przeszukiwanie","sekretne znaki (złodziei)","sekretny język (złodziejski)","skradanie się","spostrzegawczość","ukrywanie się","unik","wspinaczka","wycena","zwinne palce"],
+"abilities": [["bijatyka","brawura"],"broń specjalna (kusze)","broń specjalna (rzucana)","łotrzyk","wykrywanie pułapek"],
+"equipment": ["kusza pistoletowa i 10 bełtów",["2 topory/młoty do rzucania","3 noże/gwiazdki do rzucania"],"wytrychy najlepszej jakości","płaszcz z kapturem","worek","10 metrów liny najlepszej jakości"]
+},
+"mistrz gildii": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [20,25,30], "SW": [10,15,20], "Ogd": [25,30,35] },
+"substats": { "A": [0,1], "Żyw": [3,4,5], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","nauka (historia)","plotkowanie","przekonywanie","rzemiosło (dowolne dwa)","sekretny język (gildii)","spostrzegawczość","targowanie","wiedza (Imperium)","wycena",["znajomość języka (bretoński)","znajomość języka (estalijski)","znajomość języka (kislevski)","znajomość języka (norski)"],"znajomość języka (staroświatowy)"],
+"abilities": ["etykieta","poliglota","żyłka handlowa"],
+"equipment": ["przybory do pisania","100 zk",["gildia kupiecka","gildia złodziei"]]
+},
+"mistrz magii": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [20,25,30], "SW": [25,30,35], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 3, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie",["język tajemny (demoniczny)","język tajemny (tajemny elfów)"],"język tajemny (magiczny)","nauka (dowolne dwie)","nauka (magia)",["plotkowanie","jeździectwo"],["przekonywanie","zastraszanie"],"splatanie magii","wiedza (dowolne dwie)","wykrywanie magii","znajomość języka (dowolne trzy)"],
+"abilities": [["czarnoksięstwo","odporność psychiczna"],["dotyk mocy","morderczy pocisk"],"magia powszechna (dowolne dwie)",["zmysł magii","medytacja"]],
+"equipment": ["narzędzia (alchemiczne)","2 przedmioty magiczne"]
+},
+"mistrz rzemiosła": {
+"stats": { "WW": [0], "US": [0], "K": [0], "ODP": [0,5,10], "Zr": [10,15,20], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5,10] },
+"substats": { "A": [0], "Żyw": [1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["plotkowanie","powożenie","rzemiosło (dowolne trzy)","sekretny język (gildii)","spostrzegawczość","targowanie","wycena",["znajomość języka (bretoński)","znajomość języka (khazalid)","znajomość języka (tileański)"]],
+"abilities": [["talent artystyczny","etykieta"]],
+"equipment": ["narzędzia (rzemieślnika) najlepszej jakości","15 zk"]
+},
+"mistrz zakonny": {
+"stats": { "WW": [25,30,35], "US": [0,5,10], "K": [10,15,20], "ODP": [10,15,20], "Zr": [10,15,20], "Int": [5,10,15], "SW": [15,20,25], "Ogd": [5,10,15] },
+"substats": { "A": [2], "Żyw": [7,8], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","jeździectwo",["nauka (genealogia/heraldyka)","nauka (teologia)"],"nauka (strategia/taktyka)","przekonywanie",["sekretne znaki (zwiadowców)","sekretne znaki (rycerzy zakonnych)"],"sekretny język (bitewny)","spostrzegawczość","tresura","unik","wiedza (dowolne trzy)",["znajomość języka (bretoński)","znajomość języka (estalijski)","znajomość języka (kislevski)","znajomość języka (tileański)"]],
+"abilities": ["błyskawiczny blok","broń specjalna (parująca)","broń specjalna (szermiercza)","etykieta","morderczy atak","obieżyświat","odwaga","ogłuszanie"],
+"equipment": [["rapier","szpada"],["puklerz","lewak"],"ciężki pancerz (zbroja płytowa najlepszej jakości)","symbol religijny","50 zk"]
+},
+"nawigator": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [15,20,25], "SW": [0,5,10], "Ogd": [0,5] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","nauka (astronomia)","nawigacja","pływanie","rzemiosło (kartografia)","spostrzegawczość","wiedza (dowolne dwie)","znajomość języka (klasyczny)"],
+"abilities": ["wyczucie kierunku"],
+"equipment": ["6 map i kartuszy","narzędzia (instrumenty nawigacyjne)"]
+},
+  "odkrywca": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [5,10,15], "Zr": [0,5,10,15], "Int": [15,20,25], "SW": [10,15,20], "Ogd": [5,10,15] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","jeździectwo",["nauka (historia)","nauka (prawo)"],"nawigacja","pływanie","powożenie","rzemiosło (kartografia)","sekretne znaki (zwiadowców)","sekretny język (łowców)","spostrzegawczość","sztuka przetrwania","tropienie","wiedza (dowolne trzy)","wspinaczka","wycena","znajomość języka (dowolne trzy)"],
+"abilities": ["obieżyświat",["wyczucie kierunku","poliglota"]],
+"equipment": [[ "łuk","kusza" ], [ "10 strzał","10 bełtów" ], "broń jednoręczna","średni pancerz (kaftan kolczy i skórzana kurta)","tarcza","koń z siodłem i uprzężą","6 map","1000 zk (w monecie i towarach na wymianę)"]
+},
+"oficer": {
+"stats": { "WW": [20,25,30], "US": [10,15,20], "K": [10,15,20], "ODP": [10,15,20], "Zr": [10,15,20], "Int": [5,10,15], "SW": [5,10,15], "Ogd": [15,20,25] },
+"substats": { "A": [2], "Żyw": [5,6,7], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","jeździectwo","nauka (strategia/taktyka)","opieka nad zwierzętami","plotkowanie","sekretny język (bitewny)","unik","wiedza (dowolne trzy)",["znajomość języka (kislevski)","znajomość języka (tileański)"]],
+"abilities": ["błyskawiczny blok",["broń specjalna (kawaleryjska)","broń specjalna (dwuręczna)"],["broń specjalna (korbacze)","broń specjalna (parująca)"],["rozbrajanie","szybkie wyciągnięcie"]],
+"equipment": [[ "korbacz","łamacz mieczy" ],[ "kopia","broń dwuręczna" ],"średni pancerz (zbroja kolcza)","tarcza","rumak z siodłem i uprzężą","oddział żołnierzy"]
+},
+"oprawca": {
+"stats": { "WW": [5,10,15], "US": [0], "K": [10,15,20], "ODP": [0,5,10], "Zr": [0,5,10], "Int": [0,5,10], "SW": [10,15,20], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["leczenie","przekonywanie","spostrzegawczość","torturowanie","zastraszanie"],
+"abilities": ["broń specjalna (korbacze)","groźny","zapasy"],
+"equipment": ["5 noży","korbacz","3 pary kajdan"]
+},
+"paser": {
+"stats": { "WW": [5,10,15], "US": [0,5,10], "K": [0,5,10], "ODP": [0,5], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0,5,10] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["hazard","plotkowanie","spostrzegawczość","targowanie","wycena","zastraszanie","zwinne palce"],
+"abilities": ["geniusz arytmetyczny","ogłuszanie",["żyłka handlowa","łotrzyk"]],
+"equipment": ["narzędzia (grawera)","przybory do pisania"]
+},
+  "rajtar": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [0], "SW": [5,10,15], "Ogd": [5,10,15] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["jeździectwo","opieka nad zwierzętami","sekretne znaki (zwiadowców)","spostrzegawczość","unik",["wycena","plotkowanie"]],
+"abilities": ["artylerzysta","błyskawiczne przeładowanie","broń specjalna (palna)","silny cios","strzał mierzony","strzał przebijający","szybkie wyciągnięcie"],
+"equipment": ["2 pistolety z amunicją i zapasem prochu na 20 strzałów","ubranie najlepszej jakości","lekki koń bojowy"]
+},
+"reketer": {
+"stats": { "WW": [10,15,20], "US": [5,10,15], "K": [5,10,15], "ODP": [0,5,10], "Zr": [0,5,10], "Int": [0], "SW": [5,10,15], "Ogd": [0,5,10] },
+"substats": { "A": [1], "Żyw": [3,4,5], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie","plotkowanie","spostrzegawczość","śledzenie","targowanie","unik","wiedza (Imperium)","wycena","zastraszanie"],
+"abilities": ["bijatyka","groźny","łotrzyk","ogłuszanie","silny cios"],
+"equipment": ["kastety","ubranie dobrej jakości","kapelusz"]
+},
+"rozbójnik": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [0,5,10], "Zr": [20,25,30], "Int": [10,15,20], "SW": [5,10,15], "Ogd": [15,20,25] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["jeździectwo","opieka nad zwierzętami","plotkowanie","przekonywanie","skradanie się","tresura","wiedza (Imperium)","wycena"],
+"abilities": ["artylerzysta","brawura","broń specjalna (palna)","broń specjalna (szermiercza)","etykieta","oburęczność","strzał mierzony","strzał precyzyjny","woltyżerka"],
+"equipment": ["2 pistolety z amunicją i zapasem prochu na 20 strzałów","strój szlachecki",["kaptur","maska"],"koń z siodłem i uprzężą"]
+},
+"rycerz": {
+"stats": { "WW": [15,20,25], "US": [0], "K": [5,10,15], "ODP": [5,10,15], "Zr": [5,10,15], "Int": [0,5], "SW": [5,10,15], "Ogd": [0,5] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["jeździectwo",["nauka (genealogia/heraldyka)","nauka (teologia)"],"nauka (strategia/taktyka)","sekretny język (bitewny)","spostrzegawczość","unik","znajomość języka (dowolne dwa)"],
+"abilities": ["broń specjalna (dwuręczna)","broń specjalna (kawaleryjska)","broń specjalna (korbacze)","silny cios"],
+"equipment": [["korbacz","morgensztern"],"kopia","ciężki pancerz (zbroja płytowa)","tarcza","rumak z siodłem i uprzężą","symbol religijny","25 zk"]
+},
+  "sierżant": {
+"stats": { "WW": [10,15,20], "US": [5,10,15], "K": [0,5,10], "ODP": [0,5,10], "Zr": [0,5,10], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["dowodzenie",["jeździectwo","pływanie"],"nauka (strategia/taktyka)","plotkowanie","sekretny język (bitewny)","spostrzegawczość","unik","wiedza (dowolne dwie)","zastraszanie","znajomość języka (tileański)"],
+"abilities": [["bijatyka","zapasy"],["groźny","obieżyświat"],"ogłuszanie","silny cios"],
+"equipment": ["średni pancerz (zbroja kolcza)","tarcza"]
+},
+"skrytobójca": {
+"stats": { "WW": [15,20,25], "US": [15,20,25], "K": [0,5,10], "ODP": [0,5,10], "Zr": [20,25,30], "Int": [10,15,20], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [1,2], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 2, "PP": 0 },
+"skills": ["charakteryzacja","plotkowanie","sekretne znaki (złodziei)","skradanie się","spostrzegawczość","śledzenie","ukrywanie się","warzenie trucizn","wspinaczka"],
+"abilities": ["bijatyka","błyskawiczny blok","brawura","broń specjalna (parująca)","broń specjalna (rzucana)","broń specjalna (unieruchamiająca)","łotrzyk","strzał mierzony","strzał precyzyjny","szybkie wyciągnięcie"],
+"equipment": ["sieć","4 noże do rzucania","kotwiczka do wspinaczki","10 metrów liny","porcja trucizny (dowolnej)"]
+},
+"strzelec": {
+"stats": { "WW": [0], "US": [25,30,35], "K": [0,5,10], "ODP": [0,5,10], "Zr": [15,20,25], "Int": [0,5,10], "SW": [10,15,20], "Ogd": [5,10,15] },
+"substats": { "A": [0,1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["plotkowanie","przeszukiwanie","spostrzegawczość","sztuka przetrwania","wiedza (Imperium)","zwinne palce"],
+"abilities": ["błyskawiczne przeładowanie","broń specjalna (długi łuk)",["broń specjalna (kusze)","broń specjalna (rzucana)"],"strzał mierzony","strzał precyzyjny","strzał przebijający"],
+"equipment": [["długi łuk","kusza"],["10 strzał","10 bełtów"],"lekki pancerz (skórzana kurta)"]
+},
+"szampierz": {
+"stats": { "WW": [25,30,35], "US": [0], "K": [5,10,15], "ODP": [5,10,15], "Zr": [10,15,20], "Int": [0,5,10], "SW": [5,10,15], "Ogd": [0] },
+"substats": { "A": [1,2], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["spostrzegawczość","unik"],
+"abilities": ["błyskawiczny blok","broń specjalna (dwuręczna)","broń specjalna (korbacze)","broń specjalna (parująca)","broń specjalna (szermiercza)"],
+"equipment": ["broń dwuręczna",["korbacz","morgensztern"],["rapier","szpada"],["puklerz","lewak"],"10 metrów liny"]
+},
+  "szarlatan": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5,10], "Zr": [0,5,10,15], "Int": [5,10,15], "SW": [5,10,15], "Ogd": [15,20,25] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["charakteryzacja","gadanina","hazard","plotkowanie","przekonywanie","sekretny język (złodziejski)","spostrzegawczość","targowanie",["wiedza (Bretonia)","wiedza (Tilea)"],"wycena",["znajomość języka (bretoński)","znajomość języka (tileański)"],"znajomość języka (staroświatowy)","zwinne palce"],
+"abilities": ["chodu!",["intrygant","łotrzyk"],"naśladowca","obieżyświat","przemawianie"],
+"equipment": ["6 ubrań dobrej jakości","4 komplety ubrań najlepszej jakości","podrobione dokumenty","4 butelki różnokolorowej wody","4 butelki różnokolorowego proszku"]
+},
+"szpieg": {
+"stats": { "WW": [5,10,15], "US": [5,10,15], "K": [0,5], "ODP": [0,5,10], "Zr": [10,15,20], "Int": [10,15,20], "SW": [25,30,35], "Ogd": [10,15,20] },
+"substats": { "A": [0,1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 2, "PP": 0 },
+"skills": ["charakteryzacja","czytanie z warg","kuglarstwo (aktorstwo)","otwieranie zamków","plotkowanie","przekonywanie","sekretny język (dowolny)","skradanie się","śledzenie","ukrywanie się","wiedza (dowolne dwie)","znajomość języka (dowolne trzy)","zwinne palce"],
+"abilities": [["charyzmatyczny","szósty zmysł"],"chodu!","intrygant","poliglota"],
+"equipment": ["zestaw do charakteryzacji","4 gołębie pocztowe"]
+},
+"uczony": {
+"stats": { "WW": [0,5], "US": [0,5], "K": [0,5], "ODP": [0,5], "Zr": [0,5,10], "Int": [20,25,30], "SW": [5,10,15], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","nauka (dowolne trzy)","spostrzegawczość","wiedza (dowolne trzy)",["wycena","rzemiosło (kartografia)"],"znajomość języka (dowolne trzy)","znajomość języka (klasyczny)"],
+"abilities": ["poliglota"],
+"equipment": ["przybory do pisania"]
+},
+"urzędnik": {
+"stats": { "WW": [0,5], "US": [0,5], "K": [0,5], "ODP": [0,5,10], "Zr": [0], "Int": [10,15,20], "SW": [0,5,10], "Ogd": [10,15,20] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie","dowodzenie","gadanina","kuglarstwo (aktorstwo)",["nauka (historia)","nauka (genealogia/heraldyka)"],"nauka (prawo)","plotkowanie","przekonywanie","spostrzegawczość","targowanie","wiedza (Imperium)","wycena","znajomość języka (staroświatowy)"],
+"abilities": [["etykieta","łotrzyk"],"krasomówstwo","przemawianie",["żyłka handlowa","intrygant"]],
+"equipment": ["broń jednoręczna najlepszej jakości","lekki pancerz (skórzana kurta najlepszej jakości)","ulotki i odezwy polityczne"]
+},
+  "weteran": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [5,10], "ODP": [5,10], "Zr": [5,10,15], "Int": [0], "SW": [5,10,15], "Ogd": [0] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["hazard","mocna głowa","plotkowanie","sekretny język (bitewny)","spostrzegawczość","unik","wiedza (Imperium)","zastraszanie"],
+"abilities": [["błyskawiczne przeładowanie","morderczy atak"],"broń specjalne (dowolne dwie)",["niezwykle odporny","bardzo silny"],["strzał precyzyjny","silny cios"]],
+"equipment": ["dwie sztuki broni","średni pancerz (zbroja kolcza)",["butelka spirytusu najlepszej jakości","butelka gorzałki najlepszej jakości"]]
+},
+"wędrowny czarodziej": {
+"stats": { "WW": [0,5], "US": [0,5], "K": [0], "ODP": [0,5], "Zr": [0,5,10], "Int": [10,15,20], "SW": [15,20,25], "Ogd": [0,5,10] },
+"substats": { "A": [0], "Żyw": [1,2,3], "S": [0], "Wt": [0], "Sz": 0, "Mag": 2, "PO": 0, "PP": 0 },
+"skills": ["czytanie i pisanie",["jeździectwo","pływanie"],"język tajemny (magiczny)","nauka (dowolna)","nauka (magia)","plotkowanie",["przekonywanie","zastraszanie"],"splatanie magii","wiedza (dowolne dwie)","wykrywanie magii","znajomość języka (dowolne dwa)"],
+"abilities": [["dotyk mocy","niezwykle odporny"],["magia tajemna (dowolna)","magia czarnoksięska (dowolna)"],"magia powszechna (dowolne dwie)",["medytacja","morderczy pocisk"],["zmysł magii","czarnoksięstwo"]],
+"equipment": ["księga wiedzy tajemnej","przybory do pisania"]
+},
+"włamywacz": {
+"stats": { "WW": [0,5,10], "US": [0,5,10], "K": [0,5], "ODP": [0,5], "Zr": [15,20,25], "Int": [0,5,10], "SW": [0,5,10], "Ogd": [0] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["otwieranie zamków","plotkowanie","przeszukiwanie","sekretne znaki (złodziei)","sekretny język (złodziejski)","skradanie się","spostrzegawczość","targowanie","ukrywanie się","wspinaczka","wycena"],
+"abilities": ["bijatyka","łotrzyk","ulicznik","wykrywanie pułapek"],
+"equipment": ["wytrychy","10 metrów liny","kotwiczka do wspinaczki"]
+},
+"wybraniec boży": {
+"stats": { "WW": [5,10,15], "US": [5,10,15], "K": [0,5,10], "ODP": [0,5,10], "Zr": [0,5,10], "Int": [5,10,15], "SW": [15,20,25], "Ogd": [10,15,20] },
+"substats": { "A": [1], "Żyw": [3,4,5], "S": [0], "Wt": [0], "Sz": 0, "Mag": 2, "PO": 0, "PP": 0 },
+"skills": [["jeździectwo","pływanie"],"język tajemny (magiczny)","leczenie","nauka (dowolne dwie)","nauka (teologia)","plotkowanie","przekonywanie","splatanie magii","wiedza (dowolne dwie)","wykrywanie magii","znajomość języka (dowolne dwa)"],
+"abilities": ["magia kapłańska (dowolna)","magia powszechna (dowolne dwie)",["obieżyświat","silny cios"],["pancerz wiary","dotyk mocy"],["zmysł magii","medytacja"]],
+"equipment": [["szaty kapłańskie najlepszej jakości","strój szlachecki"]]
+},
+  "zabójca demonów": {
+"stats": { "WW": [30,35,40], "US": [0], "K": [20,25,30], "ODP": [20,25,30], "Zr": [10,15,20], "Int": [0], "SW": [20,25,30], "Ogd": [0] },
+"substats": { "A": [2], "Żyw": [6,7,8], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["mocna głowa","unik","wiedza (dowolne dwie)","wspinaczka","zastraszanie"],
+"abilities": ["błyskawiczny blok","niepokojący"],
+"equipment": ["broń dwuręczna"]
+},
+"zabójca olbrzymów": {
+"stats": { "WW": [15,20,25], "US": [0], "K": [5,10,15], "ODP": [5,10,15], "Zr": [0,5,10], "Int": [0], "SW": [10,15,20], "Ogd": [0] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["mocna głowa","spostrzegawczość","unik","wiedza (dowolna)","zastraszanie"],
+"abilities": ["broń specjalna (korbacze)","morderczy atak","nieustraszony","odporność na trucizny"],
+"equipment": ["broń dwuręczna"]
+},
+"zakonnik": {
+"stats": { "WW": [0,5,10], "US": [0], "K": [0,5], "ODP": [0,5,10], "Zr": [0], "Int": [5,10,15], "SW": [5,10,15], "Ogd": [5,10,15] },
+"substats": { "A": [0], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["leczenie","nauka (teologia)","opieka nad zwierzętami","spostrzegawczość","sztuka przetrwania","wiedza (dowolne dwie)",["znajomość języka (bretoński)","znajomość języka (estalijski)","znajomość języka (kislevski)","znajomość języka (tileański)"],"znajomość języka (klasyczny)","znajomość języka (staroświatowy)"],
+"abilities": ["obieżyświat"],
+"equipment": ["habit (szaty kapłańskie)","mikstura leczenia","symbol religijny","relikwia"]
+},
+"zwadźca": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [10,15,20], "Zr": [10,15,20], "Int": [5,10,15], "SW": [5,10,15], "Ogd": [0,5,10] },
+"substats": { "A": [0,1], "Żyw": [2,3,4], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["hazard","plotkowanie","przekonywanie","spostrzegawczość","unik","zastraszanie","zwinne palce"],
+"abilities": ["artylerzysta","brawura","broń specjalna (palna)","broń specjalna (parująca)","broń specjalna (szermiercza)","etykieta","morderczy atak",["oburęczność","rozbrajanie"],"silny cios","strzał mierzony","strzał precyzyjny","szybkie wyciągnięcie"],
+"equipment": ["lewak","pistolet z amunicją i zapasem prochu na 10 strzałów","rapier"]
+},
+  "zwiadowca": {
+"stats": { "WW": [10,15,20], "US": [10,15,20], "K": [0,5,10], "ODP": [0,5,10], "Zr": [5,10,15], "Int": [10,15,20], "SW": [10,15,20], "Ogd": [0] },
+"substats": { "A": [1], "Żyw": [4,5,6], "S": [0], "Wt": [0], "Sz": 0, "Mag": 0, "PO": 0, "PP": 0 },
+"skills": ["jeździectwo","nawigacja","opieka nad zwierzętami","oswajanie","sekretne znaki (zwiadowców)","sekretny język (łowców)","skradanie się","spostrzegawczość","tropienie","ukrywanie się","unik","wiedza (dowolne dwie)","znajomość języka (dowolne dwa)"],
+"abilities": ["błyskawiczne przeładowanie",["broń specjalna (długi łuk)","broń specjalna (kusze)"],["strzał precyzyjny","strzał przebijający"],"wyczucie kierunku"],
+"equipment": ["średni pancerz (kaftan kolczy i skórzana kurta)","tarcza","koń z siodłem i uprzężą","10 metrów liny"]
+}
+
+}
