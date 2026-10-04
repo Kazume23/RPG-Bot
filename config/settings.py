@@ -46,18 +46,6 @@ def _id_set(name: str) -> FrozenSet[int]:
     return frozenset(values)
 
 
-def _bool_value(name: str, default: bool) -> bool:
-    raw_value = os.getenv(name)
-    if raw_value is None:
-        return default
-    normalized = raw_value.strip().lower()
-    if normalized in {"1", "true", "yes", "on"}:
-        return True
-    if normalized in {"0", "false", "no", "off"}:
-        return False
-    raise ConfigurationError(f"{name} musi mieć wartość true albo false.")
-
-
 def _directory(name: str, default: Path) -> Path:
     configured = os.getenv(name)
     if not configured:
@@ -72,17 +60,11 @@ def _directory(name: str, default: Path) -> Path:
 @dataclass(frozen=True)
 class Settings:
     discord_bot_token: Optional[str]
-    openai_api_key: Optional[str]
     owner_id: Optional[int]
     gm_role_id: Optional[int]
     allowed_guild_ids: FrozenSet[int]
     content_data_dir: Path
     storage_dir: Path
-    ai_enabled: bool
-    ai_auto_start: bool
-    ai_start_personality: str
-    ai_model: str
-    ai_summary_model: str
     command_prefix: str = COMMAND_PREFIX
 
     def require_discord_token(self) -> str:
@@ -95,15 +77,9 @@ class Settings:
 
 settings = Settings(
     discord_bot_token=os.getenv("DISCORD_BOT_TOKEN"),
-    openai_api_key=os.getenv("OPENAI_API_KEY"),
     owner_id=_optional_id("BOT_OWNER_ID", os.getenv("ADMIN_ID")),
     gm_role_id=_optional_id("GM_ROLE_ID"),
     allowed_guild_ids=_id_set("ALLOWED_GUILD_IDS"),
     content_data_dir=_directory("CONTENT_DATA_DIR", PROJECT_ROOT / "data"),
     storage_dir=_directory("STORAGE_DIR", PROJECT_ROOT / "data"),
-    ai_enabled=_bool_value("AI_ENABLED", bool(os.getenv("OPENAI_API_KEY"))),
-    ai_auto_start=_bool_value("AI_AUTO_START", True),
-    ai_start_personality=os.getenv("AI_START_PERSONALITY", "pijak").strip() or "pijak",
-    ai_model=os.getenv("AI_MODEL", "gpt-4o").strip() or "gpt-4o",
-    ai_summary_model=os.getenv("AI_SUMMARY_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini",
 )

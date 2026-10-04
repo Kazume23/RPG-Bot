@@ -1,4 +1,4 @@
-class ShadowContext:
+class CommandContext:
     def __init__(self, bot, message):
         self.bot = bot
         self.message = message

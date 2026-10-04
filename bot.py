@@ -4,9 +4,8 @@ from discord.ext import commands
 from pathlib import Path
 
 import discord
-import responses
+import command_router
 from config.settings import settings
-from services.ai_session import start_session_ai
 from services.dm_sender import send_startup_dm
 
 logger = logging.getLogger(__name__)
@@ -24,8 +23,6 @@ async def on_ready():
 
     if not _startup_complete:
         await send_startup_dm(bot)
-        if settings.ai_enabled and settings.ai_auto_start:
-            await start_session_ai(bot, personality=settings.ai_start_personality)
         _startup_complete = True
 
     print(f"{bot.user} jest online!")
@@ -47,12 +44,12 @@ async def on_message(message):
     if isinstance(message.channel, discord.DMChannel):
         print(f"[DM] {message.author}: {message.content}")
 
-    if not responses.should_handle(message):
+    if not command_router.should_handle(message):
         return
 
     try:
         async with message.channel.typing():
-            response = await responses.get_response(message)
+            response = await command_router.process_message(message, bot)
         if response:
             for chunk in _split_message(response):
                 await message.channel.send(chunk)

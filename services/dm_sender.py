@@ -34,4 +34,4 @@ async def send_user_dm(bot, user_id: int, content: str) -> None:
 
 async def send_startup_dm(bot) -> None:
     if settings.owner_id is not None:
-        await manual_send(bot, settings.owner_id, "Shadow: uruchomiony i gotowy do akcji.")
+        await manual_send(bot, settings.owner_id, "Bot RPG: uruchomiony i gotowy do akcji.")
