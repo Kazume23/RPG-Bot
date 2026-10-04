@@ -1,10 +1,18 @@
-import os
-
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+from config.settings import COMMAND_PREFIX, settings
 
 
 def has_admin_permissions(ctx):
-    if ctx.guild:
-        return ctx.author.guild_permissions.administrator
-    else:
-        return ctx.author.id == ADMIN_ID
+    if settings.owner_id is not None and ctx.author.id == settings.owner_id:
+        return True
+
+    if ctx.guild is None:
+        return False
+
+    if settings.gm_role_id is not None:
+        return any(role.id == settings.gm_role_id for role in getattr(ctx.author, "roles", []))
+
+    return False
+
+
+def command_usage(syntax: str) -> str:
+    return f"`{COMMAND_PREFIX}{syntax}`"

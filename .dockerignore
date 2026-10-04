@@ -1,0 +1,11 @@
+.git
+.idea
+.env
+venv
+__pycache__
+*.py[cod]
+*.log
+*.wav
+output
+tmp
+tests

@@ -1,18 +1,21 @@
-from services.character_aliver import *
-from commands.utility import has_admin_permissions
+from commands.utility import command_usage, has_admin_permissions
+from services.character_aliver import character_randomizer
 
 
-async def npc_command(ctx):
+async def npc_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
+        return "Nie masz uprawnień do tej komendy."
 
-    parts = ctx.content.split(maxsplit=3)
+    parts = args.split(maxsplit=2)
 
-    if len(parts) < 4:
-        return "Użyj poprawnej składni: `>npc [rasa] [płeć: m/f] [klasa]`"
+    if len(parts) != 3:
+        return f"Użyj poprawnej składni: {command_usage('npc <rasa> <m/f> <klasa>')}"
 
-    race = parts[1].lower()
-    gender = parts[2].lower()
-    char_class = parts[3].lower()
+    race, gender, char_class = (part.strip().lower() for part in parts)
+    if gender not in {"m", "f"}:
+        return "Płeć musi mieć wartość `m` albo `f`."
 
-    return await character_randomizer(race, gender, char_class)
+    try:
+        return await character_randomizer(race, gender, char_class)
+    except KeyError as exc:
+        return str(exc.args[0])

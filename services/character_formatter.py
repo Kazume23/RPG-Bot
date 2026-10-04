@@ -67,5 +67,8 @@ def format_abilities(abilities: list[str]) -> list[str]:
 def format_equipment(equipment: list[str]) -> list[str]:
     result = ["Ekwipunek:"]
     for item in equipment:
-        result.append(f"- {item}")
+        if isinstance(item, list):
+            result.append(f"- {' / '.join(item)}")
+        else:
+            result.append(f"- {item}")
     return result

@@ -1,0 +1,58 @@
+{
+  "Człowiek": {
+    "f": [
+      "Alexa", "Alfrida", "Beatrix", "Bianka", "Dierdre",
+      "Elfrida", "Elise", "Gabrielle", "Gretchen", "Hanna",
+      "Ilsa", "Klara", "Jarla", "Ludmilla", "Mathilde",
+      "Regina", "Solveig", "Theodora", "Ulrike", "Wertha"
+    ],
+    "m": [
+      "Adelbert", "Albrecht", "Berthold", "Dieter", "Eckhardt",
+      "Felix", "Gottfried", "Gustav", "Heinz", "Johann",
+      "Konrad", "Leopold", "Magnus", "Otto", "Pieter",
+      "Rudiger", "Siegfried", "Ulrich", "Waldemar", "Wolfgang"
+    ]
+  },
+  "Krasnolud": {
+    "f": [
+      "Anika", "Asta", "Astrid", "Berta", "Birgit",
+      "Dagmar", "Elsa", "Erika", "Franziska", "Greta",
+      "Hunni", "Janna", "Petra", "Karin", "Sigrid",
+      "Siguna", "Silma", "Thylda", "Ulla"
+    ],
+    "m": [
+      "Bardin", "Brokk", "Dinzad", "Garil", "Grundi",
+      "Gottri", "Grim", "Harald", "Imrak", "Jorn",
+      "Madrin", "Nargond", "Ozrad", "Ragnar", "Snorri",
+      "Storri", "Thringrim", "Ugrim"
+    ]
+  },
+  "Elf": {
+    "f": [
+      "Alane", "Altronia", "Davandrel", "Eldril", "Eponia",
+      "Fanniel", "Filamir", "Gallina", "Halion", "Iludil",
+      "Ionor", "Lindara", "Lorandara", "Maruviel", "Mellion",
+      "Pelgrana", "Siluvanna", "Tallana", "Ulliana", "Yuviel"
+    ],
+    "m": [
+      "Aluthol", "Amendil", "Angran", "Cavindel", "Dolwen",
+      "Eldillor", "Falandar", "Farnoth", "Gildiril", "Harrond",
+      "Imhol", "Larandar", "Laureno", "Mellion", "Mormacar",
+      "Ravandil", "Torendil", "Urdhinar", "Valahir", "Yavandir"
+    ]
+  },
+  "Niziołek": {
+    "f": [
+      "Agnes", "Alice", "Elena", "Eva", "Frida",
+      "Greta", "Hanna", "Heidi", "Hilda", "Janna",
+      "Klara", "Leni", "Marie", "Petra", "Rosa",
+      "Sofia", "Susan", "Theda", "Ursula", "Wanda"
+    ],
+    "m": [
+      "Adam", "Albert", "Alfred", "Axel", "Carl",
+      "Edgar", "Erich", "Hans", "Jakob", "Max",
+      "Niklas", "Oskar", "Paul", "Peter", "Rolf",
+      "Stefan", "Theo", "Tobias", "Ulrich", "Walter"
+    ]
+  }
+}

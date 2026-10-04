@@ -1,0 +1,362 @@
+{
+  "artylerzysta": {
+    "name": "Artylerzysta",
+    "desc": "Bohater doskonale zna się na obsłudze broni palnej.",
+    "effect": "Skraca czas przeładowania broni palnej o jedną akcję."
+  },
+  "bardzo silny": {
+    "name": "Bardzo silny",
+    "desc": "Bohater ma niezwykłą siłę fizyczną.",
+    "effect": "+5 do Krzepy."
+  },
+  "bardzo szybki": {
+    "name": "Bardzo szybki",
+    "desc": "Bohater porusza się szybciej niż inni.",
+    "effect": "+1 do Szybkości."
+  },
+  "bijatyka": {
+    "name": "Bijatyka",
+    "desc": "Bohater jest wytrawnym wojownikiem wręcz, nawet bez broni.",
+    "effect": "+10 do Walki Wręcz przy atakach bez broni, +1 do obrażeń."
+  },
+  "błyskawiczne przeładowanie": {
+    "name": "Błyskawiczne przeładowanie",
+    "desc": "Bohater potrafi błyskawicznie przeładowywać broń strzelecką.",
+    "effect": "Skraca czas przeładowania o jedną akcję."
+  },
+  "błyskawiczny blok": {
+    "name": "Błyskawiczny blok",
+    "desc": "Bohater potrafi szybko parować ataki.",
+    "effect": "Można poświęcić jeden atak na parowanie."
+  },
+  "błyskotliwość": {
+    "name": "Błyskotliwość",
+    "desc": "Bohater jest niezwykle inteligentny i szybko przyswaja wiedzę.",
+    "effect": "+5 do Inteligencji."
+  },
+  "brawura": {
+    "name": "Brawura",
+    "desc": "Bohater jest odważny i skory do ryzyka.",
+    "effect": "Skok wymaga akcji zwykłej (zamiast podwójnej) i zwiększa zasięg skoków o 1 metr."
+  },
+  "bystry wzrok": {
+    "name": "Bystry wzrok",
+    "desc": "Bohater ma wyjątkowo dobry wzrok.",
+    "effect": "+10 do testów Spostrzegawczości."
+  },
+  "charyzmatyczny": {
+    "name": "Charyzmatyczny",
+    "desc": "Bohater ma naturalny urok osobisty.",
+    "effect": "+5 do Ogłady."
+  },
+  "chód": {
+    "name": "Chód",
+    "desc": "Bohater pod wpływem adrenaliny zadziwiająca szybko spierdala z pola walki.",
+    "effect": "+1 do Szybkości podczas ucieczki z walki."
+  },
+  "człowiek-guma": {
+    "name": "Człowiek-guma",
+    "desc": "Bohater ma niezwykłą elastyczność ciała.",
+    "effect": "+10 do testów Wspinaczki i Akrobatyki."
+  },
+  "czuły słuch": {
+    "name": "Czuły słuch",
+    "desc": "Bohater ma wyostrzone zmysły słuchu.",
+    "effect": "+10 do testów Nasłuchiwania."
+  },
+  "dotyk mocy": {
+    "name": "Dotyk mocy",
+    "desc": "Bohater potrafi przekazywać energię magiczną poprzez dotyk.",
+    "effect": "[Efekt do uzupełnienia]"
+  },
+  "etykieta": {
+    "name": "Etykieta",
+    "desc": "Bohater zna zasady dobrego wychowania i etykiety dworskiej.",
+    "effect": "+10 do testów Ogłady w sytuacjach oficjalnych."
+  },
+  "geniusz arytmetyczny": {
+    "name": "Geniusz arytmetyczny",
+    "desc": "Bohater błyskawicznie wykonuje skomplikowane obliczenia w pamięci.",
+    "effect": ""
+  },
+  "grotołaz": {
+    "name": "Grotołaz",
+    "desc": "Bohater świetnie porusza się w podziemiach.",
+    "effect": "+10 do testów Wspinaczki i Skradania się w podziemiach."
+  },
+  "groźny": {
+    "name": "Groźny",
+    "desc": "Bohater budzi strach u przeciwników.",
+    "effect": "Wrogowie otrzymują -10 do testów Siły Woli, by nie uciec przed Bohaterem."
+  },
+  "gusła": {
+    "name": "Gusła",
+    "desc": "Bohater jest wrażliwy na magię i potrafi odczuwać jej obecność.",
+    "effect": ""
+  },
+  "intrygant": {
+    "name": "Intrygant",
+    "desc": "Bohater doskonale knuje i manipuluje innymi.",
+    "effect": "+10 do testów Przekonywania i Plotkowania w sytuacjach społecznych."
+  },
+  "krasnoludzki fach": {
+    "name": "Krasnoludzki fach",
+    "desc": "Bohater zna się na rzemiośle krasnoludów.",
+    "effect": "+10 do testów Rzemiosła (górnictwo, kamieniarstwo, kowalstwo, jubilerstwo, piwowarstwo, płatnerstwo i rusznikarstwo)."
+  },
+  "krasomówstwo": {
+    "name": "Krasomówstwo",
+    "desc": "Bohater potrafi pięknie przemawiać.",
+    "effect": "+10 do testów Przekonywania i Plotkowania."
+  },
+  "krzepki": {
+    "name": "Krzepki",
+    "desc": "Bohater może nosić ciężką zbroję bez bez zmniejszenia prędkości czy zwinności.",
+    "effect": ""
+  },
+  "lewitacja": {
+    "name": "Lewitacja",
+    "desc": "Bohater potrafi unosić się w powietrzu.",
+    "effect": "[Efekt do uzupełnienia]"
+  },
+  "łotrzyk": {
+    "name": "Łotrzyk",
+    "desc": "Bohater ma smykałkę do złodziejstwa i przekrętów.",
+    "effect": "+10 do testów Zwinnych Palców i Skradania się."
+  },
+  "magia czarnoksięska": {
+    "name": "Magia czarnoksięska",
+    "desc": "Bohater zna i potrafi rzucać czarną magię.",
+    "effect": "Pozwala korzystać z Czarnej Magii."
+  },
+  "magia kapłańska": {
+    "name": "Magia kapłańska",
+    "desc": "Bohater posiada zdolność rzucania czarów kapłańskich.",
+    "effect": "Pozwala korzystać z Magii Kapłańskiej."
+  },
+  "magia powszechna": {
+    "name": "Magia powszechna",
+    "desc": "Bohater zna podstawowe zaklęcia magii.",
+    "effect": "Pozwala korzystać z Magii Powszechnej."
+  },
+  "magia prosta": {
+    "name": "Magia prosta",
+    "desc": "Bohater zna najprostsze zaklęcia.",
+    "effect": "Pozwala korzystać z Magii Prostej."
+  },
+  "magia tajemna": {
+    "name": "Magia tajemna",
+    "desc": "Bohater posiada zdolność rzucania czarów tajemnych.",
+    "effect": "Pozwala korzystać z Magii Tajemnej."
+  },
+  "medytacja": {
+    "name": "Medytacja",
+    "desc": "Bohater potrafi wchodzić w stan głębokiego skupienia.",
+    "effect": "[Efekt do uzupełnienia]"
+  },
+  "morderczy atak": {
+    "name": "Morderczy atak",
+    "desc": "Bohater potrafi uderzać z wielką siłą.",
+    "effect": "+1 do obrażeń podczas Krytyka"
+  },
+  "morderczy pocisk": {
+    "name": "Morderczy pocisk",
+    "desc": "Bohater specjalizuje się w zaklęciach dystansowych.",
+    "effect": "+1 do obrażeń na czary dystansowe"
+  },
+  "naśladowca": {
+    "name": "Naśladowca",
+    "desc": "Bohater potrafi naśladować głosy i zachowania.",
+    "effect": "+10 do testów Charakteryzacji i Gadaniny."
+  },
+  "niepokojący": {
+    "name": "Niepokojący",
+    "desc": "Bohater budzi niepokój u innych.",
+    "effect": "Przeciwnicy muszą wykonać test Siły Woli, by walczyć bez kary -10 do Walki Wręcz i Strzelania."
+  },
+  "nieustraszony": {
+    "name": "Nieustraszony",
+    "desc": "Bohater jest odporny na Strach i zmniejsza efekt Grozy do Strachu.",
+    "effect": ""
+  },
+  "niezwykle odporny": {
+    "name": "Niezwykle odporny",
+    "desc": "Bohater ma wysoką odporność na trudy życia.",
+    "effect": "+5 do Odporności."
+  },
+  "obieżyświat": {
+    "name": "Obieżyświat",
+    "desc": "Bohater ma dużą wiedzę o świecie.",
+    "effect": "+10 do testów Wiedzy i Znajomości Języków."
+  },
+  "oburęczność": {
+    "name": "Oburęczność",
+    "desc": "Bohater może walczyć obiema rękami.",
+    "effect": "Nie otrzymuje kary -20 do Walki Wręcz za używanie drugiej ręki."
+  },
+  "odporność na chaos": {
+    "name": "Odporność na Chaos",
+    "desc": "Bohater ma wrodzoną odporność na chaos.",
+    "effect": "+10 do testów Siły Woli przeciwko magii i efektom Chaosu, odporność na mutacje."
+  },
+  "odporność na choroby": {
+    "name": "Odporność na choroby",
+    "desc": "Bohater jest odporny na choroby i rzadko choruje.",
+    "effect": ""
+  },
+  "odporność na magię": {
+    "name": "Odporność na magię",
+    "desc": "Bohater trudniej poddaje się wpływom magii.",
+    "effect": ""
+  },
+  "odporność na trucizny": {
+    "name": "Odporność na trucizny",
+    "desc": "Bohater jest odporny na efekty trucizn.",
+    "effect": ""
+  },
+  "odporność psychiczna": {
+    "name": "Odporność psychiczna",
+    "desc": "Bohater ma wyjątkową siłę umysłu.",
+    "effect": "+10 do testów Siły Woli przeciwko efektom zastraszenia, lęku i magii wpływającej na umysł."
+  },
+  "odwaga": {
+    "name": "Odwaga",
+    "desc": "Bohater nie poddaje się strachowi.",
+    "effect": "+10 do testów Siły Woli w walce przeciwko strachowi, grozie i zastraszaniu."
+  },
+  "ogłuszanie": {
+    "name": "Ogłuszanie",
+    "desc": "Bohater potrafi uderzać w czułe miejsca.",
+    "effect": "Możliwość ogłuszenia przeciwnika trafieniem w głowę."
+  },
+  "opanowanie": {
+    "name": "Opanowanie",
+    "desc": "Bohater nie poddaje się panice i efektom zastraszenia.",
+    "effect": ""
+  },
+  "pancerz wiary": {
+    "name": "Pancerz Wiary",
+    "desc": "Bohater ma odporność na efekty magiczne związane z chaosem.",
+    "effect": ""
+  },
+  "przemawianie": {
+    "name": "Przemawianie",
+    "desc": "Bohater potrafi przekonująco i charyzmatycznie przemawiać.",
+    "effect": "+10 do testów Przekonywania."
+  },
+  "przerażający": {
+    "name": "Przerażający",
+    "desc": "Bohater budzi grozę w przeciwnikach.",
+    "effect": "Przeciwnicy muszą wykonać test Siły Woli, by nie uciec."
+  },
+  "rozbrajanie": {
+    "name": "Rozbrajanie",
+    "desc": "Bohater potrafi skutecznie pozbawiać przeciwników broni.",
+    "effect": "+10 do testów Walki Wręcz podczas prób rozbrojenia wroga."
+  },
+  "straszny": {
+    "name": "Straszny",
+    "desc": "Bohater wzbudza niepokój i respekt.",
+    "effect": "-10 do testów Ogłady przeciwników próbujących z nim rozmawiać."
+  },
+  "strzał mierzony": {
+    "name": "Strzał mierzony",
+    "desc": "Bohater potrafi celować z wyjątkową precyzją.",
+    "effect": "+10 do testów Umiejętności Strzeleckich, jeśli poświęci dodatkową akcję na celowanie."
+  },
+  "strzał precyzyjny": {
+    "name": "Strzał precyzyjny",
+    "desc": "Bohater trafia dokładnie tam, gdzie chce.",
+    "effect": "Ignoruje połowę pancerza przeciwnika przy ataku dystansowym."
+  },
+  "strzał przebijający": {
+    "name": "Strzał przebijający",
+    "desc": "Bohater potrafi przebić nawet najtwardszą obronę.",
+    "effect": "Zwiększa obrażenia z broni dystansowej o 1."
+  },
+  "szczęście": {
+    "name": "Szczęście",
+    "desc": "Bohater ma wyjątkowe szczęście.",
+    "effect": "Otrzymuje dodatkowy Punkt Szczęścia na dzień."
+  },
+  "szósty zmysł": {
+    "name": "Szósty zmysł",
+    "desc": "Bohater potrafi wyczuwać zagrożenia.",
+    "effect": ""
+  },
+  "szał bojowy": {
+    "name": "Szał bojowy",
+    "desc": "Bohater wpada w bitewny amok.",
+    "effect": "Musi poświęcić jedną turę by wpaść w szał bojowy. Następnie do końca walki ma modyfikator +10 do SW i K ale za to ma -10 do INT i WW. Musi wykonywać albo Szarszę albo Szaleńczy atak i nie może uciekać."
+  },
+  "talent artystyczny": {
+    "name": "Talent artystyczny",
+    "desc": "Bohater posiada naturalny dar w sztuce.",
+    "effect": "+20 do testów Rzemiosła (sztuka, muzyka, aktorstwo)."
+  },
+  "twardziel": {
+    "name": "Twardziel",
+    "desc": "Bohater jest odporny na ból i obrażenia.",
+    "effect": "+1 do Żywotności."
+  },
+  "ulicznik": {
+    "name": "Ulicznik",
+    "desc": "Bohater wychował się na ulicy i zna się na przetrwaniu.",
+    "effect": "+10 do testów Ukrywania się i Hazardu w mieście."
+  },
+  "urodzony wojownik": {
+    "name": "Urodzony wojownik",
+    "desc": "Bohater ma naturalny talent do walki.",
+    "effect": "+5 do Walki Wręcz"
+  },
+  "widzenie w ciemności": {
+    "name": "Widzenie w ciemności",
+    "desc": "Bohater widzi w półmroku do 30 metrów.",
+    "effect": ""
+  },
+  "woltyżerka": {
+    "name": "Woltyżerka",
+    "desc": "Bohater świetnie radzi sobie w walce konnej.",
+    "effect": "+10 do testów Jeździectwa."
+  },
+  "wyczucie kierunku": {
+    "name": "Wyczucie kierunku",
+    "desc": "Bohater zawsze orientuje się w terenie.",
+    "effect": ""
+  },
+  "wykrywanie pułapek": {
+    "name": "Wykrywanie pułapek",
+    "desc": "Bohater potrafi dostrzegać i rozbrajać pułapki.",
+    "effect": "+10 do testów Spostrzegawczości i Zwinnych Palców przy rozbrajaniu pułapek."
+  },
+  "wyostrzone zmysły": {
+    "name": "Wyostrzone zmysły",
+    "desc": "Bohater ma doskonałą percepcję.",
+    "effect": "+10 do testów Spostrzegawczości."
+  },
+  "wędrowiec": {
+    "name": "Wędrowiec",
+    "desc": "Bohater spędza większość czasu w drodze.",
+    "effect": "+10 do testów Skradania się i Ukrywania się poza miastem."
+  },
+  "zapasy": {
+    "name": "Zapasy",
+    "desc": "Bohater jest silny w zwarciu.",
+    "effect": "+10 do testów Siły przy chwytaniu przeciwników."
+  },
+  "zapiekła nienawiść": {
+    "name": "Zapiekła nienawiść",
+    "desc": "Bohater pała nienawiścią do konkretnej grupy lub rasy.",
+    "effect": "+5 do testów Walki Wręcz przeciwko wybranej grupie wrogów."
+  },
+  "zmysł magii": {
+    "name": "Zmysł magii",
+    "desc": "Bohater potrafi wykrywać obecność magii.",
+    "effect": ""
+  },
+  "żyłka handlowa": {
+    "name": "Żyłka handlowa",
+    "desc": "Bohater ma talent do interesów.",
+    "effect": "+10 do testów Wyceny i Targowania."
+  }
+}

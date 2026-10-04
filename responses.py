@@ -1,35 +1,32 @@
 import discord
-import openai
-import os
-from openai import OpenAI
+
+from config.settings import COMMAND_PREFIX
 from core import shadow
-from dotenv import load_dotenv
 from core.shadow_context import ShadowContext
-
-load_dotenv()
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-total_tokens_used = 0
-TOKEN_LIMIT = 3000
 
 
 async def get_response(message: discord.Message):
     p_message = message.content.strip()
+    parts = p_message.split()
+    command = parts[0].lower() if parts else ""
 
-    if p_message.upper().startswith("ARISE"):
-        parts = p_message.split()
+    if command == f"{COMMAND_PREFIX}arise":
         if len(parts) == 1:
             return shadow.toggle_session("ARISE", "none", message)
         elif len(parts) == 2:
             return shadow.toggle_session("ARISE", parts[1], message)
         else:
-            return "Użycie: ARISE <osobowość>. Dostępne: " + ", ".join(shadow.PERSONALITIES.keys())
+            return (
+                f"Użycie: {COMMAND_PREFIX}arise <osobowość>. Dostępne: "
+                + ", ".join(shadow.PERSONALITIES.keys())
+            )
 
-    if p_message.upper() == "CEASE":
-        return shadow.toggle_session("CEASE")
+    if command == f"{COMMAND_PREFIX}cease":
+        if len(parts) != 1:
+            return f"Użycie: {COMMAND_PREFIX}cease"
+        return shadow.toggle_session("CEASE", message=message)
 
-    if p_message.startswith(">"):
+    if p_message.startswith(COMMAND_PREFIX):
         ctx = ShadowContext(message._state._get_client(), message)
         return await process_commands(ctx)
 
@@ -39,55 +36,66 @@ async def get_response(message: discord.Message):
     return None
 
 
+def should_handle(message: discord.Message) -> bool:
+    content = message.content.strip()
+    parts = content.split(maxsplit=1)
+    command = parts[0].lower() if parts else ""
+    return (
+        content.startswith(COMMAND_PREFIX)
+        or command in {f"{COMMAND_PREFIX}arise", f"{COMMAND_PREFIX}cease"}
+        or shadow.is_session_active(message.channel.id)
+    )
+
+
 async def process_commands(ctx: ShadowContext):
     import commands
     parts = ctx.content.split(maxsplit=1)
-    cmd = parts[0]
-    args = parts[1] if len(parts) > 1 else None
+    cmd = parts[0].lower()
+    args = parts[1].strip() if len(parts) > 1 else ""
 
-    if cmd == ">dm":
+    if cmd == f"{COMMAND_PREFIX}dm":
         return await commands.dm_command(ctx, args)
 
-    if cmd == ">sesja":
+    if cmd == f"{COMMAND_PREFIX}sesja":
         return await commands.sesja_command(ctx, args)
 
-    if cmd == ">purge":
+    if cmd == f"{COMMAND_PREFIX}purge":
         return await commands.purge_command(ctx, args)
 
-    if cmd == ">hello":
+    if cmd == f"{COMMAND_PREFIX}hello":
         return await commands.hello_command()
 
-    if cmd == ">ochlapus":
+    if cmd == f"{COMMAND_PREFIX}ochlapus":
         return await commands.ochlapus_command(args)
 
-    if cmd == ">u":
+    if cmd == f"{COMMAND_PREFIX}u":
         return await commands.umiejki_command(args)
 
-    if cmd == ">z":
+    if cmd == f"{COMMAND_PREFIX}z":
         return await commands.zdolnosci_command(args)
 
-    if cmd == ">roll":
+    if cmd == f"{COMMAND_PREFIX}roll":
         return await commands.roll_command(args)
 
-    if cmd == ">ukryty":
-        return await commands.ukryty_command(ctx)
+    if cmd == f"{COMMAND_PREFIX}ukryty":
+        return await commands.ukryty_command(ctx, args)
 
-    if cmd == ">klnij":
+    if cmd == f"{COMMAND_PREFIX}klnij":
         return await commands.klnij_command()
 
-    if cmd == ">help":
+    if cmd == f"{COMMAND_PREFIX}help":
         return await commands.help_command()
 
-    if cmd in (">wy", ">wydarzenia"):
-        return await commands.wydarzenia_command(ctx)
+    if cmd in (f"{COMMAND_PREFIX}wy", f"{COMMAND_PREFIX}wydarzenia"):
+        return await commands.wydarzenia_command(ctx, args)
 
-    if cmd in (">not", ">notatki"):
-        return await commands.notatka_command(ctx)
+    if cmd in (f"{COMMAND_PREFIX}not", f"{COMMAND_PREFIX}notatki"):
+        return await commands.notatka_command(ctx, args)
 
-    if cmd == ">npc":
-        return await commands.npc_command(ctx)
+    if cmd == f"{COMMAND_PREFIX}npc":
+        return await commands.npc_command(ctx, args)
 
-    if cmd == ">class":
-        return await commands.classes_command(ctx)
+    if cmd == f"{COMMAND_PREFIX}class":
+        return await commands.classes_command(args)
 
-    return "Naucz się w końcu tych komend KURWAAA"
+    return f"Nieznana komenda. Wpisz `{COMMAND_PREFIX}help`, żeby zobaczyć dostępne komendy."

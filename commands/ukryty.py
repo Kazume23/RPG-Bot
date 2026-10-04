@@ -1,12 +1,15 @@
 from services.rolls import roll_logic
 from services.dm_sender import send_admin_dm
+from commands.utility import command_usage
 
 
-async def ukryty_command(ctx):
-    parts = ctx.content.split(maxsplit=1)
-    if len(parts) < 2:
-        return "Ty chuju. Pisz jak człowiek np: 5d6"
+async def ukryty_command(ctx, args: str):
+    if not args:
+        return f"Użyj poprawnej składni, np. {command_usage('ukryty 5d6')}"
 
-    result = roll_logic(parts[1])
-    await send_admin_dm(ctx.bot, f"User {ctx.author} rolled: {parts[1]}\n{result}")
-    return f"Rzuciłeś ukryty rzut lampucero"
+    result = roll_logic(args)
+    if result.startswith("Niepoprawny rzut"):
+        return result
+
+    await send_admin_dm(ctx.bot, f"User {ctx.author} rolled: {args}\n{result}")
+    return "Rzut został wysłany do MG."

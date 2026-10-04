@@ -1,17 +1,20 @@
 import discord
-from commands.utility import has_admin_permissions
+from commands.utility import command_usage, has_admin_permissions
 
 
 async def dm_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
+        return "Nie masz uprawnień do tej komendy."
+
+    if ctx.guild is None:
+        return "Tej komendy można używać tylko na serwerze."
 
     if not args:
-        return "Użyj poprawnej składni: `>dm <nazwa kanału> <wiadomość>`"
+        return f"Użyj poprawnej składni: {command_usage('dm <nazwa-kanału> <wiadomość>')}"
 
     parts = args.split(maxsplit=1)
     if len(parts) < 2:
-        return "Użyj poprawnej składni: `>dm <nazwa kanału> <wiadomość>`"
+        return f"Użyj poprawnej składni: {command_usage('dm <nazwa-kanału> <wiadomość>')}"
 
     channel_name, msg = parts[0], parts[1]
     target_channel = discord.utils.get(ctx.guild.text_channels, name=channel_name)

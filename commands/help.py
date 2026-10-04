@@ -1,19 +1,19 @@
-async def help_command():
-    return """
-    **Komendy:**
+from config.settings import COMMAND_PREFIX
 
-    1. **`>ochlapus {WT}`**  
-       Na brodę Grungniego, jego młot i synów, dzisiaj wieczorem napierdolimy się jak przodkowie przykazali!
-    
-    2. **`>u {nazwa_umiejętności}`**  
-       Sprawdź szczegóły na temat umiejętności swojej postaci. Podaj nazwę umiejętności, aby uzyskać opis i jak wpływa na twoje działania w grze.
-    
-    3. **`>z {nazwa_zdolności}`**  
-       Dowiedz się więcej o zdolnościach swojej postaci. Podaj nazwę zdolności, by poznać szczegóły na temat jej działania w grze.
-    
-    4. **`>roll {ilość}d{strona}`**  
-       Hazard! Wpisz np. `>roll 2d6`.
-    
-    \n5. **`>klnij`**     
-    Popularne krasnoludzkie wyzwiska które pomogą wam zdobyć XP na sesji.
-    """
+
+async def help_command():
+    p = COMMAND_PREFIX
+    return f"""**Komendy:**
+            `{p}roll 2d6` — rzut kośćmi
+            `{p}ukryty 1d100` — wynik rzutu wysłany do MG
+            `{p}u [nazwa]` — opis umiejętności
+            `{p}z [nazwa]` — opis zdolności
+            `{p}ochlapus <Odp>` — test mocnej głowy
+            `{p}klnij` — krasnoludzkie przekleństwo
+            `{p}class [nazwa]` — lista lub opis profesji
+            `{p}npc <rasa> <m/f> <klasa>` — generator NPC (MG)
+            `{p}notatki <dodaj/usun/zmien/daj>` — notatki MG
+            `{p}wydarzenia <dodaj/usun/zmien/daj>` — wydarzenia MG
+            `{p}sesja <kanał>` — ankieta terminu sesji (MG)
+            `{p}dm <kanał> <tekst>` — wiadomość na wskazany kanał (MG)
+            `{p}purge <1-100>` — usuwanie wiadomości (MG)"""

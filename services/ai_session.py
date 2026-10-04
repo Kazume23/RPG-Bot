@@ -1,11 +1,20 @@
-from core.shadow import toggle_session, admin
+from config.settings import settings
+from core.shadow import toggle_session
 
 
 async def start_session_ai(bot, personality: str = "none"):
-    user = await bot.fetch_user(admin)
+    if settings.owner_id is None:
+        print("[ai_session][WARN] Brakuje BOT_OWNER_ID/ADMIN_ID — nie uruchamiam sesji AI.")
+        return
+
+    user = await bot.fetch_user(settings.owner_id)
     dm_channel = await user.create_dm()
 
-    response = toggle_session("ARISE", personality=personality, message=MockMessage(admin, dm_channel.id))
+    response = toggle_session(
+        "ARISE",
+        personality=personality,
+        message=MockMessage(settings.owner_id, dm_channel.id),
+    )
 
     if response and response.strip():
         await dm_channel.send(response)

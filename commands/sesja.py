@@ -1,5 +1,5 @@
 import discord
-from commands.utility import has_admin_permissions
+from commands.utility import command_usage, has_admin_permissions
 
 
 async def send_sesja_message(ctx, channel):
@@ -30,10 +30,13 @@ async def send_sesja_message(ctx, channel):
 
 async def sesja_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
+        return "Nie masz uprawnień do tej komendy."
+
+    if ctx.guild is None:
+        return "Tej komendy można używać tylko na serwerze."
 
     if not args:
-        return "Użyj poprawnej składni: `>sesja <nazwa_kanału>`"
+        return f"Użyj poprawnej składni: {command_usage('sesja <nazwa-kanału>')}"
 
     channel = discord.utils.get(ctx.guild.text_channels, name=args.strip())
     if channel:

@@ -10,7 +10,7 @@ async def klnij_command():
     if not klnij_copy:
         klnij_copy = set(wyzwiska.przeklenstwa_ogolne)
 
-    effect = random.choice(list(klnij_copy))
-    klnij_copy.remove(effect)
+    insult = random.choice(list(klnij_copy))
+    klnij_copy.remove(insult)
 
-    return f"{wyzwiska.losuj_przeklenstwo()} \nPozostało: {len(klnij_copy)}"
+    return f"{insult} \nPozostało: {len(klnij_copy)}"

@@ -1,24 +1,23 @@
-import os
 import json
+from pathlib import Path
 from typing import Any, Dict, List, Union
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-_cache: Dict[str, Any] = {}
+from config.settings import settings
+
+DATA_DIR = settings.content_data_dir
+_cache: Dict[Path, Any] = {}
 
 
 def load_json(filename: str, subdir: str = None, use_cache: bool = True) -> Union[Dict, List]:
-    if subdir:
-        path = os.path.join(DATA_DIR, subdir, filename)
-    else:
-        path = os.path.join(DATA_DIR, filename)
+    path = DATA_DIR / subdir / filename if subdir else DATA_DIR / filename
 
     if use_cache and path in _cache:
         return _cache[path]
 
-    if not os.path.exists(path):
+    if not path.exists():
         raise FileNotFoundError(f"Plik JSON nie istnieje: {path}")
 
-    with open(path, "r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
     if use_cache:
@@ -65,6 +64,12 @@ def get_skills() -> Dict[str, Any]:
 
 def get_abilities() -> Dict[str, Any]:
     return load_json("abilities.json", subdir="content")
+
+
+def get_ochlapus_effects() -> List[str]:
+    data = load_json("ochlapus.json", subdir="content")
+    effects = data.get("ochlapus", {})
+    return [f"**{name.strip()}**\n{description.strip()}" for name, description in effects.items()]
 
 
 def clear_cache() -> None:

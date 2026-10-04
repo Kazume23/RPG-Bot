@@ -1,16 +1,19 @@
-import os
 from openai import AsyncOpenAI
-from dotenv import load_dotenv
+
+from config.settings import COMMAND_PREFIX, settings
 from core.token_counter import count_tokens
 from core.importance_rules import assign_importance_score
 
-load_dotenv()
-openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai_client = (
+    AsyncOpenAI(api_key=settings.openai_api_key)
+    if settings.openai_api_key and settings.ai_enabled
+    else None
+)
 
 MAX_CONTEXT_TOKENS = 1500
 MAX_MESSAGE_TOKENS = 250
 MAX_SUMMARY_TOKENS = 750
-MODEL_FOR_SUMMARY = "gpt-3.5-turbo"
+MODEL_FOR_SUMMARY = settings.ai_summary_model
 
 IGNORED_PHRASES = [
     "I rise, bound to no one.",
@@ -38,7 +41,9 @@ async def build_context_from_history(ctx, limit_valid=7, limit_raw=40):
 
     valid_messages = []
     for msg in messages:
-        if msg.content.upper().startswith(("ARISE", "CEASE")) or msg.content.startswith(">"):
+        if msg.content.lower().startswith(
+            (f"{COMMAND_PREFIX}arise", f"{COMMAND_PREFIX}cease")
+        ) or msg.content.startswith(COMMAND_PREFIX):
             continue
         if is_ignored_message(msg.content):
             continue
@@ -56,15 +61,13 @@ async def build_context_from_history(ctx, limit_valid=7, limit_raw=40):
 
     context = await trim_or_summarize_context(context)
 
-    print("\n========== KONTEKST UŻYTY W ZAPYTANIU ==========")
-    for i, m in enumerate(context):
-        print(f"[{i}] ({m['role']}): {m['content']}... (tokens: {count_tokens(m['content'])})")
-    print("===============================================\n")
-
     return context
 
 
 async def summarize_messages(messages_to_summarize, max_tokens=MAX_SUMMARY_TOKENS):
+    if openai_client is None:
+        raise RuntimeError("Moduł AI jest wyłączony albo brakuje OPENAI_API_KEY.")
+
     summary_prompt = (
         "Streszczaj poprzednie wiadomości zachowując ich sens, ton i emocje. "
         "Nie dodawaj nowych wątków. Nie wymyślaj niczego. Nie zmieniaj stylu. "

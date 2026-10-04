@@ -38,7 +38,11 @@ def apply_class(race_data: dict, class_data: dict) -> dict:
     abilities_final = [random.choice(ability) if isinstance(ability, list) else ability for ability in class_data.get("abilities", [])]
     merged["abilities"] = race_data.get("abilities", []) + abilities_final
 
-    merged["equipment"] = race_data.get("equipment", []) + class_data.get("equipment", [])
+    class_equipment = [
+        random.choice(item) if isinstance(item, list) else item
+        for item in class_data.get("equipment", [])
+    ]
+    merged["equipment"] = race_data.get("equipment", []) + class_equipment
 
     return merged
 

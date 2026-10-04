@@ -1,9 +1,4 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
+from config.settings import settings
 
 
 async def manual_send(bot, user_id: int, content: str) -> None:
@@ -16,13 +11,16 @@ async def manual_send(bot, user_id: int, content: str) -> None:
 
 
 async def send_admin_dm(bot, content: str) -> None:
+    if settings.owner_id is None:
+        print("[dm_sender][WARN] Brakuje BOT_OWNER_ID/ADMIN_ID — pomijam wiadomość do właściciela.")
+        return
     try:
-        admin = await bot.fetch_user(ADMIN_ID)
+        admin = await bot.fetch_user(settings.owner_id)
         await admin.send(content)
         print(f"[dm_sender] Wysłano DM do Admina: {content}")
 
     except Exception as e:
-        print(f"[dm_sender][ERROR] Nie udało się wysłać DM do {ADMIN_ID}: {e}")
+        print(f"[dm_sender][ERROR] Nie udało się wysłać DM do właściciela: {e}")
 
 
 async def send_user_dm(bot, user_id: int, content: str) -> None:
@@ -35,4 +33,5 @@ async def send_user_dm(bot, user_id: int, content: str) -> None:
 
 
 async def send_startup_dm(bot) -> None:
-    await manual_send(bot, ADMIN_ID, "Shadow: uruchomiony i gotowy do akcji.")
+    if settings.owner_id is not None:
+        await manual_send(bot, settings.owner_id, "Shadow: uruchomiony i gotowy do akcji.")

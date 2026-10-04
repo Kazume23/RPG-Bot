@@ -1,8 +1,7 @@
-import os
 import logging
 from openai import OpenAI
-from dotenv import load_dotenv
 
+from config.settings import settings
 from core.personalities import load_personalities
 from core.token_counter import count_tokens
 from core.context_builder import build_context_from_history
@@ -12,15 +11,17 @@ logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s:%(message)s',
     handlers=[
-        logging.FileHandler("shadow.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-admin = int(os.getenv("ADMIN_ID"))
+client = (
+    OpenAI(api_key=settings.openai_api_key)
+    if settings.openai_api_key and settings.ai_enabled
+    else None
+)
+admin = settings.owner_id
 
 total_tokens_used = 0
 TOKEN_LIMIT = 20000
@@ -35,8 +36,8 @@ def toggle_session(state: str, personality: str = "none", message=None):
 
     channel_id = message.channel.id if message else None
 
-    if message and message.author.id != admin:
-        return "Spierdalaj, nie jesteś moim panem"
+    if message and (admin is None or message.author.id != admin):
+        return "Nie masz uprawnień do sterowania sesją AI."
 
     personality = personality.lower()
 
@@ -52,7 +53,6 @@ def toggle_session(state: str, personality: str = "none", message=None):
             "active": True
         }
 
-        print(f"[DEBUG] ARISE → active_sessions: {active_sessions}")
         total_tokens_used = 0
         logger.info("[ARISE] Sesja rozpoczęta.")
 
@@ -65,7 +65,6 @@ def toggle_session(state: str, personality: str = "none", message=None):
         session = active_sessions.get(channel_id)
         if session:
             session["active"] = False
-            print(f"[DEBUG] CEASE → active_sessions: {active_sessions}")
         total_tokens_used = 0
         logger.info("[CEASE] Sesja zakończona.")
         return "Even in silence, my shadow remains. When you call again, I will rise..."
@@ -73,7 +72,6 @@ def toggle_session(state: str, personality: str = "none", message=None):
 
 def is_session_active(channel_id):
     session = active_sessions.get(channel_id)
-    print(f"[DEBUG] Sprawdzam sesję dla kanału {channel_id}, session: {session}")
     return session is not None and session.get("active", False)
 
 
@@ -106,6 +104,9 @@ async def get_shadow_response(ctx):
         logger.info("Wiadomość zignorowana – sesja nieaktywna.")
         return None
 
+    if client is None:
+        return "Moduł AI jest wyłączony albo brakuje OPENAI_API_KEY."
+
     personality = session.get("personality", "none")
 
     if total_tokens_used >= TOKEN_LIMIT:
@@ -132,7 +133,7 @@ async def get_shadow_response(ctx):
         logger.debug("Historia przycięta do limitu tokenów (%d)", count_tokens(history))
 
         response = client.chat.completions.create(
-            model="gpt-4o-2024-05-13",
+            model=settings.ai_model,
             messages=history,
             max_tokens=500,
         )
@@ -148,19 +149,3 @@ async def get_shadow_response(ctx):
     except Exception as e:
         logger.exception("Błąd przy generowaniu odpowiedzi: %s", str(e))
         return "Coś poszło nie tak w mroku... spróbuj ponownie."
-
-
-async def process_commands(p_message, ctx):
-    if p_message.startswith("ARISE"):
-        parts = p_message.split()
-        if len(parts) == 2:
-            return toggle_session("ARISE", parts[1], ctx)
-        elif len(parts) == 1:
-            return toggle_session("ARISE", "none", ctx)
-        else:
-            return "Użycie: ARISE <osobowość>. Dostępne: shadow, pijak, bełcho"
-
-    if p_message.startswith("CEASE"):
-        return toggle_session("CEASE", message=ctx)
-
-    return None

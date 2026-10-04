@@ -1,5 +1,3 @@
-import random
-
 # Przekleństwa dla każdego (ogólne dla Imperium)
 przeklenstwa_ogolne = [
     "Ty parszywy mutantowy pomiocie, nawet Nurgle by się tobą brzydził!",
@@ -74,7 +72,3 @@ przeklenstwa_ogolne = [
     "I niech cię pieprzy cały Kislev, a jeśli masz zamiar zginąć w tej walce, to chociaż zabierz ze sobą ten zapach, co go zostawiasz za sobą, bo nie wytrzymam, jebany łachmyto!",
     "Wolałbym tańczyć nago na stole z goblinem niż jeszcze raz słuchać, jak się odzywasz, pieprzony wraku, którego matka wysrała na świat razem z gnojówką",
 ]
-
-
-def losuj_przeklenstwo():
-    return random.choice(przeklenstwa_ogolne)

@@ -1,0 +1,197 @@
+{
+  "brzuchomówstwo": {
+    "name": "Brzuchomówstwo",
+    "desc": "Bohater, który posiada tę umiejętność, potrafi mówić bez wyraźnego ruchu ust – dzięki temu przekazuje informacje w sposób subtelny, co może zmylić przeciwnika lub umożliwić dyskretną komunikację. Używane w sytuacjach, gdy liczy się nie tylko mowa, ale i mimika.",
+    "test": "Ogłada"
+  },
+  "charakteryzacja": {
+    "name": "Charakteryzacja",
+    "desc": "Umiejętność pozwalająca bohaterowi na radykalną zmianę wyglądu przy użyciu makijażu, kostiumów oraz rekwizytów. Dzięki niej może wcielić się w zupełnie inną postać, oszukując obserwatorów i zmieniając swój wizerunek, co jest szczególnie przydatne w infiltracji lub podczas maskarad.",
+    "test": "Ogłada"
+  },
+  "czytanie i pisanie": {
+    "name": "Czytanie i pisanie",
+    "desc": "Bohater posiada umiejętność odczytywania i zapisywania informacji w dowolnym języku, z wyjątkiem bardzo skomplikowanych tekstów wymagających specjalistycznej wiedzy. Ta zdolność jest kluczowa przy sporządzaniu raportów, listów, a także przy analizie manuskryptów i dokumentów historycznych.",
+    "test": "Inteligencja"
+  },
+  "czytanie z warg": {
+    "name": "Czytanie z warg",
+    "desc": "Umiejętność umożliwiająca bohaterowi odczytywanie słów z ruchów ust rozmówcy, nawet jeśli nie słyszy wypowiedzi. Pozwala to na dyskretne pozyskiwanie informacji w sytuacjach, gdy słowa są ukryte lub celowo zniekształcone.",
+    "test": "Inteligencja"
+  },
+  "dowodzenie": {
+    "name": "Dowodzenie",
+    "desc": "Dzięki tej umiejętności bohater potrafi skutecznie kierować grupą, motywować swoich towarzyszy i wydawać rozkazy, co przekłada się na lepszą koordynację działań podczas walki i w trudnych sytuacjach kryzysowych. Jego obecność zwiększa morale sojuszników.",
+    "test": "Ogłada"
+  },
+  "gadanina": {
+    "name": "Gadanina",
+    "desc": "Bohater, który włada sztuką gadaniny, potrafi opowiadać wciągające historie oraz swobodnie rozmawiać, co pozwala mu zjednywać sojuszników lub odwracać uwagę przeciwników. Ta umiejętność może również służyć do negocjacji i manipulacji w sytuacjach społecznych.",
+    "test": "Ogłada"
+  },
+  "hazard": {
+    "name": "Hazard",
+    "desc": "Umiejętność pozwalająca bohaterowi na efektywne uczestniczenie w grach losowych, gdzie oprócz szczęścia liczy się umiejętność oceny ryzyka. Pomaga to w zdobywaniu dodatkowych środków lub wpływów poprzez korzystne zakłady.",
+    "test": "Inteligencja"
+  },
+  "hipnoza": {
+    "name": "Hipnoza",
+    "desc": "Bohater potrafi wprowadzić przeciwnika w stan transu, co umożliwia zdobycie od niego informacji lub chwilowe unieruchomienie celu. Umiejętność ta bywa stosowana jako metoda wywierania wpływu lub manipulacji.",
+    "test": "Siła Woli"
+  },
+  "jeździectwo": {
+    "name": "Jeździectwo",
+    "desc": "Umiejętność pozwalająca na opanowanie jazdy na koniu lub innym zwierzęciu, co jest kluczowe podczas podróży oraz w walce. Dobra znajomość tej umiejętności umożliwia zachowanie kontroli nad pojazdem nawet w trudnym terenie i w warunkach bojowych.",
+    "test": "Zręczność"
+  },
+  "język tajemny": {
+    "name": "Język tajemny",
+    "desc": "Bohater, który zna język tajemny, potrafi komunikować się w sposób zrozumiały tylko dla wtajemniczonych. Może to być język używany przez magów, kultystów lub członków tajnych organizacji, co daje dostęp do zakazanych informacji.",
+    "test": "Inteligencja"
+  },
+  "kuglarstwo": {
+    "name": "Kuglarstwo",
+    "desc": "Umiejętność umożliwiająca wykonywanie zręcznych sztuczek, popisów cyrkowych oraz ulicznych pokazów, które mogą służyć do rozpraszania uwagi lub zabawy publiczności. Wykorzystanie tej umiejętności wymaga precyzyjnej kontroli ruchów.",
+    "test": "Zręczność"
+  },
+  "leczenie": {
+    "name": "Leczenie",
+    "desc": "Bohater potrafi udzielać pierwszej pomocy, tamować krwotoki, bandażować rany i diagnozować choroby. Umiejętność ta jest kluczowa podczas długotrwałych przygód oraz w czasie bitew, gdy liczy się szybka opieka nad rannymi.",
+    "test": "Inteligencja"
+  },
+  "mocna głowa": {
+    "name": "Mocna głowa",
+    "desc": "Dzięki tej umiejętności bohater wykazuje wyjątkową odporność na alkohol oraz inne środki odurzające, co pozwala mu utrzymać klarowność umysłu nawet w ekstremalnych sytuacjach, np. podczas długiej podróży lub intensywnego starcia.",
+    "test": "Wytrzymałość"
+  },
+  "nauka": {
+    "name": "Nauka",
+    "desc": "Umiejętność reprezentująca wiedzę teoretyczną bohatera w określonych dziedzinach, takich jak historia, inżynieria czy magia. Pozwala ona na analizę skomplikowanych zagadnień oraz rozwiązywanie problemów wymagających głębokiej wiedzy akademickiej.",
+    "test": "Inteligencja"
+  },
+  "nawigacja": {
+    "name": "Nawigacja",
+    "desc": "Dzięki tej umiejętności bohater potrafi określić swoje położenie i wyznaczyć właściwy kierunek, co jest niezbędne podczas podróży, eksploracji nieznanego terenu czy żeglugi. Umiejętność ta minimalizuje ryzyko zagubienia się.",
+    "test": "Inteligencja"
+  },
+  "opieka nad zwierzętami": {
+    "name": "Opieka nad zwierzętami",
+    "desc": "Bohater potrafi troszczyć się o zwierzęta, tresować je oraz leczyć ich drobne urazy. Umiejętność ta jest szczególnie przydatna w sytuacjach, gdy zwierzęta stanowią zarówno źródło pomocy, jak i zagrożenia.",
+    "test": "Inteligencja"
+  },
+  "oswajanie": {
+    "name": "Oswajanie",
+    "desc": "Umiejętność umożliwiająca bohaterowi zdobywanie zaufania dzikich zwierząt, a nawet ich oswajanie, co może prowadzić do ich wykorzystania jako środków transportu, wsparcia w walce lub kompanów podróży.",
+    "test": "Siła Woli"
+  },
+  "otwieranie zamków": {
+    "name": "Otwieranie zamków",
+    "desc": "Bohater potrafi otwierać zamki oraz kłódki przy użyciu wytrychów lub specjalistycznych narzędzi. Umiejętność ta jest niezastąpiona przy próbach włamania się do zamkniętych pomieszczeń lub skrzyń.",
+    "test": "Zręczność"
+  },
+    "plotkowanie": {
+    "name": "Plotkowanie",
+    "desc": "Umiejętność pozwalająca bohaterowi zdobywać informacje poprzez rozmowy i plotki. Dzięki niej może szybko dowiedzieć się o bieżących wydarzeniach, tajemnicach czy lokalnych sekretach, co często daje przewagę strategiczną.",
+    "test": "Ogłada"
+  },
+  "pływanie": {
+    "name": "Pływanie",
+    "desc": "Bohater potrafi swobodnie poruszać się w wodzie, utrzymując się na powierzchni i przemieszczając z dobrą techniką. Umiejętność ta jest kluczowa w sytuacjach kryzysowych, takich jak ucieczka przed zagrożeniem lub ratowanie życia.",
+    "test": "Krzepa"
+  },
+  "powożenie": {
+    "name": "Powożenie",
+    "desc": "Dzięki tej umiejętności bohater sprawnie prowadzi wozy lub powozy, nawet w trudnym terenie. Jest niezbędna podczas długich podróży, transportu towarów lub w sytuacjach wymagających szybkiego przemieszczania się większych grup.",
+    "test": "Zręczność"
+  },
+  "przekonywanie": {
+    "name": "Przekonywanie",
+    "desc": "Bohater potrafi efektywnie wpływać na decyzje innych, używając argumentacji, emocjonalnej manipulacji lub perswazji. Umiejętność ta jest wykorzystywana w negocjacjach, dyplomacji oraz w sytuacjach kryzysowych, gdzie liczy się przekonanie przeciwnika do zmiany zdania.",
+    "test": "Ogłada"
+  },
+  "przeszukiwanie": {
+    "name": "Przeszukiwanie",
+    "desc": "Umiejętność umożliwiająca dokładne przeszukiwanie pomieszczeń, ruin i terenów w poszukiwaniu ukrytych przedmiotów, pułapek lub śladów, które mogą prowadzić do odkrycia cennych informacji.",
+    "test": "Inteligencja"
+  },
+  "rzemiosło": {
+    "name": "Rzemiosło (różne)",
+    "desc": "Bohater potrafi tworzyć i naprawiać przedmioty, korzystając z wiedzy technicznej i artystycznej. W zależności od dziedziny (aptekarstwo, bednarstwo, gotowanie, górnictwo, handel, jubilerstwo, kaligrafia, kamieniarstwo, kartografia, kowalstwo, krawiectwo, młynarstwo, piwowarstwo, płatnerstwo, rusznikarstwo, rymarstwo, stolarstwo, szkutnictwo, szewstwo, sztuka, świecarstwo, uprawa ziemi, wyrób łuków, zielarstwo, złotnictwo) wymaga precyzyjnych umiejętności manualnych oraz głębokiej wiedzy o materiałach.",
+    "test": "Różne"
+  },
+  "sekretne znaki": {
+    "name": "Sekretne znaki (różne)",
+    "desc": "Bohater zna tajemne systemy symboli wykorzystywanych przez wybrane frakcje lub stowarzyszenia, co pozwala mu na komunikację z wtajemniczonymi lub identyfikację członków danej grupy.",
+    "test": "Inteligencja"
+  },
+  "sekretny język": {
+    "name": "Sekretny język (różne)",
+    "desc": "Umiejętność umożliwiająca komunikację w języku znanym tylko wybranym osobom, takim jak język złodziei czy tajemnych kultów. Pozwala na przekazywanie informacji bez zrozumienia przez osoby nie wtajemniczone.",
+    "test": "Inteligencja"
+  },
+  "skradanie się": {
+    "name": "Skradanie się",
+    "desc": "Bohater potrafi poruszać się cicho i niezauważenie, co umożliwia mu infiltrację, kradzież lub unikanie wykrycia przez wrogów. Kluczowa umiejętność w sytuacjach wymagających dyskrecji.",
+    "test": "Zręczność"
+  },
+  "splatanie magii": {
+    "name": "Splatanie magii",
+    "desc": "Umiejętność pozwalająca bohaterowi na manipulowanie surową energią magiczną, umożliwiając tworzenie prostych zaklęć lub rytuałów. Wymaga silnej kontroli nad energią i skupienia.",
+    "test": "Siła Woli"
+  },
+  "spostrzegawczość": {
+    "name": "Spostrzegawczość",
+    "desc": "Bohater charakteryzuje się wyjątkową czujnością, dostrzegając nawet najmniejsze szczegóły otoczenia, co pozwala mu na szybkie wykrycie zagrożeń, pułapek lub ukrytych obiektów.",
+    "test": "Inteligencja"
+  },
+  "sztuka przetrwania": {
+    "name": "Sztuka przetrwania",
+    "desc": "Umiejętność umożliwiająca bohaterowi radzenie sobie w ekstremalnych warunkach przyrody. Pozwala na znalezienie pożywienia, wody i schronienia, a także na adaptację do trudnych warunków środowiskowych.",
+    "test": "Inteligencja"
+  },
+  "śledzenie": {
+    "name": "Śledzenie",
+    "desc": "Bohater potrafi odczytywać ślady pozostawione przez istoty, co umożliwia mu określenie kierunku, z jakiego pochodzi cel, lub odnalezienie zagubionych osób.",
+    "test": "Inteligencja"
+  },
+  "torturowanie": {
+    "name": "Torturowanie",
+    "desc": "Umiejętność pozwalająca na zadawanie przeciwnikowi intensywnego bólu w celu zdobycia informacji lub osłabienia go w walce. Jest to brutalna metoda wykorzystywana zwykle jako ostateczność.",
+    "test": "Krzepa"
+  },
+  "targowanie": {
+    "name": "Targowanie",
+    "desc": "Bohater wykazuje się zdolnością do negocjowania korzystnych warunków transakcji, potrafiąc obniżyć cenę lub uzyskać dodatkowe korzyści. Umiejętność ta wymaga finezji i wyczucia sytuacji.",
+    "test": "Ogłada"
+  },
+  "tresura": {
+    "name": "Tresura",
+    "desc": "Umiejętność umożliwiająca bohaterowi szkolenie zwierząt do wykonywania określonych zadań – od transportu, przez pomoc w walce, po wykorzystywanie w rozpoznaniu terenu.",
+    "test": "Siła Woli"
+  },
+  "ukrywanie się": {
+    "name": "Ukrywanie się",
+    "desc": "Bohater potrafi skutecznie maskować swoją obecność, korzystając z otoczenia lub specjalnych technik, aby uniknąć wykrycia przez przeciwników.",
+    "test": "Zręczność"
+  },
+  "unik": {
+    "name": "Unikanie",
+    "desc": "Umiejętność pozwalająca bohaterowi na zgrabne omijanie ciosów przeciwników.",
+    "test": "Zręczność"
+  },
+  "wycena": {
+    "name": "Wycena",
+    "desc": "Bohater potrafi precyzyjnie ocenić wartość przedmiotów, skarbów i dóbr materialnych, co jest nieocenione przy handlu i negocjacjach.",
+    "test": "Inteligencja"
+  },
+  "wiedza": {
+    "name": "Wiedza (różne)",
+    "desc": "Umiejętność reprezentująca głęboką wiedzę bohatera w określonych dziedzinach, takich jak historia, geografia, magia czy polityka. Pozwala na analizę sytuacji i rozwiązywanie problemów wymagających specjalistycznej wiedzy.",
+    "test": "Inteligencja"
+  },
+  "żeglarstwo": {
+    "name": "Żeglarstwo",
+    "desc": "Bohater potrafi sprawnie obsługiwać statki i łodzie, utrzymując kontrolę w trudnych warunkach morskich. Umiejętność ta jest kluczowa przy długodystansowych podróżach oraz w sytuacjach kryzysowych na wodzie.",
+    "test": "Zręczność"
+  }
+}
