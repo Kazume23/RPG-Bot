@@ -21,12 +21,12 @@ def parse_roll(expr: str):
     return number_dice, number_sides
 
 
-def roll_logic(expr: str) -> str:
+def roll_logic(ctx, expr: str) -> str:
     try:
         number_dice, number_sides = parse_roll(expr)
         rolls = [random.randint(1, number_sides) for _ in range(number_dice)]
         total = sum(rolls)
-        return f"Wyniki rzutów: {', '.join(map(str, rolls))}\n**Suma**: {total}"
+        return f"Rzucił: {ctx.author.display_name}\nWyniki rzutów: {', '.join(map(str, rolls))}\n**Suma**: {total}"
     except (TypeError, ValueError) as exc:
         if str(exc) == "liczba kości musi mieścić się w zakresie 1–50":
             return "No chyba cię coś pojebało"

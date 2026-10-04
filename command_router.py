@@ -34,7 +34,7 @@ async def process_commands(ctx: CommandContext):
     if cmd == f"{COMMAND_PREFIX}z":
         return await commands.zdolnosci_command(args)
     if cmd == f"{COMMAND_PREFIX}roll":
-        return await commands.roll_command(args)
+        return await commands.roll_command(ctx, args)
     if cmd == f"{COMMAND_PREFIX}ukryty":
         return await commands.ukryty_command(ctx, args)
     if cmd == f"{COMMAND_PREFIX}klnij":
