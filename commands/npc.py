@@ -4,7 +4,7 @@ from services.character_aliver import character_randomizer
 
 async def npc_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Nie masz uprawnień do tej komendy."
+        return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
 
     parts = args.split(maxsplit=2)
 

@@ -4,12 +4,12 @@ from config.settings import COMMAND_PREFIX
 async def help_command():
     p = COMMAND_PREFIX
     return f"""**Komendy:**
-            `{p}roll 2d6` — rzut kośćmi
+            `{p}roll 2d6` — Hazard! Wpisz np. `{p}roll 2d6`.
             `{p}ukryty 1d100` — wynik rzutu wysłany do MG
             `{p}u [nazwa]` — opis umiejętności
             `{p}z [nazwa]` — opis zdolności
-            `{p}ochlapus <Odp>` — test mocnej głowy
-            `{p}klnij` — krasnoludzkie przekleństwo
+            `{p}ochlapus <Odp>` — Na brodę Grungniego, jego młot i synów, dzisiaj wieczorem napierdolimy się jak przodkowie przykazali!
+            `{p}klnij` — Popularne krasnoludzkie wyzwiska które pomogą wam zdobyć XP na sesji.
             `{p}class [nazwa]` — lista lub opis profesji
             `{p}npc <rasa> <m/f> <klasa>` — generator NPC (MG)
             `{p}notatki <dodaj/usun/zmien/daj>` — notatki MG

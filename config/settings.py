@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
 # Prefix is intentionally fixed. It is part of the bot's public command syntax.
-COMMAND_PREFIX = "<"
+COMMAND_PREFIX = ">"
 
 
 class ConfigurationError(RuntimeError):

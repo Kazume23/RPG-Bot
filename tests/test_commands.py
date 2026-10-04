@@ -5,7 +5,9 @@ from unittest.mock import patch
 
 from commands.classes import classes_command
 from commands.npc import npc_command
+from commands.roll import roll_command
 from commands.utility import has_admin_permissions
+from static.wyzwiska import przeklenstwa_ogolne
 
 
 def run(coroutine):
@@ -19,7 +21,14 @@ class CommandTests(unittest.TestCase):
 
     def test_unknown_class_returns_message(self):
         result = run(classes_command("nieistniejąca klasa"))
-        self.assertIn("Nie znaleziono klasy", result)
+        self.assertEqual("Naucz się dobrze wpisywać klasy przyczłapie", result)
+
+    def test_original_roll_insult_is_preserved(self):
+        self.assertEqual("Ty chuju. Pisz jak człowiek np: 5d6", run(roll_command("")))
+
+    def test_all_original_insults_are_present(self):
+        self.assertEqual(70, len(przeklenstwa_ogolne))
+        self.assertEqual(70, len(set(przeklenstwa_ogolne)))
 
     def test_npc_rejects_invalid_gender(self):
         ctx = SimpleNamespace(

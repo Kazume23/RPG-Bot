@@ -4,7 +4,7 @@ from commands.utility import command_usage, has_admin_permissions
 
 async def dm_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Nie masz uprawnień do tej komendy."
+        return "Spierdalaj. Nie masz nade mną władzy śmiertelniku"
 
     if ctx.guild is None:
         return "Tej komendy można używać tylko na serwerze."

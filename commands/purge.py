@@ -1,20 +1,23 @@
-from commands.utility import command_usage, has_admin_permissions
+from commands.utility import has_admin_permissions
+from config.settings import COMMAND_PREFIX
 
 
 async def purge_command(ctx, args: str):
     if not has_admin_permissions(ctx):
-        return "Nie masz uprawnień do tej komendy."
+        return "Spierdalaj. Nie masz uprawnień administratora do tej komendy."
 
     if ctx.guild is None:
         return "Tej komendy można używać tylko na serwerze."
 
     if not args or not args.isdigit():
-        return f"Użyj poprawnej składni: {command_usage('purge <1-100>')}"
+        return f"Pisz jak człowiek, np: {COMMAND_PREFIX}purge 20"
 
     try:
         amount = int(args)
-        if not 1 <= amount <= 100:
-            return "Liczba wiadomości musi mieścić się w zakresie 1–100."
+        if amount > 100:
+            return "Nie możesz usunąć więcej niż 100 wiadomości naraz, debilu."
+        if amount < 1:
+            return "Nie możesz usunąć mniej niż jednej wiadomości, debilu."
         await ctx.channel.purge(limit=amount + 1)
         return None
     except Exception as e:

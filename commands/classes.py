@@ -9,4 +9,4 @@ async def classes_command(args: str):
     try:
         return await show_class_info(class_name)
     except KeyError:
-        return f"Nie znaleziono klasy: **{class_name}**. Wpisz `<class`, aby zobaczyć listę."
+        return "Naucz się dobrze wpisywać klasy przyczłapie"

@@ -28,4 +28,6 @@ def roll_logic(expr: str) -> str:
         total = sum(rolls)
         return f"Wyniki rzutów: {', '.join(map(str, rolls))}\n**Suma**: {total}"
     except (TypeError, ValueError) as exc:
-        return f"Niepoprawny rzut: {exc}."
+        if str(exc) == "liczba kości musi mieścić się w zakresie 1–50":
+            return "No chyba cię coś pojebało"
+        return "Ty chuju. Pisz jak człowiek np: 5d6"

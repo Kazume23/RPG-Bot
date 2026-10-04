@@ -50,4 +50,4 @@ async def process_commands(ctx: CommandContext):
     if cmd == f"{COMMAND_PREFIX}class":
         return await commands.classes_command(args)
 
-    return f"Nieznana komenda. Wpisz `{COMMAND_PREFIX}help`, żeby zobaczyć dostępne komendy."
+    return "Naucz się w końcu tych komend KURWAAA"
