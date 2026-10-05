@@ -386,3 +386,4 @@ docs/crowdin.py
 *.mo
 /.coverage
 build/*
+credentials/

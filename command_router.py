@@ -21,33 +21,57 @@ async def process_commands(ctx: CommandContext):
 
     if cmd == f"{COMMAND_PREFIX}dm":
         return await commands.dm_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}sesja":
         return await commands.sesja_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}purge":
         return await commands.purge_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}hello":
         return await commands.hello_command()
+
     if cmd == f"{COMMAND_PREFIX}ochlapus":
         return await commands.ochlapus_command(args)
+
     if cmd == f"{COMMAND_PREFIX}u":
         return await commands.umiejki_command(args)
+
     if cmd == f"{COMMAND_PREFIX}z":
         return await commands.zdolnosci_command(args)
+
     if cmd == f"{COMMAND_PREFIX}roll":
         return await commands.roll_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}ukryty":
         return await commands.ukryty_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}klnij":
         return await commands.klnij_command()
+
     if cmd == f"{COMMAND_PREFIX}help":
         return await commands.help_command()
-    if cmd in (f"{COMMAND_PREFIX}wy", f"{COMMAND_PREFIX}wydarzenia"):
+
+    if cmd in (
+            f"{COMMAND_PREFIX}wydarzenia",
+    ):
         return await commands.wydarzenia_command(ctx, args)
-    if cmd in (f"{COMMAND_PREFIX}not", f"{COMMAND_PREFIX}notatki"):
+
+    if cmd in (
+            f"{COMMAND_PREFIX}notatki",
+    ):
         return await commands.notatka_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}npc":
         return await commands.npc_command(ctx, args)
+
     if cmd == f"{COMMAND_PREFIX}class":
         return await commands.classes_command(args)
+
+    if cmd in (
+            f"{COMMAND_PREFIX}postać",
+            f"{COMMAND_PREFIX}postac",
+    ):
+        return await commands.postac_command(ctx, args)
 
     return "Naucz się w końcu tych komend KURWAAA"

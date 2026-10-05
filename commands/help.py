@@ -9,6 +9,7 @@ async def help_command():
             `{p}u [nazwa]` — opis umiejętności
             `{p}z [nazwa]` — opis zdolności
             `{p}ochlapus <Odp>` — Na brodę Grungniego, jego młot i synów, dzisiaj wieczorem napierdolimy się jak przodkowie przykazali!
+            `{p}postać` — wyświetla twoją kartę postaci
             `{p}klnij` — Popularne krasnoludzkie wyzwiska które pomogą wam zdobyć XP na sesji.
             `{p}class [nazwa]` — lista lub opis profesji
             `{p}npc <rasa> <m/f> <klasa>` — generator NPC (MG)
