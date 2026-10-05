@@ -4,8 +4,10 @@ import logging
 import discord
 
 from commands.utility import (
-    command_usage,
     has_admin_permissions,
+)
+from services.character_card import (
+    build_character_card,
 )
 from services.google_sheets import (
     CharacterNotFoundError,
@@ -15,70 +17,61 @@ from services.google_sheets import (
     get_character_by_discord_id,
     get_character_by_name,
 )
+from views.character_card_view import (
+    CharacterCardView,
+)
 
 
 logger = logging.getLogger(__name__)
 
 
 def _safe(value) -> str:
-    return discord.utils.escape_markdown(str(value))
+    return discord.utils.escape_markdown(
+        str(value).strip()
+    )
 
 
-def format_character(character: dict) -> str:
-    name = character.get("Imię", "Nieznana postać")
-    surname = character.get("Nazwisko", "")
-
-    full_name = f"{name} {surname}".strip()
-
-    lines = [
-        f"## {_safe(full_name)}"
-    ]
-
-    for label, value in character.items():
-        if label in {"Imię", "Nazwisko"}:
-            continue
-
-        if not value:
-            continue
-
-        if isinstance(value, list):
-            lines.append("")
-            lines.append(f"**{_safe(label)}**")
-
-            for item in value:
-                lines.append(f"• {_safe(item)}")
-
-            continue
-
-        lines.append(
-            f"**{_safe(label)}:** {_safe(value)}"
+async def _load_character(
+    ctx,
+    character_name: str,
+) -> dict:
+    if character_name:
+        return await asyncio.to_thread(
+            get_character_by_name,
+            character_name,
         )
 
-    return "\n".join(lines)
+    return await asyncio.to_thread(
+        get_character_by_discord_id,
+        ctx.author.id,
+    )
 
 
-async def postac_command(ctx, args: str):
+async def postac_command(
+    ctx,
+    args: str,
+):
     character_name = args.strip()
 
-    if character_name and not has_admin_permissions(ctx):
-        return "Nie masz uprawnień do wyświetlania cudzej postaci chuju."
+    if (
+        character_name
+        and not has_admin_permissions(ctx)
+    ):
+        return (
+            "Nie masz uprawnień do "
+            "wyświetlania cudzej postaci chuju."
+        )
 
     try:
-        if character_name:
-            character = await asyncio.to_thread(
-                get_character_by_name,
-                character_name,
-            )
-        else:
-            character = await asyncio.to_thread(
-                get_character_by_discord_id,
-                ctx.author.id,
-            )
+        character_data = await _load_character(
+            ctx,
+            character_name,
+        )
 
     except CharacterNotLinkedError:
         return (
             "Nie masz przypisanej postaci. "
-            f"Pierdol się."
+            "Pierdol się."
         )
 
     except CharacterNotFoundError:
@@ -94,12 +87,37 @@ async def postac_command(ctx, args: str):
         logger.exception(
             "Błąd konfiguracji Google Sheets"
         )
-        return "Nie mogę teraz odczytać karty postaci."
+
+        return (
+            "Nie mogę teraz odczytać "
+            "karty postaci."
+        )
 
     except Exception:
         logger.exception(
-            "Coś się wyjebało i nie wiem co"
+            "Nieoczekiwany błąd podczas "
+            "odczytu karty postaci"
         )
-        return "Nie mogę teraz odczytać karty postaci."
 
-    return format_character(character)
+        return (
+            "Nie mogę teraz odczytać "
+            "karty postaci."
+        )
+
+    card = build_character_card(
+        character_data
+    )
+
+    view = CharacterCardView(
+        card=card,
+        requester_id=ctx.author.id,
+    )
+
+    message = await ctx.channel.send(
+        embed=view.initial_embed(),
+        view=view,
+    )
+
+    view.bind_message(message)
+
+    return None
