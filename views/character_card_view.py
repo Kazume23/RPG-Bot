@@ -16,29 +16,29 @@ VIEW_TIMEOUT = 300
 PAGE_DEFINITIONS = (
     (
         "profile",
-        "Profil",
-        "👤",
+        "Bohater",
     ),
     (
         "stats",
         "Cechy",
-        "⚔️",
     ),
     (
         "skills",
         "Umiejętności",
-        "📚",
     ),
     (
         "combat",
         "Walka",
-        "🛡️",
     ),
     (
         "equipment",
         "Ekwipunek",
-        "🎒",
     ),
+)
+
+MAGIC_PAGE_DEFINITION = (
+    "magic",
+    "Magia",
 )
 
 
@@ -49,22 +49,23 @@ class CharacterPageButton(
             self,
             page: str,
             label: str,
-            emoji: str,
             active: bool = False,
     ):
-        style = (
-            discord.ButtonStyle.primary
+        self.page = page
+        self.base_label = label
+
+        display_label = (
+            f"• {label}"
             if active
-            else discord.ButtonStyle.secondary
+            else label
         )
 
         super().__init__(
-            label=label,
-            emoji=emoji,
-            style=style,
+            label=display_label,
+            style=(
+                discord.ButtonStyle.secondary
+            ),
         )
-
-        self.page = page
 
     async def callback(
             self,
@@ -100,16 +101,23 @@ class CharacterCardView(
         self.requester_id = requester_id
         self.message = None
 
+        pages = list(
+            PAGE_DEFINITIONS
+        )
+
+        if card.get_section("Magia"):
+            pages.append(
+                MAGIC_PAGE_DEFINITION
+            )
+
         for (
                 page,
                 label,
-                emoji,
-        ) in PAGE_DEFINITIONS:
+        ) in pages:
             self.add_item(
                 CharacterPageButton(
                     page=page,
                     label=label,
-                    emoji=emoji,
                     active=(
                             page == "profile"
                     ),
@@ -161,10 +169,10 @@ class CharacterCardView(
             ):
                 continue
 
-            item.style = (
-                discord.ButtonStyle.primary
+            item.label = (
+                f"• {item.base_label}"
                 if item.page == page
-                else discord.ButtonStyle.secondary
+                else item.base_label
             )
 
     async def show_page(
@@ -172,7 +180,9 @@ class CharacterCardView(
             interaction: discord.Interaction,
             page: str,
     ) -> None:
-        self._set_active_page(page)
+        self._set_active_page(
+            page
+        )
 
         embed = build_character_embed(
             self.card,
@@ -184,7 +194,9 @@ class CharacterCardView(
             view=self,
         )
 
-    async def on_timeout(self):
+    async def on_timeout(
+            self,
+    ):
         for item in self.children:
             item.disabled = True
 
