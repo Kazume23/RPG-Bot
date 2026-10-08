@@ -1,197 +1,242 @@
 {
   "brzuchomówstwo": {
     "name": "Brzuchomówstwo",
-    "desc": "Bohater, który posiada tę umiejętność, potrafi mówić bez wyraźnego ruchu ust – dzięki temu przekazuje informacje w sposób subtelny, co może zmylić przeciwnika lub umożliwić dyskretną komunikację. Używane w sytuacjach, gdy liczy się nie tylko mowa, ale i mimika.",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi mówić bez otwierania ust. Osoby uważnie obserwujące Bohatera korzystającego z tej umiejętności mogą wykonać test spostrzegawczości przeciwko testowi brzuchomówstwa BG, żeby wykryć sztuczkę Bohatera.\n\nZdolności pokrewne: brak.",
     "test": "Ogłada"
   },
   "charakteryzacja": {
     "name": "Charakteryzacja",
-    "desc": "Umiejętność pozwalająca bohaterowi na radykalną zmianę wyglądu przy użyciu makijażu, kostiumów oraz rekwizytów. Dzięki niej może wcielić się w zupełnie inną postać, oszukując obserwatorów i zmieniając swój wizerunek, co jest szczególnie przydatne w infiltracji lub podczas maskarad.",
+    "desc": "Typ: Podstawowa.\n\nWykorzystanie tej umiejętności pozwala Bohaterowi maskować jego prawdziwy wygląd i udawać kogoś innego. Często potrzebne są dodatkowe rekwizyty, właściwe ubranie lub peruka. Dzięki tej umiejętności Bohater może przebrać się za przedstawiciela innej rasy, osobę płci przeciwnej, a nawet kogoś sławnego i znanego w całym kraju, choć tego rodzaju charakteryzacja jest znacznie trudniejsza. Przeciwko charakteryzacji często wykorzystuje się test spostrzegawczości przeciwnika.\n\nZdolności pokrewne: naśladowca.",
     "test": "Ogłada"
   },
   "czytanie i pisanie": {
     "name": "Czytanie i pisanie",
-    "desc": "Bohater posiada umiejętność odczytywania i zapisywania informacji w dowolnym języku, z wyjątkiem bardzo skomplikowanych tekstów wymagających specjalistycznej wiedzy. Ta zdolność jest kluczowa przy sporządzaniu raportów, listów, a także przy analizie manuskryptów i dokumentów historycznych.",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi czytać i pisać w dowolnym języku, którym umie się posługiwać. W większości przypadków czytania i pisania nie trzeba testować. Mistrz Gry może jednak zdecydować, że test umiejętności jest potrzebny przy odcyfrowywaniu rękopisu spisanego w starożytnym języku, lub zawierającym niezrozumiałe wyrażenia albo archaiczne słownictwo.\n\nZdolności pokrewne: poliglota.",
     "test": "Inteligencja"
   },
   "czytanie z warg": {
     "name": "Czytanie z warg",
-    "desc": "Umiejętność umożliwiająca bohaterowi odczytywanie słów z ruchów ust rozmówcy, nawet jeśli nie słyszy wypowiedzi. Pozwala to na dyskretne pozyskiwanie informacji w sytuacjach, gdy słowa są ukryte lub celowo zniekształcone.",
+    "desc": "Typ: Zaawansowana.\n\nDzięki tej umiejętności Bohater może zrozumieć rozmowy prowadzone poza zasięgiem jego słuchu lub gdy rozmowa jest zagłuszana przez jakieś odgłosy. Musi widzieć usta obserwowanej osoby, jak również znać język, w którym prowadzona jest rozmowa.\n\nZdolności pokrewne: bystry wzrok.",
     "test": "Inteligencja"
   },
   "dowodzenie": {
     "name": "Dowodzenie",
-    "desc": "Dzięki tej umiejętności bohater potrafi skutecznie kierować grupą, motywować swoich towarzyszy i wydawać rozkazy, co przekłada się na lepszą koordynację działań podczas walki i w trudnych sytuacjach kryzysowych. Jego obecność zwiększa morale sojuszników.",
+    "desc": "Typ: Podstawowa.\n\nKorzystający z tej umiejętności Bohater cieszy się posłuchem u podwładnych. Po udanym teście umiejętności podwładni dokładnie wypełniają jego polecenia. Nieudany test powoduje, że rozkaz zostaje wypełniony błędnie lub też nie zostaje wykonany w ogóle (zależnie od decyzji Mistrza Gry). Dowodzenie nie ma wpływu na zachowanie osób postronnych, umożliwia posłuszeństwo osób podlegających władzy Bohatera.\n\nZdolności pokrewne: brak.",
     "test": "Ogłada"
   },
   "gadanina": {
     "name": "Gadanina",
-    "desc": "Bohater, który włada sztuką gadaniny, potrafi opowiadać wciągające historie oraz swobodnie rozmawiać, co pozwala mu zjednywać sojuszników lub odwracać uwagę przeciwników. Ta umiejętność może również służyć do negocjacji i manipulacji w sytuacjach społecznych.",
+    "desc": "Typ: Zaawansowana.\n\nBohaterowie posiadający tę umiejętność mogą próbować zagadać osobę, zasypując ją potokiem słów. Korzystający z tej umiejętności Bohater zazwyczaj nie próbuje na nikogo wpływać (do tego służy przekonywanie), chce po prostu zyskać na czasie. Po udanym teście umiejętności gadanina ofiara ma prawo do testu Siły Woli, który określa, czy zorientowała się w tym, co się naprawdę dzieje. Nieudany test oznacza, że „zagadana” osoba nic nie robi przez całą rundę, zastanawiając się, czy ma do czynienia z osobnikiem pijanym czy zwykłym idiotą, a może jedno i drugie. Gadanina nie przynosi rezultatu, jeśli ofiara bierze udział w walce lub stoi w obliczu ewidentnego zagrożenia życia. Bohater może próbować zagadać kilka osób (jedna osoba za każde 10 punktów jego Ogłady), pod warunkiem, że wszystkie te osoby rozumieją język, którym się posługuje.\n\nZdolności pokrewne: brak.",
     "test": "Ogłada"
   },
   "hazard": {
     "name": "Hazard",
-    "desc": "Umiejętność pozwalająca bohaterowi na efektywne uczestniczenie w grach losowych, gdzie oprócz szczęścia liczy się umiejętność oceny ryzyka. Pomaga to w zdobywaniu dodatkowych środków lub wpływów poprzez korzystne zakłady.",
+    "desc": "Typ: Podstawowa.\n\nUmiejętność hazard zwiększa szansę Bohatera na wygraną w grach losowych, takich jak karty lub kości. Każda uczestnicząca w grze postać wpłaca stawkę, a potem wszyscy grający jednocześnie wykonują test hazardu. Najniższy wynik rzutu (oczywiście, przy udanym teście) oznacza wygranie puli.\n\nZdolności pokrewne: geniusz arytmetyczny.",
     "test": "Inteligencja"
   },
   "hipnoza": {
     "name": "Hipnoza",
-    "desc": "Bohater potrafi wprowadzić przeciwnika w stan transu, co umożliwia zdobycie od niego informacji lub chwilowe unieruchomienie celu. Umiejętność ta bywa stosowana jako metoda wywierania wpływu lub manipulacji.",
+    "desc": "Typ: Zaawansowana.\n\nUżywając hipnozy Bohater może wprowadzić inną osobę w trans. Uwaga hipnotyzowanej osoby musi być przez minutę skupiona na jednej rzeczy (często wykorzystuje się jakąś błyskotkę na łańcuszku lub zapaloną świecę). Potem należy wykonać test umiejętności. Osoby próbujące opierać się hipnozie mogą wykonać test Siły Woli. Po wprowadzeniu osoby w trans, Bohater może jej zadać jedno pytanie za każde 10 punktów swojej Siły Woli. Osoba udziela odpowiedzi szczerze, zgodnie ze swoją wiedzą. Jeśli głęboko w coś wierzy, to udzieli takiej właśnie informacji. Po udzieleniu odpowiedzi na ostatnie pytanie osoba wychodzi z transu.\n\nZdolności pokrewne: brak.",
     "test": "Siła Woli"
   },
   "jeździectwo": {
     "name": "Jeździectwo",
-    "desc": "Umiejętność pozwalająca na opanowanie jazdy na koniu lub innym zwierzęciu, co jest kluczowe podczas podróży oraz w walce. Dobra znajomość tej umiejętności umożliwia zachowanie kontroli nad pojazdem nawet w trudnym terenie i w warunkach bojowych.",
+    "desc": "Typ: Podstawowa.\n\nBohater potrafi jeździć konno lub na innych wierzchowcach. Zwykłe jeżdżenie w normalnych warunkach nie wymaga wykonywania testu umiejętności. Jednakże może on być konieczny w przypadku jazdy galopem, wyścigu, podczas jazdy w trudnym terenie, wskakiwaniu na konia w biegu, itp.\n\nZdolności pokrewne: woltyżerka.",
     "test": "Zręczność"
   },
   "język tajemny": {
     "name": "Język tajemny",
-    "desc": "Bohater, który zna język tajemny, potrafi komunikować się w sposób zrozumiały tylko dla wtajemniczonych. Może to być język używany przez magów, kultystów lub członków tajnych organizacji, co daje dostęp do zakazanych informacji.",
+    "desc": "Typ: Zaawansowana.\n\nDzięki tej umiejętności Bohater może rzucać zaklęcia. Znajomość języka tajemnego jest konieczna przy używaniu magicznych formuł. W odróżnieniu od innych języków, język tajemny nie jest używany w codziennych rozmowach, a wyłącznie do manipulowania mocą magiczną. Wszystkie magiczne pergaminy i księgi zapisane są w określonym języku tajemnym. Istnieje wiele języków tajemnych. Najczęściej używane to: demoniczny, magiczny (znany wśród uczonych w Imperium pod nazwą Lingua Praestantia) i tajemny elf.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "kuglarstwo": {
-    "name": "Kuglarstwo",
-    "desc": "Umiejętność umożliwiająca wykonywanie zręcznych sztuczek, popisów cyrkowych oraz ulicznych pokazów, które mogą służyć do rozpraszania uwagi lub zabawy publiczności. Wykorzystanie tej umiejętności wymaga precyzyjnej kontroli ruchów.",
-    "test": "Zręczność"
+    "name": "Kuglarstwo (różne)",
+    "desc": "Typ: Zaawansowana.\n\nKuglarstwo wykorzystywane jest do zabawiania publiczności. Podobnie jak w przypadku nauki i wiedzy, nazwa kuglarstwo określa kategorię oddzielnych umiejętności. Najczęściej spotykanymi rodzajami kuglarstwa są: akrobatyka, aktorstwo, błaznowanie, gawędziarstwo, komedianctwo, mimika, muzykalność, połykanie ognia, śpiew, taniec, wróżenie z dłoni, żonglerka.\n\nZdolności pokrewne: człowiek-guma, naśladowca.",
+    "test": "Ogłada"
   },
   "leczenie": {
     "name": "Leczenie",
-    "desc": "Bohater potrafi udzielać pierwszej pomocy, tamować krwotoki, bandażować rany i diagnozować choroby. Umiejętność ta jest kluczowa podczas długotrwałych przygód oraz w czasie bitew, gdy liczy się szybka opieka nad rannymi.",
+    "desc": "Typ: Zaawansowana.\n\nDzięki tej umiejętności Bohater może zapewnić opiekę medyczną rannej osobie. Udany test leczenia przywraca 1k10 punktów Żywotności w przypadku osoby lekko rannej lub 1 punkt Żywotności w przypadku osoby ciężko rannej. Ranna osoba może być leczona tylko raz podczas sytuacji krytycznej (bitwa, zasadzka, pułapka, upadek, itp.), która spowodowała utratę punktów Żywotności, lub zaraz po niej. Test leczenia można ponowić następnego dnia, jak również każdego kolejnego dnia. Szczegółowe zasady leczenia ran znajdziesz w Rozdziale VI: Walka, obrażenia i ruch.\n\nZdolności pokrewne: chirurgia.",
     "test": "Inteligencja"
   },
   "mocna głowa": {
     "name": "Mocna głowa",
-    "desc": "Dzięki tej umiejętności bohater wykazuje wyjątkową odporność na alkohol oraz inne środki odurzające, co pozwala mu utrzymać klarowność umysłu nawet w ekstremalnych sytuacjach, np. podczas długiej podróży lub intensywnego starcia.",
-    "test": "Wytrzymałość"
+    "desc": "Typ: Podstawowa.\n\nTa umiejętność zwiększa odporność Bohatera na alkohol. Doświadczeni poszukiwacze przygód potrafią sporo wypić i jednocześnie zachować względną trzeźwość. Test umiejętności wykonuje się po każdej porcji wypitego alkoholu. Więcej informacji o napojach alkoholowych i skutkach ich spożycia znajdziesz w Rozdziale V: Ekwipunek.\n\nZdolności pokrewne: brak.",
+    "test": "Odporność"
   },
   "nauka": {
-    "name": "Nauka",
-    "desc": "Umiejętność reprezentująca wiedzę teoretyczną bohatera w określonych dziedzinach, takich jak historia, inżynieria czy magia. Pozwala ona na analizę skomplikowanych zagadnień oraz rozwiązywanie problemów wymagających głębokiej wiedzy akademickiej.",
+    "name": "Nauka (różne)",
+    "desc": "Typ: Zaawansowana.\n\nTa umiejętność wykorzystywana jest do zapamiętywania ważniejszych informacji i liczb, jak też (gdy Bohater posiada materiały pomocnicze i odpowiednie zasoby) do badań naukowych. Wymaga intensywnych studiów, lecz zapewnia znacznie szerszą i jednocześnie bardziej szczegółową znajomość problemu niż w przypadku wiedzy ogólnej. Nauka nie jest pojedynczą umiejętnością, lecz kategorią obejmującą różne, odrębnie traktowane umiejętności. Każda z nich musi zostać wykupiona oddzielnie. Musisz wydać 100 PD za każdą opanowaną naukę (w nawiasie wpisujesz nazwę wyuczonej specjalności). Na przykład umiejętność nauka (teologia) jest odrębną umiejętnością niż nauka (historia). Najczęściej spotykane dziedziny nauki to: alchemia, astronomia, demonologia, filozofia, genealogia/heraldyka, historia, inżynieria, magia, matematyka, nekromancja, prawo, runy, strategia/taktyka, sztuka oraz teologia.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "nawigacja": {
     "name": "Nawigacja",
-    "desc": "Dzięki tej umiejętności bohater potrafi określić swoje położenie i wyznaczyć właściwy kierunek, co jest niezbędne podczas podróży, eksploracji nieznanego terenu czy żeglugi. Umiejętność ta minimalizuje ryzyko zagubienia się.",
+    "desc": "Typ: Zaawansowana.\n\nUmiejętność ta wykorzystywana jest do orientowania się na lądzie i na wodzie. W zależności od wiedzy i możliwości, Bohater może nawigować według mapy albo gwiazd lub posługując się wrodzonym wyczuciem kierunku. Dzięki tej umiejętności może również ocenić długość podróży, biorąc pod uwagę topografię okolicy, porę roku i pogodę. W normalnych warunkach, utrzymanie stałego kursu wymaga jednego udanego testu umiejętności dziennie. W wyjątkowych sytuacjach Mistrz Gry może zażądać dodatkowych testów umiejętności.\n\nZdolności pokrewne: geniusz arytmetyczny, wyczucie kierunku.",
     "test": "Inteligencja"
   },
   "opieka nad zwierzętami": {
     "name": "Opieka nad zwierzętami",
-    "desc": "Bohater potrafi troszczyć się o zwierzęta, tresować je oraz leczyć ich drobne urazy. Umiejętność ta jest szczególnie przydatna w sytuacjach, gdy zwierzęta stanowią zarówno źródło pomocy, jak i zagrożenia.",
+    "desc": "Typ: Podstawowa.\n\nUmiejętność ta wykorzystywana jest podczas doglądania zwierząt domowych i hodowlanych (konie, woły, świnie, psy, itd.). Codzienne czynności i karmienie zwierząt nie wymagają testu umiejętności. Może być jednak potrzebny przy próbie wykrycia objawów choroby lub zastosowaniu specjalnych zabiegów (na przykład zaplatanie grzywy, czesanie, przygotowanie konia do parady wojskowej, itp.).\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "oswajanie": {
     "name": "Oswajanie",
-    "desc": "Umiejętność umożliwiająca bohaterowi zdobywanie zaufania dzikich zwierząt, a nawet ich oswajanie, co może prowadzić do ich wykorzystania jako środków transportu, wsparcia w walce lub kompanów podróży.",
-    "test": "Siła Woli"
+    "desc": "Typ: Zaawansowana.\n\nWykorzystanie tej umiejętności umożliwia oswajanie zwierząt. Zwierzęta domowe i hodowlane zawsze zachowują się przyjaźnie wobec Bohatera, który posiada tę umiejętność. Zwierzęta dzikie lub tresowane (na przykład psy gończe lub bojowe) mogą dać się oswoić przy udanym teście umiejętności. Mistrz Gry może przydzielić modyfikatory przy próbie oswajania zwierząt wyjątkowo agresywnych lub wyjątkowo wiernych innej osobie. Umiejętność oswajanie nie działa na potwory.\n\nZdolności pokrewne: brak.",
+    "test": "Ogłada"
   },
   "otwieranie zamków": {
     "name": "Otwieranie zamków",
-    "desc": "Bohater potrafi otwierać zamki oraz kłódki przy użyciu wytrychów lub specjalistycznych narzędzi. Umiejętność ta jest niezastąpiona przy próbach włamania się do zamkniętych pomieszczeń lub skrzyń.",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi otwierać wszelkiego rodzaju zamki i kłódki. Zazwyczaj do otwarcia zamka wystarczy jeden udany test umiejętności, ale przy próbach otworzenia szczególnie skomplikowanego mechanizmu Mistrz Gry może zażądać dodatkowych testów umiejętności.\n\nZdolności pokrewne: brak.",
     "test": "Zręczność"
   },
-    "plotkowanie": {
+  "plotkowanie": {
     "name": "Plotkowanie",
-    "desc": "Umiejętność pozwalająca bohaterowi zdobywać informacje poprzez rozmowy i plotki. Dzięki niej może szybko dowiedzieć się o bieżących wydarzeniach, tajemnicach czy lokalnych sekretach, co często daje przewagę strategiczną.",
+    "desc": "Typ: Podstawowa.\n\nWykorzystanie tej umiejętności pozwala na zbieranie informacji w czasie zwykłej rozmowy. Obejmuje wymianę najświeższych nowin, plotek o ważnych osobach oraz ogólnych informacji o wydarzeniach w okolicy.\n\nZdolności pokrewne: etykieta, łotrzyk.",
     "test": "Ogłada"
   },
   "pływanie": {
     "name": "Pływanie",
-    "desc": "Bohater potrafi swobodnie poruszać się w wodzie, utrzymując się na powierzchni i przemieszczając z dobrą techniką. Umiejętność ta jest kluczowa w sytuacjach kryzysowych, takich jak ucieczka przed zagrożeniem lub ratowanie życia.",
+    "desc": "Typ: Podstawowa.\n\nBohater umie pływać oraz nurkować. Pływanie w spokojnej wodzie nie wymaga testu umiejętności. Test może być potrzebny przy próbie nurkowania, pływania w wartkim lub zdradliwym nurcie oraz podczas próby przepłynięcia dłuższego dystansu. W czasie pływania Szybkość Bohatera spada o połowę (zaokrąglane w górę).\n\nZdolności pokrewne: brak.",
     "test": "Krzepa"
   },
   "powożenie": {
     "name": "Powożenie",
-    "desc": "Dzięki tej umiejętności bohater sprawnie prowadzi wozy lub powozy, nawet w trudnym terenie. Jest niezbędna podczas długich podróży, transportu towarów lub w sytuacjach wymagających szybkiego przemieszczania się większych grup.",
-    "test": "Zręczność"
+    "desc": "Typ: Podstawowa.\n\nBohater potrafi kierować wozem, powozem, a nawet rydwanem. Powożenie w normalnych warunkach nie wymaga testu umiejętności. Test może być potrzebny w przypadku jazdy w trudnym terenie, z dużą prędkością lub przy wykonywaniu niebezpiecznych manewrów.\n\nZdolności pokrewne: brak.",
+    "test": "Krzepa"
   },
   "przekonywanie": {
     "name": "Przekonywanie",
-    "desc": "Bohater potrafi efektywnie wpływać na decyzje innych, używając argumentacji, emocjonalnej manipulacji lub perswazji. Umiejętność ta jest wykorzystywana w negocjacjach, dyplomacji oraz w sytuacjach kryzysowych, gdzie liczy się przekonanie przeciwnika do zmiany zdania.",
+    "desc": "Typ: Podstawowa.\n\nTa umiejętność pozwala Bohaterowi wpływać na zachowanie innych osób. Może przekonywująco kłamać, blefować, a nawet skutecznie żebrać. Przekonywanie wykorzystuje się też podczas prób uwodzenia. W przypadku zastosowania tej umiejętności w celu nakłonienia kogoś do zrobienia czegoś niezwykłego lub niebezpiecznego, Mistrz Gry może pozwolić nakłanianej postaci na test Siły Woli. Bohater może próbować przekonać kilka osób (jedna osoba za każde 10 punktów jego Ogłady), pod warunkiem że wszystkie te osoby rozumieją język, którym posługuje się BG.\n\nZdolności pokrewne: etykieta, intrygant, krasomówstwo, łotrzyk, przemawianie.",
     "test": "Ogłada"
   },
   "przeszukiwanie": {
     "name": "Przeszukiwanie",
-    "desc": "Umiejętność umożliwiająca dokładne przeszukiwanie pomieszczeń, ruin i terenów w poszukiwaniu ukrytych przedmiotów, pułapek lub śladów, które mogą prowadzić do odkrycia cennych informacji.",
+    "desc": "Typ: Podstawowa.\n\nTa umiejętność jest wykorzystywana przy przeszukiwaniu obszaru lub pomieszczenia, w nadziei znalezienia wskazówek, ukrytych przejść, skarbów lub pułapek. Dokładne przeszukanie pomieszczenia lub niewielkiego obszaru wymaga jednego udanego testu umiejętności.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "rzemiosło": {
-    "name": "Rzemiosło (różne)",
-    "desc": "Bohater potrafi tworzyć i naprawiać przedmioty, korzystając z wiedzy technicznej i artystycznej. W zależności od dziedziny (aptekarstwo, bednarstwo, gotowanie, górnictwo, handel, jubilerstwo, kaligrafia, kamieniarstwo, kartografia, kowalstwo, krawiectwo, młynarstwo, piwowarstwo, płatnerstwo, rusznikarstwo, rymarstwo, stolarstwo, szkutnictwo, szewstwo, sztuka, świecarstwo, uprawa ziemi, wyrób łuków, zielarstwo, złotnictwo) wymaga precyzyjnych umiejętności manualnych oraz głębokiej wiedzy o materiałach.",
-    "test": "Różne"
+    "name": "Rzemiosło",
+    "desc": "Typ: Zaawansowana.\n\nBohater jest fachowcem w jednej z dziedzin rzemiosła. Ta umiejętność obejmuje także te dziedziny, które formalnie nie są określone jako rzemiosło, ale wymagają posiadania wyuczonej wiedzy i odpowiednich narzędzi. Każda umiejętność rzemiosło dotyczy odrębnej dziedziny. W nawiasie podano cechę, która jest powiązana z daną umiejętnością. Najczęściej spotykanymi dziedzinami rzemiosła są: aptekarstwo (Int), bednarstwo (S), garbarstwo (S), gotowanie (Int), górnictwo (S), handel (Ogd), jubilerstwo (Zr), kaligrafia (Zr), kamieniarstwo (Zr), kartografia (Zr), kowalstwo (S), krawiectwo (Zr), młynarstwo (S), piwowarstwo (Int), płatnerstwo (S), rusznikarstwo (Zr), rymarstwo (Zr), stolarstwo (Zr), szkutnictwo (Int), szewstwo (Zr), sztuka (Zr), świecarstwo (Zr), uprawa ziemi (S), wyrób łuków (Zr), zielarstwo (Int) oraz złotnictwo (Zr).\n\nZdolności pokrewne: krasnoludzki fach, talent artystyczny.",
+    "test": "różnie"
   },
   "sekretne znaki": {
     "name": "Sekretne znaki (różne)",
-    "desc": "Bohater zna tajemne systemy symboli wykorzystywanych przez wybrane frakcje lub stowarzyszenia, co pozwala mu na komunikację z wtajemniczonymi lub identyfikację członków danej grupy.",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi odczytywać lub zapisywać zaszyfrowane wiadomości. Na obszarze Imperium stosuje się wiele systemów znaków. Sekretne znaki są zazwyczaj prostymi komunikatami używanymi głównie w celu ostrzeżenia, oznakowania obiektu, wskazania szlaku lub miejsca o szczególnym znaczeniu. Odczytanie lub zapisanie krótkiej, prostej wiadomości nie wymaga testu umiejętności. W przypadku bardziej skomplikowanych zapisów lub gdy fragmenty znaku są podniszczone albo zatarte, Mistrz Gry może nakazać wykonanie testu umiejętności z odpowiednimi modyfikatorami trudności. Najczęściej wykorzystywane są znaki: łowców, rycerzy zakonnych, złodziei i zwiadowców.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "sekretny język": {
     "name": "Sekretny język (różne)",
-    "desc": "Umiejętność umożliwiająca komunikację w języku znanym tylko wybranym osobom, takim jak język złodziei czy tajemnych kultów. Pozwala na przekazywanie informacji bez zrozumienia przez osoby nie wtajemniczone.",
+    "desc": "Typ: Zaawansowana.\n\nZnajomość sekretnego języka pozwala na potajemne porozumiewanie się z przedstawicielami tej samej profesji lub grupy społecznej. Sekretne języki przypominają raczej uproszczony szyfr, a nie powszechnie używane formy porozumiewania się. Wykorzystując znaki, mowę ciała i słowa kodowe wplatane w zwykłą wypowiedź, Bohater może przekazać dodatkowe znaczenie wypowiadanych słów lub większą ilość informacji w krótkim czasie. W normalnych warunkach, gdy wszyscy rozmawiający znają dany sekretny język, test umiejętności nie jest potrzebny, aczkolwiek może być wymagany w niesprzyjających warunkach (na przykład na głośnej ulicy lub w czasie bitwy). Najczęściej używane sekretne języki to: bitewny, łowców i złodziejski.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "skradanie się": {
     "name": "Skradanie się",
-    "desc": "Bohater potrafi poruszać się cicho i niezauważenie, co umożliwia mu infiltrację, kradzież lub unikanie wykrycia przez wrogów. Kluczowa umiejętność w sytuacjach wymagających dyskrecji.",
+    "desc": "Typ: Podstawowa.\n\nUmiejętność ta umożliwia Bohaterowi ciche poruszanie się w prawie każdym terenie. Skradając się, Bohater może wykonywać najwyżej jedną akcję „ruch” w rundzie. Test skradania się jest często wykonywany w przeciwstawnym teście umiejętności przeciwko spostrzegawczości przeciwnika.\n\nZdolności pokrewne: grotołaz, ulicznik, wędrowiec.",
     "test": "Zręczność"
   },
   "splatanie magii": {
     "name": "Splatanie magii",
-    "desc": "Umiejętność pozwalająca bohaterowi na manipulowanie surową energią magiczną, umożliwiając tworzenie prostych zaklęć lub rytuałów. Wymaga silnej kontroli nad energią i skupienia.",
+    "desc": "Typ: Zaawansowana.\n\nWykorzystanie tej umiejętności ułatwia Bohaterowi kontrolowanie Wiatrów Magii. Każde rzucenie zaklęcia wymaga manipulacji Wiatrami Magii, jednak splatanie magii wykorzystuje się wtedy, gdy wymagana jest większa kontrola nad czarem lub jego precyzyjne przygotowanie. Szczegółowe zasady dotyczące rzucania zaklęć i umiejętności splatania magii znajdziesz w Rozdziale VII: Magia.\n\nZdolności pokrewne: zmysł magii.",
     "test": "Siła Woli"
   },
   "spostrzegawczość": {
     "name": "Spostrzegawczość",
-    "desc": "Bohater charakteryzuje się wyjątkową czujnością, dostrzegając nawet najmniejsze szczegóły otoczenia, co pozwala mu na szybkie wykrycie zagrożeń, pułapek lub ukrytych obiektów.",
+    "desc": "Typ: Podstawowa.\n\nBohater Gracza, który posiada tę umiejętność, dokładniej obserwuje otoczenie, często zauważając szczegóły przeoczone przez innych. Dzięki temu ma większe szanse na zauważenie pułapki, zapadni lub ukrytego przejścia. Spostrzegawczość jest używana głównie do ustalania tego co Bohater widzi, choć obejmuje także pozostałe zmysły. Może więc być użyta do określania doznań smakowych, zapachowych, słuchowych i dotykowych. Spostrzegawczość bywa często stosowana w przeciwstawnych testach umiejętności, szczególnie przeciwko takim umiejętnościom jak charakteryzacja, skradanie się i ukrywanie się. Udany test umiejętności pozwala Bohaterowi na określenie liczebności, odległości, wielkości obserwowanego obiektu, itp. Nieudany test może oznaczać uzyskanie niedokładnych informacji.\n\nZdolności pokrewne: bystry wzrok, czuły słuch, geniusz arytmetyczny.",
     "test": "Inteligencja"
   },
   "sztuka przetrwania": {
     "name": "Sztuka przetrwania",
-    "desc": "Umiejętność umożliwiająca bohaterowi radzenie sobie w ekstremalnych warunkach przyrody. Pozwala na znalezienie pożywienia, wody i schronienia, a także na adaptację do trudnych warunków środowiskowych.",
+    "desc": "Typ: Podstawowa.\n\nUmiejętność ta może zapewnić przeżycie w dziczy. Obejmuje znajomość technik łowienia ryb, polowania, oprawiania zwierzyny, rozpalania ognia, znajdowania pożywienia, konstruowania szałasów, itp.\n\nZdolności pokrewne: brak.",
     "test": "Inteligencja"
   },
   "śledzenie": {
     "name": "Śledzenie",
-    "desc": "Bohater potrafi odczytywać ślady pozostawione przez istoty, co umożliwia mu określenie kierunku, z jakiego pochodzi cel, lub odnalezienie zagubionych osób.",
-    "test": "Inteligencja"
+    "desc": "Typ: Zaawansowana.\n\nWykorzystując tę umiejętność, bohater może podążać za kimś, samemu pozostając niezauważonym. Test śledzenia jest często wykonywany w przeciwstawnym teście umiejętności przeciwko spostrzegawczości przeciwnika.\n\nZdolności pokrewne: brak.",
+    "test": "Zręczność"
   },
   "torturowanie": {
     "name": "Torturowanie",
-    "desc": "Umiejętność pozwalająca na zadawanie przeciwnikowi intensywnego bólu w celu zdobycia informacji lub osłabienia go w walce. Jest to brutalna metoda wykorzystywana zwykle jako ostateczność.",
-    "test": "Krzepa"
+    "desc": "Typ: Zaawansowana.\n\nDzięki zastosowaniu rozmaitych działań i środków przymusu Bohater potrafi wydobyć interesujące go informacje od osoby niechętnej do współpracy. Umiejętność obejmuje zarówno psychiczne znęcanie się, jak i fizyczne tortury. Ofiara może opierać się torturom, wykonując test Siły Woli.\n\nZdolności pokrewne: groźny.",
+    "test": "Ogłada"
   },
   "targowanie": {
     "name": "Targowanie",
-    "desc": "Bohater wykazuje się zdolnością do negocjowania korzystnych warunków transakcji, potrafiąc obniżyć cenę lub uzyskać dodatkowe korzyści. Umiejętność ta wymaga finezji i wyczucia sytuacji.",
+    "desc": "Typ: Podstawowa.\n\nUmiejętność ta umożliwia negocjowanie cen towarów i usług. W przypadku towarów codziennego użytku wystarczy zwykły test umiejętności. Jeśli Bohater targuje się o cenny przedmiot (na przykład próbuje ustalić koszt wyjątkowo cennego rękopisu), Mistrz Gry może zarządzić przeciwstawny test targowania (z ewentualnymi modyfikatorami trudności).\n\nZdolności pokrewne: żyłka handlowa.",
     "test": "Ogłada"
   },
   "tresura": {
     "name": "Tresura",
-    "desc": "Umiejętność umożliwiająca bohaterowi szkolenie zwierząt do wykonywania określonych zadań – od transportu, przez pomoc w walce, po wykorzystywanie w rozpoznaniu terenu.",
-    "test": "Siła Woli"
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi uczyć zwierzęta wykonywania różnych sztuczek i słuchania prostych poleceń. Zwykle tresurze poddaje się psy, konie i sokoły, choć Mistrz Gry może pozwolić na tresowanie bardziej niezwykłych zwierząt. Wyuczenie zwierzęcia zajmuje sporo czasu. Test umiejętności należy wykonywać raz na tydzień tresury. Nauczenie prostej sztuczki wymaga pojedynczego, udanego testu, średnio trudna sztuczka wymaga trzech udanych testów umiejętności, natomiast bardzo trudna - dziesięciu udanych testów umiejętności.\n\nZdolności pokrewne: brak.",
+    "test": "Ogłada"
   },
   "ukrywanie się": {
     "name": "Ukrywanie się",
-    "desc": "Bohater potrafi skutecznie maskować swoją obecność, korzystając z otoczenia lub specjalnych technik, aby uniknąć wykrycia przez przeciwników.",
+    "desc": "Typ: Podstawowa.\n\nWykorzystanie tej umiejętności umożliwia Bohaterowi ukrywanie się w niemal dowolnym terenie, pod warunkiem, że istnieje realna szansa schowania się za jakimś obiektem (mur, drzewo, budynek, itp.). Przy próbie ukrycia się na otwartej, pustej przestrzeni (na przykład na środku ulicy) test umiejętności automatycznie jest nieudany. Ukrywanie się bywa często wykorzystywane przeciwko testowi spostrzegawczości przeciwnika.\n\nZdolności pokrewne: grotołaz, ulicznik, wędrowiec.",
     "test": "Zręczność"
   },
   "unik": {
-    "name": "Unikanie",
-    "desc": "Umiejętność pozwalająca bohaterowi na zgrabne omijanie ciosów przeciwników.",
+    "name": "Unik",
+    "desc": "Typ: Zaawansowana.\n\nWykorzystanie tej umiejętności umożliwia Bohaterowi uniknięcie ataku podczas walki wręcz. Unik można stosować najwyżej raz na rundę. Szczegółowe zasady unikania ciosów znajdziesz w Rozdziale VI: Walka, obrażenia i ruch.\n\nZdolności pokrewne: brak.",
     "test": "Zręczność"
   },
   "wycena": {
     "name": "Wycena",
-    "desc": "Bohater potrafi precyzyjnie ocenić wartość przedmiotów, skarbów i dóbr materialnych, co jest nieocenione przy handlu i negocjacjach.",
+    "desc": "Typ: Podstawowa.\n\nBohater potrafi szacować wartość rzeczy codziennego użytku, jak również przedmiotów wartościowych, takich jak biżuteria, klejnoty i dzieła sztuki. Udany test umiejętności pozwala określić rynkową wartość przedmiotu. Ponieważ nieudany test umiejętności może spowodować błędne oszacowanie wartości przedmiotu, Mistrz Gry powinien wykonać rzut w tajemnicy i zależnie od wyniku poinformować gracza o ustalonej w ten sposób wartości przedmiotu.\n\nZdolności pokrewne: talent artystyczny, żyłka handlowa.",
     "test": "Inteligencja"
   },
   "wiedza": {
     "name": "Wiedza (różne)",
-    "desc": "Umiejętność reprezentująca głęboką wiedzę bohatera w określonych dziedzinach, takich jak historia, geografia, magia czy polityka. Pozwala na analizę sytuacji i rozwiązywanie problemów wymagających specjalistycznej wiedzy.",
+    "desc": "Typ: Zaawansowana.\n\nUmiejętność ta zapewnia wiedzę o zwyczajach, strukturze władzy, najważniejszych dostojnikach, obyczajach ludowych oraz przesądach mieszkańców danej krainy, członków danej grupy społecznej lub przedstawicieli danej rasy. Wiedza nie jest równoznaczna ze studiami naukowymi (to oddaje umiejętność nauka), lecz zapewnia jedynie podstawowe informacje, jakie Bohater zdobył w czasie podróży po świecie. Podobnie jak w przypadku umiejętności nauka, wiedza to szersza kategoria obejmująca różne, oddzielnie zdobywane konkretne umiejętności. Najczęściej wiedza dotyczy: Bretonii, Estalii, Imperium, Jałowej Krainy, Kisleva, Księstw Granicznych, Norski, Tilei oraz elfów, krasnoludów, niziołków i ogrów.\n\nZdolności pokrewne: obieżyświat.",
     "test": "Inteligencja"
   },
   "żeglarstwo": {
     "name": "Żeglarstwo",
-    "desc": "Bohater potrafi sprawnie obsługiwać statki i łodzie, utrzymując kontrolę w trudnych warunkach morskich. Umiejętność ta jest kluczowa przy długodystansowych podróżach oraz w sytuacjach kryzysowych na wodzie.",
+    "desc": "Typ: Zaawansowanie.\n\nDzięki tej umiejętności Bohater potrafi sterować statkami żaglowymi. Dodatkowo Bohater dysponuje wiedzą o budowie okrętów, różnych rodzajach żagli, a także umiejętnością przewidywania pogody na morzu. Żeglowanie po spokojnych wodach nie wymaga testu umiejętności. Trudne warunki pogodowe, wysokie fale lub wykonywanie manewrów w czasie bitwy mogą wymagać testu umiejętności o odpowiednim stopniu trudności.\n\nZdolności pokrewne: brak.",
+    "test": "Zręczność"
+  },
+  "tropienie": {
+    "name": "Tropienie",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi wyszukiwać ślady zwierząt, a także ludzi i innych stworzeń. Podążanie wyraźnym tropem nie wymaga testu umiejętności i nie spowalnia tempa poruszania się. Test umiejętności może być jednak potrzebny w trudnych warunkach terenu lub pogody. Odpowiedni poziom skuteczności może dostarczyć dodatkowych informacji (o liczebności grupy, odległości od tropionego stworzenia, a nawet jego cechach osobniczych).\n\nZdolności pokrewne: brak.",
+    "test": "Inteligencja"
+  },
+  "warzenie trucizn": {
+    "name": "Warzenie trucizn",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi przyrządzać rozmaite trucizny pochodzenia zwierzęcego lub roślinnego, a także trucizny uzyskiwane alchemicznie. Szczegółowy opis trucizn i efektów ich działania znajdziesz w Rozdziale V: Ekwipunek.\n\nZdolności pokrewne: brak.",
+    "test": "Inteligencja"
+  },
+  "wioślarstwo": {
+    "name": "Wioślarstwo",
+    "desc": "Typ: Podstawowa.\n\nBohater potrafi sterować tratwami, barkami i innymi łodziami wiosłowymi. Utrzymanie kursu w normalnych warunkach i proste manewry nie wymagają testu umiejętności. Mistrz Gry może uznać za stosowne wykonanie testu umiejętności w przypadku kiepskiej pogody, wysokiej fali, pokonywania progów rzecznych lub omijania mielizn.\n\nZdolności pokrewne: brak.",
+    "test": "Krzepa"
+  },
+  "wspinaczka": {
+    "name": "Wspinaczka",
+    "desc": "Typ: Podstawowa.\n\nTwój Bohater potrafi wspinać się na drzewa, mury, skalne ściany i inne pionowe przeszkody. W normalnych warunkach test umiejętności wykonuje się raz na rundę. Wspinanie się w czasie walki wymaga poświęcenia akcji podwójnej. Udany test oznacza, że Bohater wspiął się na wysokość równą połowie jego Szybkości (zaokrąglane w górę), mierzoną w metrach.\n\nZdolności pokrewne: brak.",
+    "test": "Krzepa"
+  },
+  "wykrywanie magii": {
+    "name": "Wykrywanie magii",
+    "desc": "Typ: Zaawansowana.\n\nUmiejętność ta umożliwia Bohaterowi wykrywanie subtelnych zawirowań, jakie towarzyszą magicznej aurze. Czarodzieje opisują to jako szósty, siódmy i ósmy zmysł człowieka. Wśród chłopstwa to zjawisko znane jest pod nazwą „wiedźmi wzrok”. Udany test umiejętności pozwala określić, czy przedmiot, postać lub obszar pozostaje pod wpływem czaru. Wykorzystując tę umiejętność, czarodziej może ustalić siłę Wiatrów Magii w najbliższej okolicy. Dodatkowe informacje na ten temat znajdziesz w Rozdziale VII: Magia.\n\nZdolności pokrewne: zmysł magii.",
+    "test": "Siła Woli"
+  },
+  "zastawianie pułapek": {
+    "name": "Zastawianie pułapek",
+    "desc": "Typ: Zaawansowana.\n\nBohater potrafi konstruować różnego rodzaju pułapki na zwierzęta. W Imperium używa się pułapek unieruchamiających, jak też uśmiercających złapane zwierzę. Za każdą założoną pułapkę wykonuje się jeden test umiejętności na dzień. Udany test oznacza, że w pułapkę złapało się zwierzę.\n\nZdolności pokrewne: brak.",
+    "test": "Zręczność"
+  },
+  "zastraszanie": {
+    "name": "Zastraszanie",
+    "desc": "Typ: Podstawowa.\n\nDzięki tej umiejętności Bohater może zastraszać lub zmuszać do uległości inne osoby. Ofiary, które nie chcą ugiąć się przed groźbami, mogą wykonać test Siły Woli. Reakcja postaci zależy całkowicie od decyzji Mistrza Gry, który bierze pod uwagę jej osobowość oraz wynik testu zastraszania. W niektórych sytuacjach (szantaż, itp.), Mistrz Gry może uznać, że bardziej odpowiednią cechą do testu zastraszania może być Ogłada.\n\nZdolności pokrewne: groźny.",
+    "test": "Krzepa"
+  },
+  "znajomość języka": {
+    "name": "Znajomość języka",
+    "desc": "Typ: Zaawansowana.\n\nTa umiejętność umożliwia Bohaterowi porozumiewanie się w obcym języku. Większość języków Starego Świata wywodzi się ze wspólnego starożytnego narzecza, choć w ciągu wielu wieków różnice między poszczególnymi dialektami doprowadziły do powstania odrębnych języków. W normalnych warunkach, gdy wszyscy rozmawiający znają dany język, test umiejętności nie jest potrzebny. Test umiejętności może być potrzebny w przypadku prób naśladowania regionalnych akcentów lub gdy Bohater Gracza próbuje przekonać słuchających, że język obcy jest ojczystym jego językiem. Najczęściej używanymi językami są: bretoński (Bretonia), eltharin (elfi), estalijski (Estalia), khazalid (krasnoludzki), kislevski (Kislev), norski (Norska), tileański (Tilea) oraz Reikspiel czyli staroświatowy (Imperium) i nieco podobny do niego język niziołków. Uczeni posługują się także językiem klasycznym, choć obecnie występuje on głównie w formie pisanej. Mniej cywilizowane rasy posługują się językiem goblińskim (orki, gobliny i hobgobliny), narzeczem grumbarth (ogry) oraz mroczną mową (zwierzoludzie i inne istoty Chaosu).\n\nZdolności pokrewne: naśladowca, obieżyświat, poliglota.",
+    "test": "Inteligencja"
+  },
+  "zwinne palce": {
+    "name": "Zwinne palce",
+    "desc": "Typ: Zaawansowana.\n\nDzięki tej użytecznej umiejętności Bohater potrafi ukryć w dłoni małe przedmioty lub wykonywać sztuczki z kartami i monetami. Zwinne palce przydają się również przy ukradkowym sięganiu do cudzych sakiewek. Test zwinnych palców jest często wykonywany w przeciwstawnym teście umiejętności przeciwko spostrzegawczości przeciwnika.\n\nZdolności pokrewne: brak.",
     "test": "Zręczność"
   }
 }

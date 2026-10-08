@@ -1,362 +1,417 @@
 {
   "artylerzysta": {
     "name": "Artylerzysta",
-    "desc": "Bohater doskonale zna się na obsłudze broni palnej.",
-    "effect": "Skraca czas przeładowania broni palnej o jedną akcję."
+    "desc": "Bohater został świetnie wyszkolony w obsłudze broni palnej.",
+    "effect": "Dzięki tej zdolności może przeładować broń palną w czasie krótszym o akcję. Jeśli Bohater posiada również zdolność błyskawiczne przeładowanie, może korzystać naraz z obu zdolności (skracając czas przeładowania broni palnej o akcję podwójną)."
   },
   "bardzo silny": {
     "name": "Bardzo silny",
-    "desc": "Bohater ma niezwykłą siłę fizyczną.",
-    "effect": "+5 do Krzepy."
+    "desc": "Bohater obdarzony jest wyjątkową siłą.",
+    "effect": "Otrzymuje +5 do Krzepy, dodawane do początkowej wartości cechy. Może to zmienić wartość Siły BG, zgodnie z zasadami opisanymi na str. 19."
   },
   "bardzo szybki": {
     "name": "Bardzo szybki",
-    "desc": "Bohater porusza się szybciej niż inni.",
-    "effect": "+1 do Szybkości."
+    "desc": "Bohater potrafi poruszać się znacznie szybciej niż inni.",
+    "effect": "Otrzymuje +1 do Szybkości, dodawane do początkowej wartości cechy."
   },
   "bijatyka": {
     "name": "Bijatyka",
-    "desc": "Bohater jest wytrawnym wojownikiem wręcz, nawet bez broni.",
-    "effect": "+10 do Walki Wręcz przy atakach bez broni, +1 do obrażeń."
+    "desc": "Bohater nauczył się walczyć w karczemnych burdach i miejskich rozróbach.",
+    "effect": "Otrzymuje modyfikator +10 do Walki Wręcz podczas ataku bez broni. Dodatkowo otrzymuje modyfikator +1 do obrażeń zadawanych podczas takiego ataku."
   },
   "błyskawiczne przeładowanie": {
     "name": "Błyskawiczne przeładowanie",
-    "desc": "Bohater potrafi błyskawicznie przeładowywać broń strzelecką.",
-    "effect": "Skraca czas przeładowania o jedną akcję."
+    "desc": "Bohater jest doświadczonym strzelcem.",
+    "effect": "Dzięki tej zdolności może przeładować broń strzelecką w czasie krótszym o akcję. Bohater używający błyskawicznego przeładowania może napiąć kuszę w czasie jednej akcji zwykłej, podczas gdy normalnie wymaga to akcji podwójnej. Jeśli przeładowanie broni normalnie zajmuje akcję, korzystając z tej zdolności można to wykonać w ramach akcji natychmiastowej. Dzięki temu Bohater może przeładować taką broń praktycznie w mgnieniu oka, co pozwala na wykonanie „ataku wielokrotnego” z broni strzeleckiej. Szczegółowe zasady wykonywania „ataku wielokrotnego” znajdziesz w Rozdziale VI: Walka, obrażenia i ruch."
   },
   "błyskawiczny blok": {
     "name": "Błyskawiczny blok",
-    "desc": "Bohater potrafi szybko parować ataki.",
-    "effect": "Można poświęcić jeden atak na parowanie."
+    "desc": "Bohater, który wykonuje „atak wielokrotny” (więcej na ten temat w Rozdziale VI: Walka, obrażenia i ruch), może poświęcić jeden z ataków, otrzymując w zamian możliwość sparowania ataku przeciwnika.",
+    "effect": "Na przykład Bohater mający 3 Ataki i deklarujący atak wielokrotny, mógłby wykonać dwa ataki i raz sparować atak przeciwnika. Bohater nadal może parować najwyżej jeden atak na rundę."
   },
   "błyskotliwość": {
     "name": "Błyskotliwość",
-    "desc": "Bohater jest niezwykle inteligentny i szybko przyswaja wiedzę.",
-    "effect": "+5 do Inteligencji."
+    "desc": "Bohater obdarzony jest wyjątkową inteligencją.",
+    "effect": "Otrzymuje +5 do Inteligencji, dodawane do początkowej wartości cechy."
   },
   "brawura": {
     "name": "Brawura",
-    "desc": "Bohater jest odważny i skory do ryzyka.",
-    "effect": "Skok wymaga akcji zwykłej (zamiast podwójnej) i zwiększa zasięg skoków o 1 metr."
+    "desc": "Obdarzony tą zdolnością Bohater wykazuje się wyjątkową śmiałością i ruchliwością w walce.",
+    "effect": "Może wykonać akcję „skok” poświęcając na to akcję zwykłą (zamiast akcji podwójnej). Zdolność zwiększa też maksymalny zasięg wszystkich skoków o 1 metr."
   },
   "bystry wzrok": {
     "name": "Bystry wzrok",
-    "desc": "Bohater ma wyjątkowo dobry wzrok.",
-    "effect": "+10 do testów Spostrzegawczości."
+    "desc": "Bohater obdarzony jest doskonałym wzrokiem.",
+    "effect": "Otrzymuje modyfikator +10 do testów spostrzegawczości podczas rozglądania się oraz do testów czytania z warg."
   },
   "charyzmatyczny": {
     "name": "Charyzmatyczny",
-    "desc": "Bohater ma naturalny urok osobisty.",
-    "effect": "+5 do Ogłady."
+    "desc": "Bohater obdarzony jest zniewalającym urokiem osobistym.",
+    "effect": "Otrzymuje +5 do Ogłady, dodawane do początkowej wartości cechy."
   },
   "chód": {
-    "name": "Chód",
-    "desc": "Bohater pod wpływem adrenaliny zadziwiająca szybko spierdala z pola walki.",
-    "effect": "+1 do Szybkości podczas ucieczki z walki."
+    "name": "Chodu!",
+    "desc": "W chwili zagrożenia Bohater odkrywa w sobie zadziwiające możliwości fizyczne.",
+    "effect": "Uciekając z pola walki lub z miejsca zagrożenia, na 1k10 rund otrzymuje +1 do Szybkości."
   },
   "człowiek-guma": {
     "name": "Człowiek-guma",
-    "desc": "Bohater ma niezwykłą elastyczność ciała.",
-    "effect": "+10 do testów Wspinaczki i Akrobatyki."
+    "desc": "Bohater potrafi wyginać swoje ciało w sposób nieosiągalny dla zwykłych osób.",
+    "effect": "Otrzymuje modyfikator +10 do testów kuglarstwa (akrobatyka) oraz modyfikator +20 do Zręczności podczas testów wyzwalania się z więzów, przeciskania przez szczeliny, itp."
   },
   "czuły słuch": {
     "name": "Czuły słuch",
-    "desc": "Bohater ma wyostrzone zmysły słuchu.",
-    "effect": "+10 do testów Nasłuchiwania."
+    "desc": "Bohater obdarzony jest wyjątkowo czułym słuchem.",
+    "effect": "Otrzymuje modyfikator +20 do testów spostrzegawczości podczas nasłuchiwania."
   },
   "dotyk mocy": {
     "name": "Dotyk mocy",
-    "desc": "Bohater potrafi przekazywać energię magiczną poprzez dotyk.",
-    "effect": "[Efekt do uzupełnienia]"
+    "desc": "Niektóre czary używane w walce wymagają dotknięcia przeciwnika.",
+    "effect": "Bohater, który posiada zdolność dotyk mocy, otrzymuje modyfikator +20 do Walki Wręcz przy testach związanych z rzucaniem czarów dotykowych."
   },
   "etykieta": {
     "name": "Etykieta",
-    "desc": "Bohater zna zasady dobrego wychowania i etykiety dworskiej.",
-    "effect": "+10 do testów Ogłady w sytuacjach oficjalnych."
+    "desc": "Bohater potrafi odpowiednio zachowywać się we wszelkich sytuacjach towarzyskich.",
+    "effect": "Otrzymuje modyfikator +10 do testów plotkowania i przekonywania podczas rozmów z przedstawicielami szlachty i arystokracji. Modyfikator stosuje się również w sytuacjach, gdy wymagana jest znajomość etykiety (na przykład podszywanie się pod szlachcica z wykorzystaniem charakteryzacji)."
   },
   "geniusz arytmetyczny": {
     "name": "Geniusz arytmetyczny",
-    "desc": "Bohater błyskawicznie wykonuje skomplikowane obliczenia w pamięci.",
-    "effect": ""
+    "desc": "Bohater potrafi błyskawicznie rachować w umyśle oraz, mając do dyspozycji dostatecznie dużo czasu, może rozwiązać niemal dowolny problem matematyczny.",
+    "effect": "Otrzymuje modyfikator +10 do testów hazardu i nawigacji oraz modyfikator +20 do testów spostrzegawczości związanych z oceną odległości, ciężaru, itd."
   },
   "grotołaz": {
     "name": "Grotołaz",
-    "desc": "Bohater świetnie porusza się w podziemiach.",
-    "effect": "+10 do testów Wspinaczki i Skradania się w podziemiach."
+    "desc": "Bohater wychował się w jaskiniach bądź często po nich wędrował. Bez trudu potrafi poruszać się w podziemiach.",
+    "effect": "Otrzymuje modyfikator +10 do testów skradania się i ukrywania się wykonywanych pod powierzchnią ziemi lub w jaskiniach."
   },
   "groźny": {
     "name": "Groźny",
-    "desc": "Bohater budzi strach u przeciwników.",
-    "effect": "Wrogowie otrzymują -10 do testów Siły Woli, by nie uciec przed Bohaterem."
+    "desc": "Wygląd, wzrost lub zachowanie Bohatera wzbudzają respekt i instynktowny niepokój wśród obserwatorów.",
+    "effect": "Otrzymuje modyfikator +10 do testów zastraszania i torturowania."
   },
   "gusła": {
     "name": "Gusła",
-    "desc": "Bohater jest wrażliwy na magię i potrafi odczuwać jej obecność.",
-    "effect": ""
+    "desc": "Bohater odkrył w sobie dziki talent magiczny, który udoskonala metodą prób i błędów, nie mając dostępu do magicznych studiów.",
+    "effect": "Bohater potrafi rzucać czary magii prostej (gusła) bez konieczności posiadania umiejętności język tajemny. Do rzucania czarów nadal wymagana jest zdolność magia prosta (gusła). Za każdym razem, gdy Bohater korzysta z zaklęć magii prostej (gusła), musisz rzucić dodatkową kostką k10. Wynik rzutu nie dodaje się do poziomu mocy czaru, lecz jest używany do sprawdzania Przekleństwa Tzeentcha. Jeśli Twój BG nauczy się umiejętności język tajemny, nie będziesz musiał rzucać dodatkową kostką."
   },
   "intrygant": {
     "name": "Intrygant",
-    "desc": "Bohater doskonale knuje i manipuluje innymi.",
-    "effect": "+10 do testów Przekonywania i Plotkowania w sytuacjach społecznych."
+    "desc": "Bohater jest mistrzem rozgrywek politycznych i intryg.",
+    "effect": "Otrzymuje modyfikator +10 do testów przekonywania związanych z intrygami oraz do Siły Woli podczas testów przeciwko przekonywaniu ze strony innych osób."
   },
   "krasnoludzki fach": {
     "name": "Krasnoludzki fach",
-    "desc": "Bohater zna się na rzemiośle krasnoludów.",
-    "effect": "+10 do testów Rzemiosła (górnictwo, kamieniarstwo, kowalstwo, jubilerstwo, piwowarstwo, płatnerstwo i rusznikarstwo)."
+    "desc": "Krasnoludy są urodzonymi rzemieślnikami.",
+    "effect": "Bohater otrzymuje modyfikator +10 do testów rzemiosła: górnictwo, kamieniarstwo, kowalstwo, jubilerstwo, piwowarstwo, płatnerstwo i rusznikarstwo."
   },
   "krasomówstwo": {
     "name": "Krasomówstwo",
-    "desc": "Bohater potrafi pięknie przemawiać.",
-    "effect": "+10 do testów Przekonywania i Plotkowania."
+    "desc": "Bohater potrafi przemawiać tak pięknie i przekonywująco, że może poderwać do działania całe tłumy.",
+    "effect": "Wykorzystując przekonywanie BG może oddziaływać na grupę osób 100 razy liczniejszą niż normalnie. Zdolność krasomówstwo wymaga uprzedniego opanowania zdolności przemawianie."
   },
   "krzepki": {
     "name": "Krzepki",
-    "desc": "Bohater może nosić ciężką zbroję bez bez zmniejszenia prędkości czy zwinności.",
-    "effect": ""
+    "desc": "Bohater, który posiada tę zdolność, w czasie wielu przygód nabrał niesamowitej krzepy.",
+    "effect": "Może nosić ciężki pancerz lub zbroję płytową bez zmniejszenia Szybkości. Szczegółowy opis pancerzy znajdziesz w Rozdziale V: Ekwipunek."
   },
   "lewitacja": {
     "name": "Lewitacja",
-    "desc": "Bohater potrafi unosić się w powietrzu.",
-    "effect": "[Efekt do uzupełnienia]"
+    "desc": "Postać potrafi unosić się nisko nad ziemią.",
+    "effect": "Zasady dotyczące lewitacji znajdziesz w Rozdziale VI: Walka, obrażenia i ruch."
   },
   "łotrzyk": {
     "name": "Łotrzyk",
-    "desc": "Bohater ma smykałkę do złodziejstwa i przekrętów.",
-    "effect": "+10 do testów Zwinnych Palców i Skradania się."
+    "desc": "Bohater jest blisko związany ze światem przestępczym.",
+    "effect": "Otrzymuje modyfikator +10 do testów plotkowania i przekonywania w kontaktach z przedstawicielami przestępczego półświatka."
   },
   "magia czarnoksięska": {
     "name": "Magia czarnoksięska",
-    "desc": "Bohater zna i potrafi rzucać czarną magię.",
-    "effect": "Pozwala korzystać z Czarnej Magii."
+    "desc": "Twój Bohater poznał tajniki jednej z zakazanych tradycji magicznych.",
+    "effect": "Podobnie jak w przypadku magii tajemnej, zgłębianie sekretów magii czarnoksięskiej wymagania poświęcenia i wyboru jednej z dostępnych mrocznych tradycji. Każda magia czarnoksięska jest oddzielną zdolnością. Na przykład magia czarnoksięska (Chaos) różni się od magii czarnoksięskiej (nekromancja). W kolejnych dodatkach znajdziesz informacje o innych rodzajach magii czarnoksięskiej, włącznie z wyszczególnieniem mocy bogów Chaosu: Nurgla, Slaanesha i Tzeentcha. Znajomość magii czarnoksięskiej pozwala na rzucanie czarów z określonej tradycji. Szczegółowe zasady rzucania zaklęć znajdziesz w Rozdziale VII: Magia."
   },
   "magia kapłańska": {
     "name": "Magia kapłańska",
-    "desc": "Bohater posiada zdolność rzucania czarów kapłańskich.",
-    "effect": "Pozwala korzystać z Magii Kapłańskiej."
+    "desc": "Bohater jest tak żarliwym wyznawcą jakiegoś bóstwa, że dzięki jego modlitwom zdarzają się rzeczy nadprzyrodzone.",
+    "effect": "Zgłębianie tajemnic boga wymaga fanatycznego poświęcenia i zaangażowania. Bohater musi wybrać jednego boga, a w konsekwencji także jedną z magii kapłańskich. Każda magia kapłańska jest oddzielną zdolnością magiczną, pozwalającą na rzucanie czarów z dziedziny określonego bóstwa. Na przykład magia kapłańska (dziedzina Sigmara) różni się od magii kapłańskiej (dziedzina Ulryka). Każde z większych bóstw w Starym Świecie posiada własny kult, który naucza magii kapłańskiej. Są to Świątynie: Mananna, Morra, Myrmidii, Ranalda, Sigmara, Shallyi, Taala i Rhyi, Ulryka oraz Vereny. Znajomość magii kapłańskiej pozwala na rzucanie czarów z określonej dziedziny. Szczegółowe zasady rzucania zaklęć znajdziesz w Rozdziale VII: Magia."
   },
   "magia powszechna": {
     "name": "Magia powszechna",
-    "desc": "Bohater zna podstawowe zaklęcia magii.",
-    "effect": "Pozwala korzystać z Magii Powszechnej."
+    "desc": "Bohater potrafi rzucać zaklęcia, które są powszechnie używane przez czarodziejów i kapłanów.",
+    "effect": "Magia powszechna obejmuje wybór czarów, z których każdy jest osobną zdolnością. Na przykład magia powszechna (rozproszenie magii) i magia powszechna (podniebny chód) to odrębne zdolności. Najczęściej wykorzystywane czary z magii powszechnej to: dotyk na odległość, magiczny alarm, magiczna broń, magiczny zamek, pancerz Eteru, podniebny chód, rozproszenie magii oraz uciszenie. Szczegółowe informacje na temat magii powszechnej i opis poszczególnych czarów znajdziesz w Rozdziale VII: Magia. Zdolność magia powszechna wymaga uprzedniego posiadania zdolności magia prosta."
   },
   "magia prosta": {
     "name": "Magia prosta",
-    "desc": "Bohater zna najprostsze zaklęcia.",
-    "effect": "Pozwala korzystać z Magii Prostej."
+    "desc": "Bohater poznał podstawowe tajniki rzucania czarów.",
+    "effect": "Magia prosta, podobnie jak magia tajemna, obejmuje kilka zdolności. Każdy rodzaj magii prostej jest traktowany jako oddzielna zdolność magiczna. Na przykład magia prosta (tajemna) i magia prosta (kapłańska) to odrębne zdolności. Znajomość dowolnego rodzaju magii prostej i posiadanie cechy Magia przynajmniej na poziomie 1 pozwala na rzucanie czarów z odpowiedniej listy zaklęć. Istnieją trzy podstawowe rodzaje magii prostej: gusła, kapłańska i tajemna. Szczegółowe zasady rzucania zaklęć znajdziesz w Rozdziale VII: Magia."
   },
   "magia tajemna": {
     "name": "Magia tajemna",
-    "desc": "Bohater posiada zdolność rzucania czarów tajemnych.",
-    "effect": "Pozwala korzystać z Magii Tajemnej."
+    "desc": "Bohater poznał tajniki jednej z kilku tradycji magicznych znanych w Imperium.",
+    "effect": "Magia tajemna wymaga absolutnego poświęcenia i długotrwałych studiów. W konsekwencji Bohater musi dokonać wyboru jednej z dostępnych tradycji i nie będzie mógł uczyć się innych. Każdy rodzaj magii tajemnej jest oddzielną zdolnością. Na przykład magia tajemna (zwierzęta) różni się od magii tajemnej (ogień). W Imperium istnieje osiem Kolegiów Magii, z których każde naucza odrębnej Tradycji, czyli odmiennej magii tajemnej. Są to Tradycje: Cienia, Metalu, Niebios, Ognia, Śmierci, Światła, Zwierząt i Życia. Znajomość magii tajemnej pozwala na rzucanie czarów należących do określonej tradycji. Szczegółowe zasady rzucania zaklęć znajdziesz w Rozdziale VII: Magia."
   },
   "medytacja": {
     "name": "Medytacja",
-    "desc": "Bohater potrafi wchodzić w stan głębokiego skupienia.",
-    "effect": "[Efekt do uzupełnienia]"
+    "desc": "Bohater potrafi skupić się na własnym wnętrzu i wejść w głęboki trans, ignorując doznania ze świata zewnętrznego.",
+    "effect": "Podczas odprawiania rytuału magicznego BG otrzymuje modyfikator do poziomu mocy czaru równy wartości jego cechy Magia."
   },
   "morderczy atak": {
     "name": "Morderczy atak",
-    "desc": "Bohater potrafi uderzać z wielką siłą.",
-    "effect": "+1 do obrażeń podczas Krytyka"
+    "desc": "Dzięki znajomości podstaw anatomii Bohater potrafi wymierzyć atak w newralgiczną część ciała przeciwnika.",
+    "effect": "Zwiększa to o 1 Wartość Krytyczną wszystkich trafień krytycznych zadanych przez BG."
   },
   "morderczy pocisk": {
     "name": "Morderczy pocisk",
-    "desc": "Bohater specjalizuje się w zaklęciach dystansowych.",
-    "effect": "+1 do obrażeń na czary dystansowe"
+    "desc": "Bohater specjalizuje się w czarach typu „magiczny pocisk”.",
+    "effect": "Otrzymuje modyfikator +1 do rzutów na obrażenia, gdy atakuje czarami tego typu."
   },
   "naśladowca": {
     "name": "Naśladowca",
-    "desc": "Bohater potrafi naśladować głosy i zachowania.",
-    "effect": "+10 do testów Charakteryzacji i Gadaniny."
+    "desc": "Bohater potrafi bezbłędnie naśladować różne odgłosy.",
+    "effect": "Otrzymuje modyfikator +10 do testów: kuglarstwa (aktorstwo, błaznowanie, gawędziarstwo i komedianctwo), charakteryzacji (jeśli jednym z elementów przebrania jest naśladowanie głosu lub dźwięków) oraz znajomości języka, gdy próbuje udawać, że to jego język ojczysty."
   },
   "niepokojący": {
     "name": "Niepokojący",
-    "desc": "Bohater budzi niepokój u innych.",
-    "effect": "Przeciwnicy muszą wykonać test Siły Woli, by walczyć bez kary -10 do Walki Wręcz i Strzelania."
+    "desc": "Bohater ma w swoim wyglądzie coś takiego, że przeciwnicy stają się niespokojni.",
+    "effect": "Widząc go, wrogowie muszą wykonać test Siły Woli. Nieudany test oznacza, że otrzymują modyfikator -10 do testów Walki Wręcz i Umiejętności Strzeleckich w czasie walki z Bohaterem. Podczas każdej kolejnej rundy mogą próbować przełamać swój lęk (wykonując kolejny test Siły Woli). Efekt mija, gdy jedna ze stron ucieknie z pola walki."
   },
   "nieustraszony": {
     "name": "Nieustraszony",
-    "desc": "Bohater jest odporny na Strach i zmniejsza efekt Grozy do Strachu.",
-    "effect": ""
+    "desc": "Bohater nie odczuwa strachu. Może jest naprawdę odważny, a może po prostu szalony.",
+    "effect": "Bez względu na przyczynę, jest odporny na Strach i w mniejszym stopniu ulega Grozie (wykonujesz rzut przeciw Grozie jako rzut przeciw Strachowi). Bohater jest również odporny na działanie umiejętności zastraszanie i zdolności niepokojący. Szczegółowe zasady dotyczące wzbudzania Strachu i Grozy znajdziesz w Rozdziale IX: Mistrz Gry."
   },
   "niezwykle odporny": {
     "name": "Niezwykle odporny",
-    "desc": "Bohater ma wysoką odporność na trudy życia.",
-    "effect": "+5 do Odporności."
+    "desc": "Bohater obdarzony jest wyjątkową odpornością.",
+    "effect": "Otrzymuje +5 do Odporności, dodawane do początkowej wartości cechy. Może to zmienić wartość Wytrzymałości, BG zgodnie z zasadami opisanymi na str. 19."
   },
   "obieżyświat": {
     "name": "Obieżyświat",
-    "desc": "Bohater ma dużą wiedzę o świecie.",
-    "effect": "+10 do testów Wiedzy i Znajomości Języków."
+    "desc": "Bohater w swoim życiu wiele podróżował, zdobywając rozległą wiedzę.",
+    "effect": "Otrzymuje modyfikator +10 do testów wiedzy oraz znajomości języka."
   },
   "oburęczność": {
     "name": "Oburęczność",
-    "desc": "Bohater może walczyć obiema rękami.",
-    "effect": "Nie otrzymuje kary -20 do Walki Wręcz za używanie drugiej ręki."
+    "desc": "Bohater może używać obu rąk z jednakową sprawnością, nie otrzymując modyfikatora -20 do Walki Wręcz, gdy trzyma broń w słabszej ręce.",
+    "effect": ""
   },
   "odporność na chaos": {
     "name": "Odporność na Chaos",
-    "desc": "Bohater ma wrodzoną odporność na chaos.",
-    "effect": "+10 do testów Siły Woli przeciwko magii i efektom Chaosu, odporność na mutacje."
+    "desc": "Bohater obdarzony jest naturalną odpornością na wpływ Chaosu.",
+    "effect": "Otrzymuje modyfikator +10 do Siły Woli podczas testów przeciwko magii i efektom Chaosu. Jest również całkowicie odporny na mutacje Chaosu. Jednak nigdy nie będzie mógł rzucać czarów."
   },
   "odporność na choroby": {
     "name": "Odporność na choroby",
-    "desc": "Bohater jest odporny na choroby i rzadko choruje.",
-    "effect": ""
+    "desc": "Bohater jest obdarzony końskim zdrowiem.",
+    "effect": "Otrzymuje modyfikator +10 do Odporności podczas testów przeciwko chorobom."
   },
   "odporność na magię": {
     "name": "Odporność na magię",
-    "desc": "Bohater trudniej poddaje się wpływom magii.",
-    "effect": ""
+    "desc": "Bohater w naturalny sposób opiera się działaniu czarów.",
+    "effect": "Otrzymuje modyfikator +10 do Siły Woli podczas testów przeciwko magii."
   },
   "odporność na trucizny": {
     "name": "Odporność na trucizny",
-    "desc": "Bohater jest odporny na efekty trucizn.",
-    "effect": ""
+    "desc": "Wyjątkowa odporność organizmu pozwala Bohaterowi na osłabienie działania trucizny.",
+    "effect": "Otrzymuje modyfikator +10 do Odporności podczas testów przeciwko truciznom."
   },
   "odporność psychiczna": {
     "name": "Odporność psychiczna",
-    "desc": "Bohater ma wyjątkową siłę umysłu.",
-    "effect": "+10 do testów Siły Woli przeciwko efektom zastraszenia, lęku i magii wpływającej na umysł."
+    "desc": "Opis: Bohater jest mniej podatny na efekt szokujących i przerażających wydarzeń.",
+    "effect": "Do momentu uzbierania 8 Punktów Obłędu nie musisz testować, czy Bohater nabawił się choroby umysłu. Bohater popada w obłęd (wykazuje objawy pierwszej choroby umysłowej) dopiero po uzbieraniu 14 Punktów Obłędu."
   },
   "odwaga": {
     "name": "Odwaga",
-    "desc": "Bohater nie poddaje się strachowi.",
-    "effect": "+10 do testów Siły Woli w walce przeciwko strachowi, grozie i zastraszaniu."
+    "desc": "Bohater odznacza się wyjątkową odwagą.",
+    "effect": "Otrzymuje modyfikator +10 do Siły Woli podczas testów przeciwko Strachowi i Grozie oraz zastraszaniu."
   },
   "ogłuszanie": {
     "name": "Ogłuszanie",
-    "desc": "Bohater potrafi uderzać w czułe miejsca.",
-    "effect": "Możliwość ogłuszenia przeciwnika trafieniem w głowę."
+    "desc": "Po udanym ataku bronią białą Bohater może zadeklarować próbę ogłuszenia przeciwnika, zamiast zadawać mu obrażenia.",
+    "effect": "W takiej sytuacji należy wykonać przeciwstawny test Krzepy. Jeśli Bohater wygra, jego przeciwnik musi natychmiast wykonać test Odporności, dodając modyfikator +10 za każdy Punkt Zbroi hełmu lub osłony noszonej na głowie. Jeśli ten test będzie nieudany, przeciwnik zostaje ogłuszony na 1k10 rund. W tym czasie nie może podejmować żadnych akcji i nie może stosować umiejętności unik."
   },
   "opanowanie": {
     "name": "Opanowanie",
-    "desc": "Bohater nie poddaje się panice i efektom zastraszenia.",
-    "effect": ""
+    "desc": "Bohater nigdy nie traci zimnej krwi.",
+    "effect": "Otrzymuje +5 do Siły Woli, dodawane do początkowej wartości cechy."
   },
   "pancerz wiary": {
-    "name": "Pancerz Wiary",
-    "desc": "Bohater ma odporność na efekty magiczne związane z chaosem.",
-    "effect": ""
+    "name": "Pancerz wiary",
+    "desc": "Dzięki żarliwej modlitwie Bohater potrafi skutecznie rzucać czary, nawet nosząc pancerz.",
+    "effect": "Zdolność umożliwia dodanie +3 do ujemnego modyfikatora do poziomu mocy czaru, który związany jest noszeniem zbroi. Na przykład rzucanie czarów i jednoczesne zasłanianie się ciężką tarczą jest obciążone modyfikatorem -3. Zdolność pancerz wiary redukuje ten modyfikator do 0."
   },
   "przemawianie": {
     "name": "Przemawianie",
-    "desc": "Bohater potrafi przekonująco i charyzmatycznie przemawiać.",
-    "effect": "+10 do testów Przekonywania."
+    "desc": "Gdy Bohater przemawia, potrafi skupić uwagę większej grupy słuchaczy.",
+    "effect": "Wykorzystując przekonywanie, może oddziaływać na grupę osób 10 razy liczniejszą niż normalnie."
   },
   "przerażający": {
     "name": "Przerażający",
-    "desc": "Bohater budzi grozę w przeciwnikach.",
-    "effect": "Przeciwnicy muszą wykonać test Siły Woli, by nie uciec."
+    "desc": "Wygląd postaci wywołuje przerażenie wśród obserwatorów.",
+    "effect": "Swoim zachowaniem wzbudza Grozę, zgodnie z zasadami opisanymi w Rozdziale IX: Mistrz Gry."
   },
   "rozbrajanie": {
     "name": "Rozbrajanie",
-    "desc": "Bohater potrafi skutecznie pozbawiać przeciwników broni.",
-    "effect": "+10 do testów Walki Wręcz podczas prób rozbrojenia wroga."
+    "desc": "Po udanym ataku bronią białą, Bohater może podjąć próbę rozbrojenia przeciwnika, zamiast zadawać mu obrażenia.",
+    "effect": "W takiej sytuacji należy wykonać przeciwstawny test Zręczności. Jeśli Bohater wygra, jego przeciwnik zostaje rozbrojony i upuszcza broń. Broń można podnieść, wykonując akcję „użycie przedmiotu”. Jeśli przeciwnik wygra, utrzymuje broń w ręce. Nie można rozbrajać przeciwnika, który walczy bronią naturalną (kły, pazury, itp.)."
   },
   "straszny": {
     "name": "Straszny",
-    "desc": "Bohater wzbudza niepokój i respekt.",
-    "effect": "-10 do testów Ogłady przeciwników próbujących z nim rozmawiać."
+    "desc": "Wygląd postaci wywołuje przestrach wśród obserwatorów.",
+    "effect": "Swoim zachowaniem wzbudza Strach, zgodnie z zasadami opisanymi w Rozdziale IX: Mistrz Gry."
   },
   "strzał mierzony": {
     "name": "Strzał mierzony",
-    "desc": "Bohater potrafi celować z wyjątkową precyzją.",
-    "effect": "+10 do testów Umiejętności Strzeleckich, jeśli poświęci dodatkową akcję na celowanie."
+    "desc": "Wykonując atak bronią strzelecką, Bohater potrafi skoncentrować się i znacznie lepiej wycelować.",
+    "effect": "Po zadeklarowaniu akcji „wycelowanie” otrzymuje modyfikator +20 do Umiejętności Strzeleckich przy rzucie na trafienie, zamiast normalnego modyfikatora +10."
   },
   "strzał precyzyjny": {
     "name": "Strzał precyzyjny",
-    "desc": "Bohater trafia dokładnie tam, gdzie chce.",
-    "effect": "Ignoruje połowę pancerza przeciwnika przy ataku dystansowym."
+    "desc": "Wykonując atak bronią strzelecką, Bohater potrafi precyzyjnie wymierzyć strzał, który zadaje dodatkowe obrażenia.",
+    "effect": "Otrzymuje modyfikator +1 do rzutów na obrażenia podczas ataku z użyciem broni strzeleckiej."
   },
   "strzał przebijający": {
     "name": "Strzał przebijający",
-    "desc": "Bohater potrafi przebić nawet najtwardszą obronę.",
-    "effect": "Zwiększa obrażenia z broni dystansowej o 1."
+    "desc": "Bohater potrafi znaleźć odsłoniętą szczelinę w pancerzu przeciwnika.",
+    "effect": "Po udanym ataku bronią strzelecką może zignorować 1 Punkt Zbroi przeciwnika. Jeśli przeciwnik nie nosi zbroi, ta zdolność jest nieskuteczna."
   },
   "szczęście": {
     "name": "Szczęście",
-    "desc": "Bohater ma wyjątkowe szczęście.",
-    "effect": "Otrzymuje dodatkowy Punkt Szczęścia na dzień."
+    "desc": "Bohater jest nieprawdopodobnym szczęściarzem. Wydaje się wychodzić obronną ręką z najgorszych opresji.",
+    "effect": "Każdego dnia dostaje dodatkowy Punkt Szczęścia. Szczegółowe zasady przyznawania i wydawania Punktów Szczęścia znajdziesz w Rozdziale VI: Walka, obrażenia i ruch."
   },
   "szósty zmysł": {
     "name": "Szósty zmysł",
-    "desc": "Bohater potrafi wyczuwać zagrożenia.",
-    "effect": ""
+    "desc": "Bohater jest niezwykle czujny i niemal instynktownie wyczuwa zagrożenie.",
+    "effect": "W przypadku zasadzki lub innego zagrożenia Mistrz Gry może wykonać tajny test Siły Woli Bohatera. Jeśli test okaże się udany, Mistrz Gry powinien Cię poinformować, że Twój Bohater ma złe przeczucie albo wrażenie, że jest obserwowany. Dzięki temu BG obdarzony szóstym zmysłem może uniknąć zaskoczenia w początkowej fazie walki."
   },
   "szał bojowy": {
     "name": "Szał bojowy",
-    "desc": "Bohater wpada w bitewny amok.",
-    "effect": "Musi poświęcić jedną turę by wpaść w szał bojowy. Następnie do końca walki ma modyfikator +10 do SW i K ale za to ma -10 do INT i WW. Musi wykonywać albo Szarszę albo Szaleńczy atak i nie może uciekać."
+    "desc": "W trakcie walki Bohater potrafi wpaść w szał bojowy.",
+    "effect": "Przez jedną rundę musi się doprowadzić do wściekłości (wyjąc, gryząc tarczę, bijąc się w piersi, itd.). W następnej rundzie jego pierwotna natura bierze górę, zapewniając modyfikator +10 do testów Siły Woli i Krzepy, (także +1 do Siły, czyli zadawanych obrażeń), przy jednoczesnym modyfikatorze -10 do testów Inteligencji i Walki Wręcz. Podczas walki zawsze atakuje najbliższego przeciwnika, wykonując „szarżę” lub „szaleńczy atak”, nie może uciekać ani wykonywać akcji „odwrót”. BG pozostaje pod wpływem szału bojowego do końca starcia."
   },
   "talent artystyczny": {
     "name": "Talent artystyczny",
-    "desc": "Bohater posiada naturalny dar w sztuce.",
-    "effect": "+20 do testów Rzemiosła (sztuka, muzyka, aktorstwo)."
+    "desc": "Bohater potrafi tworzyć dzieła sztuki.",
+    "effect": "Otrzymuje modyfikator +20 do testów rzemiosła (sztuka) oraz modyfikator +10 do testów wyceny przy szacowaniu wartości dzieł sztuki."
   },
   "twardziel": {
     "name": "Twardziel",
-    "desc": "Bohater jest odporny na ból i obrażenia.",
-    "effect": "+1 do Żywotności."
+    "desc": "Bohater jest wyjątkowo odporny na ból i zranienia.",
+    "effect": "Otrzymuje +1 do Żywotności, dodawane do początkowej wartości cechy."
   },
   "ulicznik": {
     "name": "Ulicznik",
-    "desc": "Bohater wychował się na ulicy i zna się na przetrwaniu.",
-    "effect": "+10 do testów Ukrywania się i Hazardu w mieście."
+    "desc": "Bohater wychował się w mieście i z łatwością orientuje się w terenie zabudowanym.",
+    "effect": "Otrzymuje modyfikator +10 do testów skradania się i ukrywania się w mieście."
   },
   "urodzony wojownik": {
     "name": "Urodzony wojownik",
-    "desc": "Bohater ma naturalny talent do walki.",
-    "effect": "+5 do Walki Wręcz"
+    "desc": "Bohater wyjątkowo sprawnie posługuje się bronią białą.",
+    "effect": "Otrzymuje +5 do Walki Wręcz, dodawane do początkowej wartości cechy."
   },
   "widzenie w ciemności": {
     "name": "Widzenie w ciemności",
-    "desc": "Bohater widzi w półmroku do 30 metrów.",
-    "effect": ""
+    "desc": "Bohater dysponuje zdolnością wyraźnego widzenia przy oświetleniu porównywalnym ze światłem gwiazd.",
+    "effect": "Zasięg wzroku w takich warunkach wynosi 30 metrów. Zdolność jest bezużyteczna w całkowitej ciemności."
   },
   "woltyżerka": {
     "name": "Woltyżerka",
-    "desc": "Bohater świetnie radzi sobie w walce konnej.",
-    "effect": "+10 do testów Jeździectwa."
+    "desc": "Bohater potrafi dokonywać niewiarygodnych wyczynów podczas jazdy konnej.",
+    "effect": "Potrafi stać na rękach na grzbiecie galopującego wierzchowca, przeskakiwać z jednego konia na drugiego, zeskakiwać w pełnym biegu, itp. Bohater wykonuje testy jeździectwa tylko w najbardziej ekstremalnych sytuacjach, a i wtedy otrzymuje modyfikator +10 do testów tej umiejętności."
   },
   "wyczucie kierunku": {
     "name": "Wyczucie kierunku",
-    "desc": "Bohater zawsze orientuje się w terenie.",
-    "effect": ""
+    "desc": "Bohater instynktownie potrafi określać strony świata i orientować się w przestrzeni. Prawie nigdy się nie gubi i bez wahania potrafi wskazać kierunek północny.",
+    "effect": "Dodatkowo otrzymuje modyfikator +10 do testów nawigacji."
   },
   "wykrywanie pułapek": {
     "name": "Wykrywanie pułapek",
-    "desc": "Bohater potrafi dostrzegać i rozbrajać pułapki.",
-    "effect": "+10 do testów Spostrzegawczości i Zwinnych Palców przy rozbrajaniu pułapek."
+    "desc": "Bohater jest ekspertem w wykrywaniu i rozbrajaniu pułapek.",
+    "effect": "Otrzymuje modyfikator +10 do testów spostrzegawczości i otwierania zamków związanych z wykrywaniem i unieszkodliwianiem pułapek."
   },
   "wyostrzone zmysły": {
     "name": "Wyostrzone zmysły",
-    "desc": "Bohater ma doskonałą percepcję.",
-    "effect": "+10 do testów Spostrzegawczości."
+    "desc": "Bohater posiada wyjątkowo wyczulone zmysły.",
+    "effect": "Otrzymuje modyfikator +20 do wszystkich testów spostrzegawczości."
   },
   "wędrowiec": {
     "name": "Wędrowiec",
-    "desc": "Bohater spędza większość czasu w drodze.",
-    "effect": "+10 do testów Skradania się i Ukrywania się poza miastem."
+    "desc": "Bohater wychował się na wsi i z łatwością orientuje się w terenie wiejskim.",
+    "effect": "Otrzymuje modyfikator +10 do testów skradania się i ukrywania się na terenach poza miastem."
   },
   "zapasy": {
     "name": "Zapasy",
-    "desc": "Bohater jest silny w zwarciu.",
-    "effect": "+10 do testów Siły przy chwytaniu przeciwników."
+    "desc": "Bohater wyjątkowo dobrze walczy bez broni.",
+    "effect": "Wykonując chwyt, otrzymuje modyfikator +10 do Walki Wręcz. Dodatkowo otrzymuje modyfikator +10 do Krzepy, gdy chwyta przeciwnika lub gdy wyzwala się z uścisku."
   },
   "zapiekła nienawiść": {
     "name": "Zapiekła nienawiść",
-    "desc": "Bohater pała nienawiścią do konkretnej grupy lub rasy.",
-    "effect": "+5 do testów Walki Wręcz przeciwko wybranej grupie wrogów."
+    "desc": "Bohater podziela głęboko zakorzenioną wśród swojego ludu wrogość wobec wszystkich zielonoskórych.",
+    "effect": "Ta wiekowa już tradycja napełnia go taką nienawiścią, że otrzymuje modyfikator +5 do Walki Wręcz, gdy atakuje gobliny, orki i hobgobliny."
   },
   "zmysł magii": {
     "name": "Zmysł magii",
-    "desc": "Bohater potrafi wykrywać obecność magii.",
-    "effect": ""
+    "desc": "Bohater potrafi umiejętnie manipulować Wiatrami Magii.",
+    "effect": "Otrzymuje modyfikator +10 do testów splatania magii oraz wykrywania magii."
   },
   "żyłka handlowa": {
     "name": "Żyłka handlowa",
-    "desc": "Bohater ma talent do interesów.",
-    "effect": "+10 do testów Wyceny i Targowania."
+    "desc": "Bohater potrafi sprzedać niemal wszystko.",
+    "effect": "Otrzymuje modyfikator +10 do testów targowania i wyceny."
+  },
+  "broń naturalna": {
+    "name": "Broń naturalna",
+    "desc": "Postać dysponuje ostrymi kłami lub pazurami, których z powodzeniem może używać w walce.",
+    "effect": "W czasie walki bez broni jest traktowana, jak gdyby używała broni jednoręcznej. Broń naturalna nie pozwala na parowanie ciosów. W przypadku broni naturalnej nie można stosować rozbrajania."
+  },
+  "broń specjalna": {
+    "name": "Broń specjalna (różne)",
+    "desc": "Bohater potrafi władać bronią, która wymaga specjalistycznego treningu.",
+    "effect": "Każda zdolność broń specjalna jest odrębną zdolnością. Na przykład broń specjalna (dwuręczna) różni się od zdolności broń specjalna (rzucana). Każda zdolność musi zostać wykupiona oddzielnie. Najczęściej spotykanymi rodzajami broni specjalnych są: dwuręczna, kawaleryjska, mechaniczna, palna, parująca, rzucana, szermiercza, unieruchamiająca oraz korbacze, kusze, łuki i proce. Szczegółowy opis poszczególnych rodzajów broni znajdziesz w Rozdziale V: Ekwipunek."
+  },
+  "chirurgia": {
+    "name": "Chirurgia",
+    "desc": "Bohater poznał tajniki najnowszej wiedzy medycznej.",
+    "effect": "Otrzymuje modyfikator +10 do testów leczenia. W przypadku leczenia ciężko rannego pacjenta udany test przywraca 2 punkty Żywotności zamiast, jak normalnie, tylko 1. Jeśli w wyniku trafienia krytycznego istnieje ryzyko utraty kończyny, pacjent leczony przez chirurga otrzymuje modyfikator +20 do Odporności podczas testów związanych z ryzykiem utraty kończyny. Szczegółowe zasady dotyczące trafień krytycznych znajdziesz w Rozdziale VI: Walka, obrażenia i ruch."
+  },
+  "czarnoksięstwo": {
+    "name": "Czarnoksięstwo",
+    "desc": "Bohater poznał sekret Czarnej Magii Dhar i potrafi jej używać do wspomożenia siły swoich zaklęć. Korzystanie z czarnoksięstwa umożliwia zdobycie większej mocy, ale jest także bardziej ryzykowne.",
+    "effect": "Za każdym razem, gdy Bohater rzuca czar, może wykorzystać energię Dhar do jego wzmocnienia. Wykonując rzut na poziom mocy czaru, możesz rzucić dodatkową kostką k10 i zignorować najmniejszy z uzyskanych wyników, który jednak liczy się przy sprawdzaniu Przekleństwa Tzeentcha. Na przykład czarodziej z Magią 2, który rzuca zaklęcie z wykorzystaniem czarnoksięstwa, rzuca 3k10 i wybiera dwa najwyższe wyniki. Wszystkie trzy kostki są używane do sprawdzania Przekleństwa Tzeentcha. Gdyby na kostkach wypadło 6, 6 i 6, poziom mocy czaru wyniósłby 12 (6+6), jednak czar wywołałby Poważną Manifestację Chaosu. Znajomość czarnoksięstwa jest wymagana przy rzucaniu czarów z magii czarnoksięskiej. Szczegółowe zasady rzucania zaklęć znajdziesz w Rozdziale VII: Magia."
+  },
+  "latanie": {
+    "name": "Latanie",
+    "desc": "Postać potrafi latać.",
+    "effect": "Zasady dotyczące latania znajdziesz w Rozdziale VI: Walka, obrażenia i ruch."
+  },
+  "ożywieniec": {
+    "name": "Ożywieniec",
+    "desc": "Postać jest nieumarłym stworem, przywróconym do życia za pomocą magii nekromanckiej (patrz Rozdział VII: Magia).",
+    "effect": "Jest odporna na Strach, Grozę, trucizny, choroby oraz na wszystkie czary, umiejętności i zdolności, które wpływają na emocje i umysł."
+  },
+  "poliglota": {
+    "name": "Poliglota",
+    "desc": "Bohater posiada naturalną zdolność uczenia się i zapamiętywania obcych języków.",
+    "effect": "Otrzymuje modyfikator +10 do testów czytania i pisania oraz znajomości języka."
+  },
+  "silny cios": {
+    "name": "Silny cios",
+    "desc": "Dzięki doświadczeniu nabytemu w wielu walkach Bohater potrafi precyzyjnie wymierzać ciosy w walce wręcz.",
+    "effect": "Otrzymuje modyfikator +1 do obrażeń zadawanych bronią białą."
+  },
+  "strzelec wyborowy": {
+    "name": "Strzelec wyborowy",
+    "desc": "Bohater potrafi wyjątkowo celnie strzelać.",
+    "effect": "Otrzymuje +5 do Umiejętności Strzeleckich, dodawane do początkowej wartości cechy."
+  },
+  "szybki refleks": {
+    "name": "Szybki refleks",
+    "desc": "Bohater jest obdarzony wspaniałym refleksem.",
+    "effect": "Otrzymuje +5 do Zręczności, dodawane do początkowej wartości cechy."
+  },
+  "szybkie wyciągnięcie": {
+    "name": "Szybkie wyciągnięcie",
+    "desc": "Dzięki tej zdolności Bohater potrafi szybko zareagować, błyskawicznie dobywając broni lub wyciągając inny przedmiot zza pasa lub z kieszeni.",
+    "effect": "Raz na rundę może użyć akcji „użycie przedmiotu” jako akcji natychmiastowej."
   }
 }
