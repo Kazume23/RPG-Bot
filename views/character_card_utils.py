@@ -1,5 +1,10 @@
 import discord
 
+from services.character_card import (
+    CharacterCard,
+    CharacterStat,
+)
+
 FIELD_VALUE_LIMIT = 1024
 FIELD_NAME_LIMIT = 256
 MAX_FIELDS = 25
@@ -10,15 +15,6 @@ def safe(value) -> str:
     return discord.utils.escape_markdown(
         str(value).strip()
     )
-
-
-def inline_code(value) -> str:
-    safe_value = str(value).replace(
-        "`",
-        "'",
-    )
-
-    return f"`{safe_value}`"
 
 
 def embed_length(
@@ -39,11 +35,17 @@ def embed_length(
     )
 
     if footer_text:
-        total += len(footer_text)
+        total += len(
+            footer_text
+        )
 
     for field in embed.fields:
-        total += len(field.name)
-        total += len(field.value)
+        total += len(
+            field.name
+        )
+        total += len(
+            field.value
+        )
 
     return total
 
@@ -61,7 +63,9 @@ def split_text(
     for line in text.splitlines():
         if len(line) > limit:
             if current:
-                chunks.append(current)
+                chunks.append(
+                    current
+                )
                 current = ""
 
             for start in range(
@@ -71,8 +75,7 @@ def split_text(
             ):
                 chunks.append(
                     line[
-                    start:
-                    start + limit
+                    start:start + limit
                     ]
                 )
 
@@ -89,11 +92,15 @@ def split_text(
             current = candidate
             continue
 
-        chunks.append(current)
+        chunks.append(
+            current
+        )
         current = line
 
     if current:
-        chunks.append(current)
+        chunks.append(
+            current
+        )
 
     return chunks
 
@@ -107,7 +114,9 @@ def add_field(
     if len(embed.fields) >= MAX_FIELDS:
         return False
 
-    name = name[:FIELD_NAME_LIMIT]
+    name = name[
+           :FIELD_NAME_LIMIT
+           ]
 
     remaining = (
             MAX_EMBED_LENGTH
@@ -123,7 +132,9 @@ def add_field(
         remaining,
     )
 
-    value = value[:max_value_length]
+    value = value[
+            :max_value_length
+            ]
 
     if not value:
         return False
@@ -154,7 +165,9 @@ def add_section(
     else:
         lines = values
 
-    text = "\n".join(lines)
+    text = "\n".join(
+        lines
+    )
 
     for index, chunk in enumerate(
             split_text(text)
@@ -171,3 +184,50 @@ def add_section(
                 chunk,
         ):
             return
+
+
+def profile_map(
+        card: CharacterCard,
+) -> dict[str, str]:
+    return {
+        label: value
+        for label, value
+        in card.profile_fields
+    }
+
+
+def stat_map(
+        card: CharacterCard,
+) -> dict[str, CharacterStat]:
+    return {
+        stat.abbreviation.casefold(): stat
+        for stat in card.stats
+    }
+
+
+def get_stat_value(
+        card: CharacterCard,
+        abbreviation: str,
+) -> str:
+    stat = stat_map(
+        card
+    ).get(
+        abbreviation.casefold()
+    )
+
+    if stat is None:
+        return "—"
+
+    return stat.final_value
+
+
+def format_sorted_list(
+        values: list[str],
+) -> str:
+    return "\n".join(
+        f"• {safe(value)}"
+        for value in sorted(
+            values,
+            key=str.casefold,
+        )
+    )

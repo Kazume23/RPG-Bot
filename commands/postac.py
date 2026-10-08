@@ -114,11 +114,34 @@ async def postac_command(
     )
 
     message = await ctx.channel.send(
+        view=view,
+    )
+
+    view.bind_message(
+        message
+    )
+
+    await register_character_card(
+        view
+    )
+
+    card = build_character_card(
+        character_data
+    )
+
+    view = CharacterCardView(
+        card=card,
+        requester_id=ctx.author.id,
+    )
+
+    message = await ctx.channel.send(
         embed=view.initial_embed(),
         view=view,
     )
 
-    view.bind_message(message)
+    view.bind_message(
+        message
+    )
 
     await register_character_card(
         view

@@ -5,7 +5,7 @@ import discord
 from services.character_card import (
     CharacterCard,
 )
-from views.character_card_embeds import (
+from views.character_card_layouts import (
     build_character_embed,
 )
 
@@ -107,15 +107,14 @@ class CharacterCardView(
             PAGE_DEFINITIONS
         )
 
-        if card.get_section("Magia"):
+        if card.get_section(
+                "Magia"
+        ):
             pages.append(
                 MAGIC_PAGE_DEFINITION
             )
 
-        for (
-                page,
-                label,
-        ) in pages:
+        for page, label in pages:
             self.add_item(
                 CharacterPageButton(
                     page=page,
@@ -131,7 +130,9 @@ class CharacterCardView(
             message: discord.Message,
     ) -> None:
         self.message = message
-        self.channel_id = message.channel.id
+        self.channel_id = (
+            message.channel.id
+        )
 
     def initial_embed(
             self,
