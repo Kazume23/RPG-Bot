@@ -11,7 +11,7 @@ from views.character_card_embeds import (
 
 logger = logging.getLogger(__name__)
 
-VIEW_TIMEOUT = 300
+VIEW_TIMEOUT = 8 * 60 * 60
 
 PAGE_DEFINITIONS = (
     (
@@ -41,6 +41,8 @@ MAGIC_PAGE_DEFINITION = (
     "Magia",
 )
 
+_active_character_cards = {}
+
 
 class CharacterPageButton(
     discord.ui.Button
@@ -62,9 +64,7 @@ class CharacterPageButton(
 
         super().__init__(
             label=display_label,
-            style=(
-                discord.ButtonStyle.secondary
-            ),
+            style=discord.ButtonStyle.secondary,
         )
 
     async def callback(
@@ -100,6 +100,7 @@ class CharacterCardView(
         self.card = card
         self.requester_id = requester_id
         self.message = None
+        self.channel_id = None
 
         pages = list(
             PAGE_DEFINITIONS
@@ -129,6 +130,7 @@ class CharacterCardView(
             message: discord.Message,
     ) -> None:
         self.message = message
+        self.channel_id = message.channel.id
 
     def initial_embed(
             self,
@@ -175,6 +177,32 @@ class CharacterCardView(
                 else item.base_label
             )
 
+    def _disable_buttons(
+            self,
+    ) -> None:
+        for item in self.children:
+            item.disabled = True
+
+    async def disable(
+            self,
+    ) -> None:
+        self._disable_buttons()
+        self.stop()
+
+        if self.message is None:
+            return
+
+        try:
+            await self.message.edit(
+                view=self
+            )
+
+        except (
+                discord.NotFound,
+                discord.HTTPException,
+        ):
+            pass
+
     async def show_page(
             self,
             interaction: discord.Interaction,
@@ -197,8 +225,18 @@ class CharacterCardView(
     async def on_timeout(
             self,
     ):
-        for item in self.children:
-            item.disabled = True
+        self._disable_buttons()
+
+        if (
+                self.channel_id is not None
+                and _active_character_cards.get(
+            self.channel_id
+        ) is self
+        ):
+            _active_character_cards.pop(
+                self.channel_id,
+                None,
+            )
 
         if self.message is None:
             return
@@ -252,3 +290,26 @@ class CharacterCardView(
 
         except discord.HTTPException:
             pass
+
+
+async def register_character_card(
+        view: CharacterCardView,
+) -> None:
+    if view.channel_id is None:
+        return
+
+    previous_view = (
+        _active_character_cards.get(
+            view.channel_id
+        )
+    )
+
+    _active_character_cards[
+        view.channel_id
+    ] = view
+
+    if (
+            previous_view is not None
+            and previous_view is not view
+    ):
+        await previous_view.disable()

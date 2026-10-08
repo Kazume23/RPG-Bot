@@ -19,8 +19,8 @@ from services.google_sheets import (
 )
 from views.character_card_view import (
     CharacterCardView,
+    register_character_card,
 )
-
 
 logger = logging.getLogger(__name__)
 
@@ -32,8 +32,8 @@ def _safe(value) -> str:
 
 
 async def _load_character(
-    ctx,
-    character_name: str,
+        ctx,
+        character_name: str,
 ) -> dict:
     if character_name:
         return await asyncio.to_thread(
@@ -48,14 +48,14 @@ async def _load_character(
 
 
 async def postac_command(
-    ctx,
-    args: str,
+        ctx,
+        args: str,
 ):
     character_name = args.strip()
 
     if (
-        character_name
-        and not has_admin_permissions(ctx)
+            character_name
+            and not has_admin_permissions(ctx)
     ):
         return (
             "Nie masz uprawnień do "
@@ -81,8 +81,8 @@ async def postac_command(
         )
 
     except (
-        GoogleSheetsConfigurationError,
-        CharacterSheetFormatError,
+            GoogleSheetsConfigurationError,
+            CharacterSheetFormatError,
     ):
         logger.exception(
             "Błąd konfiguracji Google Sheets"
@@ -119,5 +119,9 @@ async def postac_command(
     )
 
     view.bind_message(message)
+
+    await register_character_card(
+        view
+    )
 
     return None
