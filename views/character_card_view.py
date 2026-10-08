@@ -101,6 +101,7 @@ class CharacterCardView(
         self.requester_id = requester_id
         self.message = None
         self.channel_id = None
+        self._closed = False
 
         pages = list(
             PAGE_DEFINITIONS
@@ -177,28 +178,28 @@ class CharacterCardView(
                 else item.base_label
             )
 
-    def _disable_buttons(
+    async def close(
             self,
     ) -> None:
-        for item in self.children:
-            item.disabled = True
+        if self._closed:
+            return
 
-    async def disable(
-            self,
-    ) -> None:
-        self._disable_buttons()
+        self._closed = True
         self.stop()
+
+        _unregister_character_card(
+            self
+        )
 
         if self.message is None:
             return
 
         try:
-            await self.message.edit(
-                view=self
-            )
+            await self.message.delete()
 
         except (
                 discord.NotFound,
+                discord.Forbidden,
                 discord.HTTPException,
         ):
             pass
@@ -225,32 +226,7 @@ class CharacterCardView(
     async def on_timeout(
             self,
     ):
-        self._disable_buttons()
-
-        if (
-                self.channel_id is not None
-                and _active_character_cards.get(
-            self.channel_id
-        ) is self
-        ):
-            _active_character_cards.pop(
-                self.channel_id,
-                None,
-            )
-
-        if self.message is None:
-            return
-
-        try:
-            await self.message.edit(
-                view=self
-            )
-
-        except (
-                discord.NotFound,
-                discord.HTTPException,
-        ):
-            pass
+        await self.close()
 
     async def on_error(
             self,
@@ -292,6 +268,23 @@ class CharacterCardView(
             pass
 
 
+def _unregister_character_card(
+        view: CharacterCardView,
+) -> None:
+    if view.channel_id is None:
+        return
+
+    if (
+            _active_character_cards.get(
+                view.channel_id
+            ) is view
+    ):
+        _active_character_cards.pop(
+            view.channel_id,
+            None,
+        )
+
+
 async def register_character_card(
         view: CharacterCardView,
 ) -> None:
@@ -312,4 +305,4 @@ async def register_character_card(
             previous_view is not None
             and previous_view is not view
     ):
-        await previous_view.disable()
+        await previous_view.close()
